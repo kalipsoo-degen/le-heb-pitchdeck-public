@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Financial Deck - Conclusion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f1923;
+            color: #f5f5f5;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f1923 0%, #1a2c39 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #06b6d4, #0ea5e9, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glow {
+            text-shadow: 0 0 15px rgba(6, 182, 212, 0.7);
+        }
+        .bg-pattern {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+        .hexagon {
+            position: absolute;
+            width: 200px;
+            height: 173px;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            z-index: 0;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        .pulse {
+            animation: pulse 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        @keyframes pulse {
+            0% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 0.7; transform: scale(1); }
+        }
+        .card-glow {
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+            transition: all 0.3s ease;
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.5);
+            transform: translateY(-5px);
+        }
+        .highlight-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .highlight-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #06b6d4, transparent);
+            transition: all 0.5s ease;
+        }
+        .highlight-card:hover::after {
+            left: 0;
+        }
+        .highlight-card:hover {
+            transform: translateY(-3px);
+        }
+        .contact-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: linear-gradient(90deg, #0ea5e9, #3b82f6);
+            z-index: 1;
+        }
+        .contact-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+        .contact-button:hover::before {
+            left: 0;
+        }
+        .contact-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
+        }
+        .cta-card {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            animation: pulse 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col items-start justify-start relative">
+        <!-- Background Pattern -->
+        <div class="bg-pattern"></div>
+        
+        <!-- Hexagons for futuristic styling -->
+        <div class="hexagon" style="top: 120px; right: 180px; opacity: 0.5;"></div>
+        <div class="hexagon" style="bottom: 150px; left: 220px; opacity: 0.6;"></div>
+        <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
+        
+        <!-- Content -->
+        <div class="content-wrapper w-full px-16 py-12">
+            <div class="flex justify-between items-center mb-6">
+                <div class="flex items-center">
+                    <i class="fas fa-flag-checkered text-3xl text-cyan-500 mr-4"></i>
+                    <h2 class="text-4xl font-bold gradient-text">THE NEXT HORIZON</h2>
+                </div>
+                <div class="text-sm text-gray-400">NEXT HORIZON STUDIOS | 15/15</div>
+            </div>
+            
+            <div class="mb-8 text-center">
+                <h3 class="text-2xl font-semibold text-cyan-400 mb-3">JOIN US IN REVOLUTIONIZING ENTERTAINMENT</h3>
+                <p class="text-gray-300 text-lg max-w-3xl mx-auto">As the digital and physical worlds converge, Next Horizon Studios is positioned to lead the future of interactive experiences through our unique vision, technological prowess, and strategic execution.</p>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-8 mb-10">
+                <div class="highlight-card bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-cyan-900 flex items-center justify-center mb-4">
+                            <i class="fas fa-users text-2xl text-cyan-400"></i>
+                        </div>
+                        <h4 class="font-semibold text-xl mb-2">Proven Team</h4>
+                        <p class="text-gray-300 text-sm">Leadership with track record of success in gaming and technology, backed by elite 3D production capabilities</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-card bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-blue-900 flex items-center justify-center mb-4">
+                            <i class="fas fa-chart-line text-2xl text-blue-400"></i>
+                        </div>
+                        <h4 class="font-semibold text-xl mb-2">Massive Market</h4>
+                        <p class="text-gray-300 text-sm">Targeting growing industries with $119B+ TAM by 2028, at the intersection of gaming, metaverse and holographic tech</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-card bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-indigo-900 flex items-center justify-center mb-4">
+                            <i class="fas fa-rocket text-2xl text-indigo-400"></i>
+                        </div>
+                        <h4 class="font-semibold text-xl mb-2">Clear Path to $1B</h4>
+                        <p class="text-gray-300 text-sm">Strategic roadmap with multiple revenue streams and technological advantages to reach billion-dollar valuation</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-8 mb-10">
+                <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4">INVESTMENT OPPORTUNITY</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fas fa-dollar-sign text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Raising $5.5M</h4>
+                                <p class="text-sm text-gray-300">Using SAFE agreements with $40M valuation cap to accelerate product development</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fas fa-bullseye text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">First Year Projections</h4>
+                                <p class="text-sm text-gray-300">$12M revenue target with proven business model and multiple revenue streams</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fas fa-chart-pie text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Use of Funds</h4>
+                                <p class="text-sm text-gray-300">Product development (40%), team expansion (25%), marketing (20%), R&D (10%), working capital (5%)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fas fa-hourglass-half text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Investment Timeline</h4>
+                                <p class="text-sm text-gray-300">Closing round by end of Q2 2025, with first product launches in Q3 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4">CONTACT & NEXT STEPS</h3>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-cyan-900 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-user text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">John Metaverse</h4>
+                                <p class="text-sm text-gray-300">Founder & CEO</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-cyan-900 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-envelope text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">investors@nexthorizonstudios.com</h4>
+                                <p class="text-sm text-gray-300">Investment inquiries</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-cyan-900 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-phone text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">+1 (555) 123-4567</h4>
+                                <p class="text-sm text-gray-300">Investor relations</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-card p-5 rounded-xl text-center">
+                        <h4 class="text-xl font-bold text-white mb-3">Ready to join the revolution?</h4>
+                        <p class="text-gray-300 mb-4">Schedule a demo to see our technology in action and discuss investment opportunities.</p>
+                        <button class="contact-button text-white font-bold py-3 px-8 rounded-full">
+                            SCHEDULE A DEMO
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <div class="text-3xl font-bold gradient-text glow mb-3">THANK YOU</div>
+                <p class="text-gray-400">Join us in building the future of entertainment</p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="absolute bottom-6 right-8 text-gray-500 text-sm">
+            Confidential | Fundraising with SAFE Agreements
+        </div>
+    </div>
+</body>
+</html>

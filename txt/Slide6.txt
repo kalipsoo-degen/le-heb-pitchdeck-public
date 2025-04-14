@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Financial Deck - Market Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f1923;
+            color: #f5f5f5;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height:: 720px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f1923 0%, #1a2c39 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #00c2ff, #4e40ff, #b236ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glow {
+            text-shadow: 0 0 15px rgba(0, 194, 255, 0.7);
+        }
+        .bg-pattern {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 194, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(78, 64, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(178, 54, 255, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+        .hexagon {
+            position: absolute;
+            width: 200px;
+            height: 173px;
+            background: linear-gradient(135deg, rgba(0, 194, 255, 0.1) 0%, rgba(178, 54, 255, 0.05) 100%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            z-index: 0;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        .pulse {
+            animation: pulse 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        @keyframes pulse {
+            0% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 0.7; transform: scale(1); }
+        }
+        .card-glow {
+            box-shadow: 0 0 20px rgba(0, 194, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 194, 255, 0.5);
+            transform: translateY(-5px);
+        }
+        .market-bar {
+            height: 30px;
+            background: linear-gradient(90deg, rgba(0, 194, 255, 0.3), rgba(78, 64, 255, 0.3));
+            border-radius: 15px;
+            position: relative;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .market-bar-fill {
+            height: 100%;
+            border-radius: 15px;
+            background: linear-gradient(90deg, #00c2ff, #4e40ff);
+            position: absolute;
+            animation: growBar 1.5s ease-out forwards;
+        }
+        @keyframes growBar {
+            0% { width: 0; }
+            100% { width: var(--width); }
+        }
+        .chart-container {
+            position: relative;
+            height: 250px;
+            width: 100%;
+        }
+        .opportunity-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        .opportunity-card:hover {
+            transform: translateX(5px);
+            border-left-color: #00c2ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col items-start justify-start relative">
+        <!-- Background Pattern -->
+        <div class="bg-pattern"></div>
+        
+        <!-- Hexagons for futuristic styling -->
+        <div class="hexagon" style="top: 120px; right: 180px; opacity: 0.5;"></div>
+        <div class="hexagon" style="bottom: 150px; left: 220px; opacity: 0.6;"></div>
+        <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
+        
+        <!-- Content -->
+        <div class="content-wrapper w-full px-16 py-12">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center">
+                    <i class="fas fa-chart-line text-3xl text-blue-400 mr-4"></i>
+                    <h2 class="text-4xl font-bold gradient-text">MARKET ANALYSIS</h2>
+                </div>
+                <div class="text-sm text-gray-400">NEXT HORIZON STUDIOS | 6/15</div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-10">
+                <!-- Left Column -->
+                <div>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 mb-6 card-glow">
+                        <h3 class="text-2xl font-semibold text-blue-400 mb-4">MARKET SIZE & GROWTH</h3>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-lg font-semibold text-white">Metaverse Gaming</span>
+                                <span class="text-lg font-bold text-blue-300">$31.6B by 2025</span>
+                            </div>
+                            <div class="market-bar">
+                                <div class="market-bar-fill" style="--width: 75%;"></div>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-400">
+                                <span>CAGR: 39.3%</span>
+                                <span>$119.2B by 2028</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-lg font-semibold text-white">Holographic Display</span>
+                                <span class="text-lg font-bold text-purple-300">$13.0B by 2032</span>
+                            </div>
+                            <div class="market-bar">
+                                <div class="market-bar-fill" style="--width: 60%;"></div>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-400">
+                                <span>CAGR: 21.4%</span>
+                                <span>From $1.9B in 2022</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-lg font-semibold text-white">AI in Gaming</span>
+                                <span class="text-lg font-bold text-pink-300">$38.8B by 2025</span>
+                            </div>
+                            <div class="market-bar">
+                                <div class="market-bar-fill" style="--width: 85%;"></div>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-400">
+                                <span>CAGR: 27.5%</span>
+                                <span>Accelerating adoption</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-4">TARGET DEMOGRAPHICS</h3>
+                        
+                        <div class="chart-container">
+                            <canvas id="demographicsChart"></canvas>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 mt-5">
+                            <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg text-center">
+                                <div class="text-sm text-gray-400">Primary Audience</div>
+                                <div class="text-lg font-semibold">18-34 Years</div>
+                                <div class="text-xs text-gray-500">Early adopters</div>
+                            </div>
+                            <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg text-center">
+                                <div class="text-sm text-gray-400">Secondary Audience</div>
+                                <div class="text-lg font-semibold">35-45 Years</div>
+                                <div class="text-xs text-gray-500">Tech-savvy adults</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 mb-6 card-glow">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-4">COMPETITIVE LANDSCAPE</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-5">
+                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                                <h4 class="text-lg font-semibold text-white mb-2">Established Players</h4>
+                                <ul class="text-sm text-gray-300 space-y-2">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-circle text-xs text-blue-400 mr-2"></i>
+                                        <span>Major gaming studios entering metaverse</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-circle text-xs text-blue-400 mr-2"></i>
+                                        <span>Limited holographic capabilities</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-circle text-xs text-blue-400 mr-2"></i>
+                                        <span>High development costs</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                                <h4 class="text-lg font-semibold text-white mb-2">Startup Innovators</h4>
+                                <ul class="text-sm text-gray-300 space-y-2">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-circle text-xs text-purple-400 mr-2"></i>
+                                        <span>Focused on niche applications</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-circle text-xs text-purple-400 mr-2"></i>
+                                        <span>Limited funding & resources</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-circle text-xs text-purple-400 mr-2"></i>
+                                        <span>Innovative but smaller reach</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-blue-900 bg-opacity-30 p-4 rounded-lg">
+                            <h4 class="text-lg font-semibold text-white mb-2">Our Competitive Advantage</h4>
+                            <ul class="text-sm text-gray-300 space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                    <span>Vertical integration with MHSProd acquisition</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                    <span>Cross-platform technology spanning gaming, metaverse, and holograms</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                    <span>Proven revenue model with $20M in previous bull market</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                    <span>Dual approach: building both content and platform solutions</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-4">MARKET OPPORTUNITIES</h3>
+                        
+                        <div class="space-y-3">
+                            <div class="opportunity-card bg-gray-800 bg-opacity-50 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-vr-cardboard text-blue-400"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Shifting Entertainment Preferences</h4>
+                                        <p class="text-xs text-gray-400">Younger generations moving from traditional entertainment to immersive experiences</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="opportunity-card bg-gray-800 bg-opacity-50 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-robot text-purple-400"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">AI & Hologram Technology Convergence</h4>
+                                        <p class="text-xs text-gray-400">First-mover advantage in combining AI with holographic entertainment experiences</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="opportunity-card bg-gray-800 bg-opacity-50 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-pink-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-globe text-pink-400"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Global Expansion Potential</h4>
+                                        <p class="text-xs text-gray-400">Strong growth in Asian markets with 54% adoption rate of metaverse technologies</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="opportunity-card bg-gray-800 bg-opacity-50 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-handshake text-green-400"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Brand Partnerships & IP Licensing</h4>
+                                        <p class="text-xs text-gray-400">High demand for innovative immersive experiences from major entertainment brands</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="absolute bottom-6 right-8 text-gray-500 text-sm">
+            Confidential | Fundraising with SAFE Agreements
+        </div>
+    </div>
+    
+    <script>
+        // Demographics Chart
+        const demographicsCtx = document.getElementById('demographicsChart').getContext('2d');
+        const demographicsChart = new Chart(demographicsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['18-24 (38%)', '25-34 (32%)', '35-45 (18%)', '46+ (12%)'],
+                datasets: [{
+                    data: [38, 32, 18, 12],
+                    backgroundColor: [
+                        '#00c2ff',
+                        '#4e40ff',
+                        '#b236ff',
+                        '#1a2c39'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            color: '#f5f5f5',
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                },
+                cutout: '65%'
+            }
+        });
+    </script>
+</body>
+</html>

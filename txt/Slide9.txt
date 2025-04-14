@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Financial Deck - Investment Opportunity</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f1923;
+            color: #f5f5f5;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f1923 0%, #1a2c39 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #a66efa, #7440fa, #4924b4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glow {
+            text-shadow: 0 0 15px rgba(166, 110, 250, 0.7);
+        }
+        .bg-pattern {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(166, 110, 250, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(116, 64, 250, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(73, 36, 180, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+        .hexagon {
+            position: absolute;
+            width: 200px;
+            height: 173px;
+            background: linear-gradient(135deg, rgba(166, 110, 250, 0.1) 0%, rgba(73, 36, 180, 0.05) 100%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            z-index: 0;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        .pulse {
+            animation: pulse 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        @keyframes pulse {
+            0% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 0.7; transform: scale(1); }
+        }
+        .card-glow {
+            box-shadow: 0 0 20px rgba(166, 110, 250, 0.3);
+            transition: all 0.3s ease;
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 30px rgba(166, 110, 250, 0.5);
+            transform: translateY(-5px);
+        }
+        .chart-container {
+            position: relative;
+            height: 200px;
+            width: 100%;
+        }
+        .funding-card {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        .funding-card:hover {
+            transform: translateX(5px);
+            border-left-color: #a66efa;
+        }
+        .milestone-point {
+            position: relative;
+        }
+        .milestone-point::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            width: 20px;
+            height: 3px;
+            background: linear-gradient(90deg, #a66efa, transparent);
+        }
+        .milestone-point::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -35px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #a66efa;
+            transform: translateY(-50%);
+            box-shadow: 0 0 10px rgba(166, 110, 250, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col items-start justify-start relative">
+        <!-- Background Pattern -->
+        <div class="bg-pattern"></div>
+        
+        <!-- Hexagons for futuristic styling -->
+        <div class="hexagon" style="top: 120px; right: 180px; opacity: 0.5;"></div>
+        <div class="hexagon" style="bottom: 150px; left: 220px; opacity: 0.6;"></div>
+        <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
+        
+        <!-- Content -->
+        <div class="content-wrapper w-full px-16 py-12">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center">
+                    <i class="fas fa-gem text-3xl text-purple-400 mr-4"></i>
+                    <h2 class="text-4xl font-bold gradient-text">INVESTMENT OPPORTUNITY</h2>
+                </div>
+                <div class="text-sm text-gray-400">NEXT HORIZON STUDIOS | 9/15</div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-10">
+                <!-- Left Column -->
+                <div>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 mb-6 card-glow">
+                        <h3 class="text-2xl font-semibold text-purple-400 mb-4">FUNDRAISING ROUND</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-purple-900 bg-opacity-30 p-4 rounded-lg text-center">
+                                <div class="text-sm text-gray-400 mb-1">Target Raise</div>
+                                <div class="text-3xl font-bold text-white">$5.5M</div>
+                                <div class="text-xs text-gray-500 mt-1">SAFE Agreements</div>
+                            </div>
+                            <div class="bg-purple-900 bg-opacity-30 p-4 rounded-lg text-center">
+                                <div class="text-sm text-gray-400 mb-1">Valuation Cap</div>
+                                <div class="text-3xl font-bold text-white">$40M</div>
+                                <div class="text-xs text-gray-500 mt-1">Pre-money</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg mb-5">
+                            <h4 class="text-lg font-semibold text-purple-300 mb-3">Key Terms</h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                    <div>
+                                        <div class="text-sm font-medium">No Discount</div>
+                                        <div class="text-xs text-gray-400">Conversion at valuation cap</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                    <div>
+                                        <div class="text-sm font-medium">Pro-Rata Rights</div>
+                                        <div class="text-xs text-gray-400">For investors above $500K</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                    <div>
+                                        <div class="text-sm font-medium">Board Observer</div>
+                                        <div class="text-xs text-gray-400">For lead investor</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                    <div>
+                                        <div class="text-sm font-medium">Information Rights</div>
+                                        <div class="text-xs text-gray-400">Quarterly updates</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-indigo-900 bg-opacity-30 p-4 rounded-lg">
+                            <h4 class="text-lg font-semibold text-indigo-300 mb-3">Why SAFE Agreements?</h4>
+                            <ul class="text-sm text-gray-300 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-angle-right text-indigo-400 mt-1 mr-2"></i>
+                                    <span>Streamlined process with minimal legal costs</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-angle-right text-indigo-400 mt-1 mr-2"></i>
+                                    <span>No maturity date or interest accrual</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-angle-right text-indigo-400 mt-1 mr-2"></i>
+                                    <span>Conversion flexibility with future equity rounds</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-angle-right text-indigo-400 mt-1 mr-2"></i>
+                                    <span>Industry-standard terms based on Y Combinator SAFE</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+                        <h3 class="text-xl font-semibold text-purple-400 mb-4">INVESTMENT TIMELINE</h3>
+                        
+                        <div class="chart-container">
+                            <canvas id="timelineChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 mb-6 card-glow">
+                        <h3 class="text-xl font-semibold text-purple-400 mb-4">USE OF FUNDS</h3>
+                        
+                        <div class="grid grid-cols-1 gap-3 mb-6">
+                            <div class="funding-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-code text-purple-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-semibold">Product Development</h4>
+                                        <p class="text-xs text-gray-400">Accelerate development of The Legend metaverse and Bananium.ai platforms</p>
+                                    </div>
+                                    <div class="text-lg font-bold text-purple-300">40%</div>
+                                </div>
+                            </div>
+                            
+                            <div class="funding-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-users text-indigo-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-semibold">Team Expansion</h4>
+                                        <p class="text-xs text-gray-400">Hire key technical and creative talent to scale operations</p>
+                                    </div>
+                                    <div class="text-lg font-bold text-indigo-300">25%</div>
+                                </div>
+                            </div>
+                            
+                            <div class="funding-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-bullhorn text-blue-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-semibold">Marketing & Community</h4>
+                                        <p class="text-xs text-gray-400">Build engaged user communities and drive acquisition</p>
+                                    </div>
+                                    <div class="text-lg font-bold text-blue-300">20%</div>
+                                </div>
+                            </div>
+                            
+                            <div class="funding-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-teal-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-vr-cardboard text-teal-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-semibold">R&D (Holographic Tech)</h4>
+                                        <p class="text-xs text-gray-400">Invest in next-gen holographic entertainment technology</p>
+                                    </div>
+                                    <div class="text-lg font-bold text-teal-300">10%</div>
+                                </div>
+                            </div>
+                            
+                            <div class="funding-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-dollar-sign text-gray-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-semibold">Working Capital</h4>
+                                        <p class="text-xs text-gray-400">Operational expenses and financial reserves</p>
+                                    </div>
+                                    <div class="text-lg font-bold text-gray-300">5%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+                        <h3 class="text-xl font-semibold text-purple-400 mb-4">INVESTMENT HIGHLIGHTS</h3>
+                        
+                        <div class="pl-10 space-y-4">
+                            <div class="milestone-point">
+                                <h4 class="text-lg font-semibold text-white">Proven Track Record</h4>
+                                <p class="text-sm text-gray-300">Previous revenue of $20M during bull market demonstrates execution capability</p>
+                            </div>
+                            
+                            <div class="milestone-point">
+                                <h4 class="text-lg font-semibold text-white">Strategic Acquisition</h4>
+                                <p class="text-sm text-gray-300">MHSProd integration provides competitive advantage in 3D production capabilities</p>
+                            </div>
+                            
+                            <div class="milestone-point">
+                                <h4 class="text-lg font-semibold text-white">Rapidly Growing Market</h4>
+                                <p class="text-sm text-gray-300">Metaverse gaming projected to reach $119.2B by 2028 (39.3% CAGR)</p>
+                            </div>
+                            
+                            <div class="milestone-point">
+                                <h4 class="text-lg font-semibold text-white">Multiple Revenue Streams</h4>
+                                <p class="text-sm text-gray-300">Diversified income from NFTs, events, royalties, and technology services</p>
+                            </div>
+                            
+                            <div class="milestone-point">
+                                <h4 class="text-lg font-semibold text-white">Path to $1B+ Valuation</h4>
+                                <p class="text-sm text-gray-300">Clear roadmap to billion-dollar studio through platform growth and IP development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="absolute bottom-6 right-8 text-gray-500 text-sm">
+            Confidential | Fundraising with SAFE Agreements
+        </div>
+    </div>
+    
+    <script>
+        // Investment Timeline Chart
+        const timelineCtx = document.getElementById('timelineChart').getContext('2d');
+        const timelineChart = new Chart(timelineCtx, {
+            type: 'line',
+            data: {
+                labels: ['Now', 'SAFE Round', 'Series A', 'Series B', 'Potential Exit'],
+                datasets: [{
+                    label: 'Projected Valuation ($M)',
+                    data: [40, 40, 150, 500, 1200],
+                    backgroundColor: 'rgba(166, 110, 250, 0.2)',
+                    borderColor: 'rgba(166, 110, 250, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(166, 110, 250, 1)',
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: '#f5f5f5',
+                            callback: function(value) {
+                                return '$' + value + 'M';
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: '#f5f5f5'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return 'Valuation: $' + context.parsed.y + 'M';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
