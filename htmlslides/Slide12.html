@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Financial Deck - Team & Leadership</title>
+    <title>Studio Financial Deck - Sustainable Growth</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
     <style>
@@ -81,51 +81,13 @@
             box-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
             transform: translateY(-5px);
         }
-        .team-card {
+        .strategy-card {
             transition: all 0.3s ease;
             border-left: 3px solid transparent;
         }
-        .team-card:hover {
+        .strategy-card:hover {
             transform: translateX(5px);
             border-left-color: #10b981;
-        }
-        .avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #10b981, #047857);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: white;
-            font-weight: bold;
-        }
-        .connector {
-            position: absolute;
-            width: 2px;
-            background: linear-gradient(to bottom, #10b981, rgba(16, 185, 129, 0.1));
-        }
-        .connector-dot {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #10b981;
-            left: -3px;
-            top: 0;
-            box-shadow: 0 0 6px #10b981;
-        }
-        .skill-badge {
-            background-color: rgba(16, 185, 129, 0.2);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 12px;
-            padding: 2px 8px;
-            font-size: 11px;
-            color: #10b981;
-            display: inline-block;
-            margin-right: 4px;
-            margin-bottom: 4px;
         }
     </style>
 </head>
@@ -143,87 +105,63 @@
         <div class="content-wrapper w-full px-16 py-12">
             <div class="flex justify-between items-center mb-8">
                 <div class="flex items-center">
-                    <i class="fas fa-users-cog text-3xl text-green-400 mr-4"></i>
-                    <h2 class="text-4xl font-bold gradient-text">TEAM & LEADERSHIP</h2>
+                    <i class="fas fa-seedling text-3xl text-green-400 mr-4"></i>
+                    <h2 class="text-4xl font-bold gradient-text">SUSTAINABLE GROWTH</h2>
                 </div>
-                <div class="text-sm text-gray-400">NEXT HORIZON STUDIOS | 12/15</div>
+                <div class="text-sm text-gray-400">HEB STUDIOS | 12/15</div>
             </div>
             
             <div class="grid grid-cols-12 gap-8">
-                <!-- Left Column - Executive Team (5 columns wide) -->
+                <!-- Left Column - Growth Strategy (5 columns wide) -->
                 <div class="col-span-5">
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow mb-6">
-                        <h3 class="text-2xl font-semibold text-green-400 mb-5">EXECUTIVE LEADERSHIP</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+                        <h3 class="text-2xl font-semibold text-green-400 mb-5">GROWTH STRATEGY</h3>
                         
-                        <div class="space-y-5">
-                            <div class="team-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                        <div class="space-y-4">
+                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
                                 <div class="flex items-start">
-                                    <div class="avatar mr-4 flex-shrink-0">
-                                        <i class="fas fa-user-tie text-white"></i>
+                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <i class="fas fa-users text-green-400"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-lg">John Metaverse</h4>
-                                        <div class="text-green-400 text-sm mb-1">CEO & Founder</div>
-                                        <p class="text-xs text-gray-300 mb-2">Serial entrepreneur with previous exits in gaming and technology sectors. Led teams at major game studios before founding Next Horizon.</p>
-                                        <div>
-                                            <span class="skill-badge">Strategy</span>
-                                            <span class="skill-badge">Vision</span>
-                                            <span class="skill-badge">Leadership</span>
-                                        </div>
+                                        <h4 class="font-semibold text-lg">Community Growth</h4>
+                                        <p class="text-sm text-gray-300">Build and nurture an engaged player community through events, tournaments, and creator programs.</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="team-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
                                 <div class="flex items-start">
-                                    <div class="avatar mr-4 flex-shrink-0">
-                                        <i class="fas fa-code text-white"></i>
+                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <i class="fas fa-handshake text-green-400"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-lg">Sarah Tech</h4>
-                                        <div class="text-green-400 text-sm mb-1">CTO</div>
-                                        <p class="text-xs text-gray-300 mb-2">Former lead architect at major tech company. Expert in AR/VR technologies and holographic display systems.</p>
-                                        <div>
-                                            <span class="skill-badge">Engineering</span>
-                                            <span class="skill-badge">Innovation</span>
-                                            <span class="skill-badge">AR/VR</span>
-                                        </div>
+                                        <h4 class="font-semibold text-lg">Strategic Partnerships</h4>
+                                        <p class="text-sm text-gray-300">Form alliances with complementary tech companies, game publishers, and entertainment brands.</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="team-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
                                 <div class="flex items-start">
-                                    <div class="avatar mr-4 flex-shrink-0">
-                                        <i class="fas fa-chart-line text-white"></i>
+                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <i class="fas fa-chart-line text-green-400"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-lg">Michael Finances</h4>
-                                        <div class="text-green-400 text-sm mb-1">CFO</div>
-                                        <p class="text-xs text-gray-300 mb-2">20+ years in finance with expertise in venture capital and gaming industry. Previously CFO at two successful gaming startups.</p>
-                                        <div>
-                                            <span class="skill-badge">Finance</span>
-                                            <span class="skill-badge">Investment</span>
-                                            <span class="skill-badge">Scaling</span>
-                                        </div>
+                                        <h4 class="font-semibold text-lg">Vertical Integration</h4>
+                                        <p class="text-sm text-gray-300">Expand capabilities across the production chain from content creation to distribution and marketing.</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="team-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
                                 <div class="flex items-start">
-                                    <div class="avatar mr-4 flex-shrink-0" style="background: linear-gradient(135deg, #4f46e5, #4338ca);">
-                                        <i class="fas fa-paint-brush text-white"></i>
+                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <i class="fas fa-globe text-green-400"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-lg">Pierre Artiste</h4>
-                                        <div class="text-indigo-400 text-sm mb-1">Creative Director (MHSProd)</div>
-                                        <p class="text-xs text-gray-300 mb-2">Founder of MHSProd. Renowned 3D artist with work featured in major films and gaming titles. Cinema 4D & Octane expert.</p>
-                                        <div>
-                                            <span class="skill-badge bg-indigo-900 border-indigo-700 text-indigo-300">3D Design</span>
-                                            <span class="skill-badge bg-indigo-900 border-indigo-700 text-indigo-300">Art Direction</span>
-                                            <span class="skill-badge bg-indigo-900 border-indigo-700 text-indigo-300">VFX</span>
-                                        </div>
+                                        <h4 class="font-semibold text-lg">Global Expansion</h4>
+                                        <p class="text-sm text-gray-300">Penetrate key markets in Asia, Europe, and Latin America through localized content and regional partnerships.</p>
                                     </div>
                                 </div>
                             </div>
@@ -231,225 +169,197 @@
                     </div>
                 </div>
                 
-                <!-- Middle Column - Team Structure (3 columns wide) -->
+                <!-- Middle Column - Revenue Diversification (3 columns wide) -->
                 <div class="col-span-3">
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 h-full card-glow">
-                        <h3 class="text-xl font-semibold text-green-400 mb-5">TEAM STRUCTURE</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow mb-6">
+                        <h3 class="text-xl font-semibold text-green-400 mb-4">REVENUE MIX (2025)</h3>
                         
-                        <div class="relative h-full pt-4 pl-4">
-                            <!-- CEO Level -->
-                            <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg text-center mb-8 w-48 relative left-1/2 transform -translate-x-1/2">
-                                <div class="text-lg font-bold">CEO</div>
-                                <div class="text-xs text-gray-400">John Metaverse</div>
-                            </div>
-                            
-                            <!-- Connectors -->
-                            <div class="connector absolute" style="height: 40px; left: 50%; top: 75px;"></div>
-                            <div class="connector-dot absolute" style="left: 50%; top: 75px;"></div>
-                            
-                            <!-- C-Suite Level -->
-                            <div class="flex justify-between mb-10 relative">
-                                <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg text-center w-24">
-                                    <div class="text-sm font-bold">CTO</div>
-                                    <div class="text-xs text-gray-400">Sarah</div>
-                                </div>
-                                <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg text-center w-24">
-                                    <div class="text-sm font-bold">CFO</div>
-                                    <div class="text-xs text-gray-400">Michael</div>
-                                </div>
-                                <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg text-center w-24">
-                                    <div class="text-sm font-bold">COO</div>
-                                    <div class="text-xs text-gray-400">Alex</div>
-                                </div>
-                            </div>
-                            
-                            <!-- More connectors -->
-                            <div class="connector absolute" style="height: 40px; left: 25%; top: 190px;"></div>
-                            <div class="connector-dot absolute" style="left: 25%; top: 190px;"></div>
-                            <div class="connector absolute" style="height: 40px; left: 75%; top: 190px;"></div>
-                            <div class="connector-dot absolute" style="left: 75%; top: 190px;"></div>
-                            
-                            <!-- Division Level -->
-                            <div class="flex justify-between mb-8">
-                                <div>
-                                    <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg text-center w-32 mb-3">
-                                        <div class="text-sm font-bold">Engineering</div>
-                                        <div class="text-xs text-gray-400">25 staff</div>
+                        <div class="space-y-4">
+                            <div class="relative pt-1">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block text-green-400">
+                                            Game Sales
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block text-green-400">
+                                            40%
+                                        </span>
                                     </div>
                                 </div>
-                                <div>
-                                    <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg text-center w-32 mb-3">
-                                        <div class="text-sm font-bold">Creative</div>
-                                        <div class="text-xs text-gray-400">18 staff</div>
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-800">
+                                    <div style="width:40%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="relative pt-1">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block text-green-400">
+                                            Subscriptions
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block text-green-400">
+                                            25%
+                                        </span>
                                     </div>
                                 </div>
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-800">
+                                    <div style="width:25%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
+                                </div>
                             </div>
                             
-                            <!-- Studio Level -->
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg text-center">
-                                    <div class="text-xs font-bold">The Legend Team</div>
-                                    <div class="text-xs text-gray-400">12 members</div>
+                            <div class="relative pt-1">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block text-green-400">
+                                            In-App Purchases
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block text-green-400">
+                                            20%
+                                        </span>
+                                    </div>
                                 </div>
-                                <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg text-center">
-                                    <div class="text-xs font-bold">Bananium Team</div>
-                                    <div class="text-xs text-gray-400">8 members</div>
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-800">
+                                    <div style="width:20%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
                                 </div>
-                                <div class="bg-indigo-900 bg-opacity-60 p-2 rounded-lg text-center">
-                                    <div class="text-xs font-bold">MHSProd</div>
-                                    <div class="text-xs text-gray-400">18 artists</div>
-                                </div>
-                                <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg text-center">
-                                    <div class="text-xs font-bold">Hologram R&D</div>
-                                    <div class="text-xs text-gray-400">5 engineers</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right Column - Expertise & Advisors (4 columns wide) -->
-                <div class="col-span-4">
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 mb-6 card-glow">
-                        <h3 class="text-xl font-semibold text-green-400 mb-4">TEAM EXPERTISE</h3>
-                        
-                        <div class="grid grid-cols-2 gap-4 mb-4">
-                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
-                                <div class="flex items-center mb-2">
-                                    <i class="fas fa-gamepad text-green-400 mr-2"></i>
-                                    <h4 class="font-semibold">Gaming & Metaverse</h4>
-                                </div>
-                                <ul class="text-xs text-gray-300 space-y-1 pl-4">
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check text-green-400 mr-2"></i>
-                                        <span>15+ team members from AAA game studios</span>
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check text-green-400 mr-2"></i>
-                                        <span>Unity and Unreal Engine experts</span>
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check text-green-400 mr-2"></i>
-                                        <span>Web3 & blockchain integration specialists</span>
-                                    </li>
-                                </ul>
                             </div>
                             
-                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
-                                <div class="flex items-center mb-2">
-                                    <i class="fas fa-cubes text-green-400 mr-2"></i>
-                                    <h4 class="font-semibold">3D Production</h4>
+                            <div class="relative pt-1">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block text-green-400">
+                                            Licensing & IP
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block text-green-400">
+                                            10%
+                                        </span>
+                                    </div>
                                 </div>
-                                <ul class="text-xs text-gray-300 space-y-1 pl-4">
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check text-green-400 mr-2"></i>
-                                        <span>18 professional 3D artists from MHSProd</span>
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check text-green-400 mr-2"></i>
-                                        <span>Cinema 4D, Blender, Maya experts</span>
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check text-green-400 mr-2"></i>
-                                        <span>VFX, animation, and rigging specialists</span>
-                                    </li>
-                                </ul>
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-800">
+                                    <div style="width:10%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
+                                </div>
                             </div>
                             
-                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
-                                <div class="flex items-center mb-2">
-                                    <i class="fas fa-brain text-green-400 mr-2"></i>
-                                    <h4 class="font-semibold">AI & Machine Learning</h4>
+                            <div class="relative pt-1">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block text-green-400">
+                                            Hardware & Other
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block text-green-400">
+                                            5%
+                                        </span>
+                                    </div>
                                 </div>
-                                <ul class="text-xs text-gray-300 space-y-1 pl-4">
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check text-green-400 mr-2"></i>
-                                        <span>Former Google & NVIDIA ML engineers</span>
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check text-green-400 mr-2"></i>
-                                        <span>AI character development for Bananium</span>
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check text-green-400 mr-2"></i>
-                                        <span>Procedural content generation systems</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
-                                <div class="flex items-center mb-2">
-                                    <i class="fas fa-vr-cardboard text-green-400 mr-2"></i>
-                                    <h4 class="font-semibold">Holographic Technology</h4>
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-800">
+                                    <div style="width:5%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
                                 </div>
-                                <ul class="text-xs text-gray-300 space-y-1 pl-4">
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check text-green-400 mr-2"></i>
-                                        <span>AR/VR pioneers from leading research labs</span>
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check text-green-400 mr-2"></i>
-                                        <span>Volumetric display technology experts</span>
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check text-green-400 mr-2"></i>
-                                        <span>Optical engineering specialists</span>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                     
                     <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
-                        <h3 class="text-xl font-semibold text-green-400 mb-4">ADVISORS & PARTNERS</h3>
+                        <h3 class="text-xl font-semibold text-green-400 mb-4">SUSTAINABILITY FOCUS</h3>
+                        
+                        <ul class="text-sm space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Carbon-neutral server operations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Green development practices</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Ethical content & community policies</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Diversity & inclusion initiatives</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Projections (4 columns wide) -->
+                <div class="col-span-4">
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow mb-6">
+                        <h3 class="text-xl font-semibold text-green-400 mb-4">5-YEAR PROJECTIONS</h3>
+                        
+                        <table class="min-w-full text-sm">
+                            <thead>
+                                <tr>
+                                    <th class="py-2 text-left text-green-400">Metric</th>
+                                    <th class="py-2 text-center text-green-400">Year 1</th>
+                                    <th class="py-2 text-center text-green-400">Year 3</th>
+                                    <th class="py-2 text-center text-green-400">Year 5</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-300">
+                                <tr class="border-t border-gray-800">
+                                    <td class="py-2">Revenue ($M)</td>
+                                    <td class="py-2 text-center">12</td>
+                                    <td class="py-2 text-center">38</td>
+                                    <td class="py-2 text-center">75</td>
+                                </tr>
+                                <tr class="border-t border-gray-800">
+                                    <td class="py-2">User Base (M)</td>
+                                    <td class="py-2 text-center">0.8</td>
+                                    <td class="py-2 text-center">2.5</td>
+                                    <td class="py-2 text-center">6.0</td>
+                                </tr>
+                                <tr class="border-t border-gray-800">
+                                    <td class="py-2">EBITDA Margin</td>
+                                    <td class="py-2 text-center">18%</td>
+                                    <td class="py-2 text-center">24%</td>
+                                    <td class="py-2 text-center">32%</td>
+                                </tr>
+                                <tr class="border-t border-gray-800">
+                                    <td class="py-2">Team Size</td>
+                                    <td class="py-2 text-center">65</td>
+                                    <td class="py-2 text-center">120</td>
+                                    <td class="py-2 text-center">200</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+                        <h3 class="text-xl font-semibold text-green-400 mb-4">KEY GROWTH METRICS</h3>
                         
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="team-card bg-gray-800 bg-opacity-60 p-3 rounded-lg">
-                                <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3">
-                                        <i class="fas fa-user-graduate text-green-400"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold">Dr. Emma Hologram</h4>
-                                        <div class="text-xs text-gray-400">MIT Media Lab, Holographic Display Pioneer</div>
-                                    </div>
-                                </div>
+                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                                <div class="text-sm text-green-400 mb-1">Retention Rate</div>
+                                <div class="text-2xl font-bold">68%</div>
+                                <div class="text-xs text-gray-400">Targeting 75% by Year 3</div>
                             </div>
                             
-                            <div class="team-card bg-gray-800 bg-opacity-60 p-3 rounded-lg">
-                                <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3">
-                                        <i class="fas fa-user-tie text-green-400"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold">David GameVC</h4>
-                                        <div class="text-xs text-gray-400">Former Gaming Exec, Angel Investor</div>
-                                    </div>
-                                </div>
+                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                                <div class="text-sm text-green-400 mb-1">CAC Payback</div>
+                                <div class="text-2xl font-bold">9 months</div>
+                                <div class="text-xs text-gray-400">Improving to 7 months</div>
                             </div>
                             
-                            <div class="team-card bg-gray-800 bg-opacity-60 p-3 rounded-lg">
-                                <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3">
-                                        <i class="fas fa-building text-green-400"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold">NextGen Ventures</h4>
-                                        <div class="text-xs text-gray-400">Strategic Partner, Gaming Focus VC</div>
-                                    </div>
-                                </div>
+                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                                <div class="text-sm text-green-400 mb-1">User LTV</div>
+                                <div class="text-2xl font-bold">$85</div>
+                                <div class="text-xs text-gray-400">Growing by 15% annually</div>
                             </div>
                             
-                            <div class="team-card bg-gray-800 bg-opacity-60 p-3 rounded-lg">
-                                <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3">
-                                        <i class="fas fa-globe text-green-400"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold">Metaverse Alliance</h4>
-                                        <div class="text-xs text-gray-400">Industry Consortium, Standards Development</div>
-                                    </div>
-                                </div>
+                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                                <div class="text-sm text-green-400 mb-1">ARR Growth</div>
+                                <div class="text-2xl font-bold">42%</div>
+                                <div class="text-xs text-gray-400">Year-over-Year</div>
                             </div>
                         </div>
                     </div>
