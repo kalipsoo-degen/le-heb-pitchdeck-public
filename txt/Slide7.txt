@@ -293,7 +293,6 @@
                                         <h4 class="font-semibold">NFT & Digital Asset Sales</h4>
                                         <p class="text-xs text-gray-400">Primary sales of NFTs, in-game assets, and virtual land</p>
                                     </div>
-                                    <div class="text-lg font-bold text-teal-300">35%</div>
                                 </div>
                             </div>
                             
@@ -306,7 +305,6 @@
                                         <h4 class="font-semibold">Royalties & Secondary Sales</h4>
                                         <p class="text-xs text-gray-400">Ongoing royalties from marketplace trades & secondary transactions</p>
                                     </div>
-                                    <div class="text-lg font-bold text-blue-300">25%</div>
                                 </div>
                             </div>
                             
@@ -319,7 +317,6 @@
                                         <h4 class="font-semibold">Events & Entertainment</h4>
                                         <p class="text-xs text-gray-400">Ticket sales, broadcasts, and betting platform fees</p>
                                     </div>
-                                    <div class="text-lg font-bold text-cyan-300">20%</div>
                                 </div>
                             </div>
                             
@@ -332,7 +329,6 @@
                                         <h4 class="font-semibold">Strategic Partnerships</h4>
                                         <p class="text-xs text-gray-400">Brand integrations, sponsorships, and IP licensing</p>
                                     </div>
-                                    <div class="text-lg font-bold text-green-300">15%</div>
                                 </div>
                             </div>
                             
@@ -345,7 +341,6 @@
                                         <h4 class="font-semibold">Technology Services</h4>
                                         <p class="text-xs text-gray-400">White-label solutions and development services</p>
                                     </div>
-                                    <div class="text-lg font-bold text-purple-300">5%</div>
                                 </div>
                             </div>
                         </div>

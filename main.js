@@ -6,9 +6,81 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalSlidesEl = document.getElementById('totalSlides');
     const slideIndicator = document.getElementById('slideIndicator');
     const fullscreenBtn = document.getElementById('fullscreenBtn');
+    const navControls = document.querySelector('.nav-controls');
     
     const totalSlides = 15;
     let currentSlideIndex = 0;
+    let navTimeout;
+    let isNavVisible = true;
+    let lastMouseX = 0;
+    let lastMouseY = 0;
+    
+    // Auto-hide navigation functionality
+    function startNavHideTimer() {
+        clearTimeout(navTimeout);
+        
+        // Make navigation visible
+        if (!isNavVisible) {
+            navControls.style.opacity = '1';
+            navControls.style.pointerEvents = 'auto';
+            fullscreenBtn.style.opacity = '1';
+            fullscreenBtn.style.pointerEvents = 'auto';
+            isNavVisible = true;
+        }
+        
+        navTimeout = setTimeout(() => {
+            navControls.style.opacity = '0';
+            navControls.style.pointerEvents = 'none';
+            fullscreenBtn.style.opacity = '0';
+            fullscreenBtn.style.pointerEvents = 'none';
+            isNavVisible = false;
+        }, 3000);
+    }
+    
+    // Initialize nav hide timer
+    startNavHideTimer();
+    
+    // Track mouse position
+    function updateMousePosition(e) {
+        lastMouseX = e.clientX;
+        lastMouseY = e.clientY;
+        startNavHideTimer();
+    }
+    
+    // Show nav on mouse events
+    const showNavOnMouseActivity = (e) => {
+        if (e) updateMousePosition(e);
+        startNavHideTimer();
+    };
+    
+    // Add multiple event listeners to increase reliability
+    window.addEventListener('mousemove', showNavOnMouseActivity);
+    window.addEventListener('mouseenter', showNavOnMouseActivity);
+    document.body.addEventListener('mouseover', showNavOnMouseActivity);
+    
+    // Check for mouse position changes periodically
+    let checkInterval = setInterval(() => {
+        function handleMouseMove(e) {
+            if (e.clientX !== lastMouseX || e.clientY !== lastMouseY) {
+                updateMousePosition(e);
+                window.removeEventListener('mousemove', handleMouseMove);
+            }
+        }
+        window.addEventListener('mousemove', handleMouseMove);
+        
+        // Force navigation to show on hover over navigation area
+        navControls.addEventListener('mouseenter', () => {
+            if (!isNavVisible) {
+                startNavHideTimer();
+            }
+        });
+        
+        fullscreenBtn.addEventListener('mouseenter', () => {
+            if (!isNavVisible) {
+                startNavHideTimer();
+            }
+        });
+    }, 500);
     
     // Update total slides count
     totalSlidesEl.textContent = totalSlides;
@@ -19,6 +91,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get all slide elements after creating them
     const slides = document.querySelectorAll('.slide-frame');
     
+    // Add event listeners to each iframe when it loads
+    slides.forEach(iframe => {
+        iframe.addEventListener('load', () => {
+            try {
+                // Try to add event listener to iframe content
+                const iframeContent = iframe.contentDocument || iframe.contentWindow.document;
+                iframeContent.addEventListener('mousemove', showNavOnMouseActivity);
+                iframeContent.addEventListener('mouseenter', showNavOnMouseActivity);
+            } catch (e) {
+                console.log('Could not add listeners to iframe:', e);
+            }
+        });
+    });
+    
     // Create indicator dots
     for (let i = 0; i < totalSlides; i++) {
         const dot = document.createElement('div');
@@ -26,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (i === 0) dot.classList.add('active');
         dot.addEventListener('click', () => {
             goToSlide(i);
+            startNavHideTimer();
         });
         slideIndicator.appendChild(dot);
     }
@@ -63,6 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nextIndex = 0; // Loop back to the first slide
         }
         goToSlide(nextIndex);
+        startNavHideTimer();
     }
     
     // Previous slide
@@ -72,6 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
             prevIndex = totalSlides - 1; // Loop to the last slide
         }
         goToSlide(prevIndex);
+        startNavHideTimer();
     }
     
     // Function to create all slides using iframes
@@ -105,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (e.key === 'ArrowLeft') {
             prevSlide();
         }
+        startNavHideTimer();
     });
     
     // Fullscreen toggle
@@ -120,6 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
             }
         }
+        startNavHideTimer();
     });
     
     // Handle fullscreen change
@@ -129,5 +220,11 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
         }
+        startNavHideTimer();
+    });
+    
+    // Clean up interval when page unloads
+    window.addEventListener('beforeunload', () => {
+        clearInterval(checkInterval);
     });
 }); 
