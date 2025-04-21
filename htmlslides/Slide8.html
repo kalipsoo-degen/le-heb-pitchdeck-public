@@ -18,7 +18,7 @@
         }
         .slide {
             width: 1280px;
-            min-height: 720px;
+            height: 720px;
             margin: 0 auto;
             padding: 0;
             position: relative;
@@ -84,7 +84,7 @@
         }
         .chart-container {
             position: relative;
-            height: 260px;
+            height: 150px;
             width: 100%;
         }
         .kpi-card {
@@ -96,7 +96,7 @@
             border-left-color: #ff2a6d;
         }
         .highlight-number {
-            font-size: 1.8rem;
+            font-size: 1.5rem !important;
             font-weight: bold;
             background: linear-gradient(90deg, #ff2a6d, #d1225b);
             -webkit-background-clip: text;
@@ -127,10 +127,37 @@
             background: #ff2a6d;
             box-shadow: 0 0 10px #ff2a6d;
         }
+    
+        
+        /* Additional styles for compact layout */
+        .grid { margin-bottom: 0 !important; }
+        .text-4xl { font-size: 1.5rem !important; line-height: 1.75rem !important; }
+        .text-3xl { font-size: 1.25rem !important; line-height: 1.5rem !important; }
+        .text-2xl { font-size: 1.125rem !important; line-height: 1.35rem !important; }
+        .text-xl { font-size: 1rem !important; line-height: 1.25rem !important; }
+        .text-lg { font-size: 0.9rem !important; line-height: 1.1rem !important; }
+        p { margin-bottom: 0.375rem !important; line-height: 1.2 !important; }
+        .p-3 { padding: 0.5rem !important; }
+        .p-2 { padding: 0.375rem !important; }
+        .py-4 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+        .py-3 { padding-top: 0.375rem !important; padding-bottom: 0.375rem !important; }
+        .px-4 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+        .px-3 { padding-left: 0.375rem !important; padding-right: 0.375rem !important; }
+        .rounded-xl { border-radius: 0.375rem !important; }
+        .rounded-lg { border-radius: 0.25rem !important; }
+        .h-16, .w-16 { height: 2.5rem !important; width: 2.5rem !important; }
+        .h-14, .w-14 { height: 2.25rem !important; width: 2.25rem !important; }
+        .h-12, .w-12 { height: 2rem !important; width: 2rem !important; }
+        .h-10, .w-10 { height: 1.75rem !important; width: 1.75rem !important; }
+        .h-8, .w-8 { height: 1.5rem !important; width: 1.5rem !important; }
+        .h-5, .w-5 { height: 1.125rem !important; width: 1.125rem !important; }
+        .space-y-4 > * + * { margin-top: 0.5rem !important; }
+        .space-y-3 > * + * { margin-top: 0.375rem !important; }
+        .space-y-2 > * + * { margin-top: 0.25rem !important; }
     </style>
 </head>
 <body>
-    <div class="slide flex flex-col items-start justify-start relative">
+    <div class="slide flex flex-col items-start justify-start relative financial-custom">
         <!-- Background Pattern -->
         <div class="bg-pattern"></div>
         
@@ -140,41 +167,41 @@
         <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
         
         <!-- Content -->
-        <div class="content-wrapper w-full px-16 py-12">
-            <div class="flex justify-between items-center mb-8">
+        <div class="content-wrapper w-full px-8 pt-5 pb-4">
+            <div class="flex justify-between items-center mb-3">
                 <div class="flex items-center">
-                    <i class="fas fa-chart-pie text-3xl text-pink-500 mr-4"></i>
-                    <h2 class="text-4xl font-bold gradient-text">FINANCIAL PROJECTIONS</h2>
+                    <i class="fas fa-chart-pie text-lg text-pink-500 mr-3"></i>
+                    <h2 class="text-lg font-bold gradient-text">FINANCIAL PROJECTIONS</h2>
                 </div>
-                <div class="text-sm text-gray-400">HEB STUDIOS | 8/15</div>
+                <div class="text-xs text-gray-400">HEB STUDIOS | 8/15</div>
             </div>
             
-            <div class="grid grid-cols-2 gap-10">
+            <div class="grid grid-cols-2 gap-2">
                 <!-- Left Column -->
                 <div>
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 mb-6 card-glow">
-                        <h3 class="text-2xl font-semibold text-pink-400 mb-3">REVENUE FORECAST</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-lg p-3 mb-3 card-glow">
+                        <h3 class="text-lg font-semibold text-pink-400 mb-2">REVENUE FORECAST</h3>
                         
                         <div class="chart-container mb-1">
                             <canvas id="revenueChart"></canvas>
                         </div>
                         
-                        <div class="flex justify-center text-xs text-gray-400 italic">
+                        <div class="flex justify-center text-xs text-gray-400 italic financial-small-text">
                             * Projections assume successful funding and market conditions aligned with industry growth rates
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
-                        <h3 class="text-xl font-semibold text-pink-400 mb-4">REVENUE BREAKDOWN BY PROJECT</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-lg p-3 card-glow">
+                        <h3 class="text-base font-semibold text-pink-400 mb-2">REVENUE BREAKDOWN BY PROJECT</h3>
                         
-                        <div class="grid grid-cols-2 gap-6">
+                        <div class="grid grid-cols-2 gap-3">
                             <div class="chart-container">
                                 <canvas id="breakdownChart2025"></canvas>
-                                <div class="text-center text-sm font-semibold mt-2">Year 1 (2025)</div>
+                                <div class="text-center text-xs font-semibold mt-1">Year 1 (2025)</div>
                             </div>
                             <div class="chart-container">
                                 <canvas id="breakdownChart2027"></canvas>
-                                <div class="text-center text-sm font-semibold mt-2">Year 3 (2027)</div>
+                                <div class="text-center text-xs font-semibold mt-1">Year 3 (2027)</div>
                             </div>
                         </div>
                     </div>
@@ -182,105 +209,108 @@
                 
                 <!-- Right Column -->
                 <div>
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 mb-6 card-glow">
-                        <h3 class="text-xl font-semibold text-pink-400 mb-4">KEY FINANCIAL METRICS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-lg p-3 mb-3 card-glow">
+                        <h3 class="text-base font-semibold text-pink-400 mb-2">KEY FINANCIAL METRICS</h3>
                         
-                        <div class="grid grid-cols-2 gap-4 mb-4">
-                            <div class="kpi-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
-                                <div class="text-sm text-gray-400 mb-1">Projected EBITDA Margin</div>
+                        <div class="grid grid-cols-2 gap-3 mb-3">
+                            <div class="kpi-card bg-gray-800 bg-opacity-60 rounded-lg">
+                                <div class="text-xs text-gray-400 mb-0">Projected EBITDA Margin</div>
                                 <div class="highlight-number">28-35%</div>
-                                <div class="text-xs text-gray-500 mt-1">Increasing with scale</div>
+                                <div class="text-xs text-gray-500">Increasing with scale</div>
                             </div>
-                            <div class="kpi-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
-                                <div class="text-sm text-gray-400 mb-1">Cash Runway</div>
+                            <div class="kpi-card bg-gray-800 bg-opacity-60 rounded-lg">
+                                <div class="text-xs text-gray-400 mb-0">Cash Runway</div>
                                 <div class="highlight-number">24+ months</div>
-                                <div class="text-xs text-gray-500 mt-1">Post-investment</div>
+                                <div class="text-xs text-gray-500">Post-investment</div>
                             </div>
-                            <div class="kpi-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
-                                <div class="text-sm text-gray-400 mb-1">Operating Expenses</div>
+                            <div class="kpi-card bg-gray-800 bg-opacity-60 rounded-lg">
+                                <div class="text-xs text-gray-400 mb-0">Operating Expenses</div>
                                 <div class="highlight-number">$5.8M</div>
-                                <div class="text-xs text-gray-500 mt-1">Year 1 estimate</div>
+                                <div class="text-xs text-gray-500">Year 1 estimate</div>
                             </div>
-                            <div class="kpi-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
-                                <div class="text-sm text-gray-400 mb-1">Time to Profitability</div>
+                            <div class="kpi-card bg-gray-800 bg-opacity-60 rounded-lg">
+                                <div class="text-xs text-gray-400 mb-0">Time to Profitability</div>
                                 <div class="highlight-number">18 months</div>
-                                <div class="text-xs text-gray-500 mt-1">From investment date</div>
+                                <div class="text-xs text-gray-500">From investment date</div>
                             </div>
                         </div>
                         
-                        <div class="bg-gray-800 bg-opacity-50 rounded-lg p-4">
-                            <div class="text-lg font-semibold mb-2">Cost Structure (Year 1)</div>
-                            <div class="grid grid-cols-2 gap-3">
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-sm text-gray-300">Development</span>
-                                        <span class="text-sm text-gray-300">45%</span>
-                                    </div>
-                                    <div class="h-2 bg-gray-700 rounded-full">
-                                        <div class="h-2 bg-gradient-to-r from-pink-600 to-pink-400 rounded-full" style="width: 45%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-sm text-gray-300">Marketing</span>
-                                        <span class="text-sm text-gray-300">25%</span>
-                                    </div>
-                                    <div class="h-2 bg-gray-700 rounded-full">
-                                        <div class="h-2 bg-gradient-to-r from-purple-600 to-purple-400 rounded-full" style="width: 25%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-sm text-gray-300">Operations</span>
-                                        <span class="text-sm text-gray-300">20%</span>
-                                    </div>
-                                    <div class="h-2 bg-gray-700 rounded-full">
-                                        <div class="h-2 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full" style="width: 20%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-sm text-gray-300">Admin & Legal</span>
-                                        <span class="text-sm text-gray-300">10%</span>
-                                    </div>
-                                    <div class="h-2 bg-gray-700 rounded-full">
-                                        <div class="h-2 bg-gradient-to-r from-cyan-600 to-cyan-400 rounded-full" style="width: 10%"></div>
-                                    </div>
-                                </div>
+                        <h3 class="text-base font-semibold text-pink-400 mb-2">Cost Structure (Year 1)</h3>
+                        
+                        <div class="space-y-1 mb-1 financial-small-text">
+                            <div class="flex items-center justify-between">
+                                <span>Development</span>
+                                <span class="text-pink-400 font-semibold">45%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 h-1.5 rounded-full mb-1">
+                                <div class="bg-pink-500 h-1.5 rounded-full" style="width: 45%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between">
+                                <span>Marketing</span>
+                                <span class="text-pink-400 font-semibold">25%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 h-1.5 rounded-full mb-1">
+                                <div class="bg-pink-400 h-1.5 rounded-full" style="width: 25%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between">
+                                <span>Operations</span>
+                                <span class="text-pink-400 font-semibold">20%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 h-1.5 rounded-full mb-1">
+                                <div class="bg-pink-300 h-1.5 rounded-full" style="width: 20%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between">
+                                <span>Admin & Legal</span>
+                                <span class="text-pink-400 font-semibold">10%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 h-1.5 rounded-full mb-1">
+                                <div class="bg-pink-200 h-1.5 rounded-full" style="width: 10%"></div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
-                        <h3 class="text-xl font-semibold text-pink-400 mb-4">FINANCIAL MILESTONES</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-lg p-3 card-glow">
+                        <h3 class="text-base font-semibold text-pink-400 mb-2">FINANCIAL MILESTONES</h3>
                         
-                        <div class="space-y-4">
-                            <div class="financial-milestone pl-6">
-                                <div class="milestone-dot"></div>
-                                <h4 class="text-white font-semibold">Q4 2025</h4>
-                                <p class="text-sm text-gray-300">$12M Annual Revenue Run Rate</p>
-                                <p class="text-xs text-gray-400">First full year with restructured studio</p>
+                        <div class="space-y-1 financial-small-text">
+                            <div class="flex items-start mb-1">
+                                <div class="w-7 h-7 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-900 text-pink-400 mr-2">
+                                    <i class="fas fa-flag-checkered text-xs"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Q3 2025: $2M Revenue Milestone</div>
+                                    <p class="text-gray-400">First major revenue threshold from NFT sales and initial game launches</p>
+                                </div>
                             </div>
-                            
-                            <div class="financial-milestone pl-6">
-                                <div class="milestone-dot"></div>
-                                <h4 class="text-white font-semibold">Q2 2026</h4>
-                                <p class="text-sm text-gray-300">Break-even Point Reached</p>
-                                <p class="text-xs text-gray-400">Positive monthly cash flow</p>
+                            <div class="flex items-start mb-1">
+                                <div class="w-7 h-7 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-900 text-pink-400 mr-2">
+                                    <i class="fas fa-chart-line text-xs"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Q1 2026: Break-Even Point</div>
+                                    <p class="text-gray-400">Monthly revenue exceeds operating expenses</p>
+                                </div>
                             </div>
-                            
-                            <div class="financial-milestone pl-6">
-                                <div class="milestone-dot"></div>
-                                <h4 class="text-white font-semibold">Q4 2027</h4>
-                                <p class="text-sm text-gray-300">$50M Annual Revenue</p>
-                                <p class="text-xs text-gray-400">Expanded portfolio of 5+ active projects</p>
+                            <div class="flex items-start mb-1">
+                                <div class="w-7 h-7 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-900 text-pink-400 mr-2">
+                                    <i class="fas fa-hand-holding-usd text-xs"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Q4 2026: $12M Annual Run Rate</div>
+                                    <p class="text-gray-400">Sustained revenue across all product offerings</p>
+                                </div>
                             </div>
-                            
-                            <div class="financial-milestone pl-6">
-                                <div class="milestone-dot"></div>
-                                <h4 class="text-white font-semibold">2030</h4>
-                                <p class="text-sm text-gray-300">$250M+ Annual Revenue</p>
-                                <p class="text-xs text-gray-400">Portfolio valuation exceeding $1B</p>
+                            <div class="flex items-start">
+                                <div class="w-7 h-7 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-900 text-pink-400 mr-2">
+                                    <i class="fas fa-gem text-xs"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">2028: Series B Funding Round</div>
+                                    <p class="text-gray-400">Strategic expansion funding at $150M+ valuation</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -289,180 +319,164 @@
         </div>
         
         <!-- Footer -->
-        <div class="absolute bottom-6 right-8 text-gray-500 text-sm">
+        <div class="absolute bottom-0.5 right-4 text-gray-500 text-xs opacity-80">
             Confidential
         </div>
     </div>
     
     <script>
-        // Revenue Forecast Chart
-        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
-        const revenueChart = new Chart(revenueCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Historical (2021)', 'Year 1 (2025)', 'Year 2 (2026)', 'Year 3 (2027)', 'Year 4 (2028)', 'Year 5 (2029)'],
-                datasets: [{
-                    label: 'Annual Revenue ($M)',
-                    data: [20, 12, 25, 50, 95, 180],
-                    backgroundColor: [
-                        'rgba(95, 15, 78, 0.8)',
-                        'rgba(255, 42, 109, 0.8)',
-                        'rgba(255, 42, 109, 0.8)',
-                        'rgba(255, 42, 109, 0.8)',
-                        'rgba(255, 42, 109, 0.8)',
-                        'rgba(255, 42, 109, 0.8)'
-                    ],
-                    borderColor: [
-                        'rgba(95, 15, 78, 1)',
-                        'rgba(255, 42, 109, 1)',
-                        'rgba(255, 42, 109, 1)',
-                        'rgba(255, 42, 109, 1)',
-                        'rgba(255, 42, 109, 1)',
-                        'rgba(255, 42, 109, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
-                        },
-                        ticks: {
-                            color: '#f5f5f5',
-                            callback: function(value) {
-                                return '$' + value + 'M';
-                            }
-                        }
-                    },
-                    x: {
-                        grid: {
-                            display: false
-                        },
-                        ticks: {
-                            color: '#f5f5f5'
-                        }
-                    }
+        // Chart initialization scripts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Revenue Chart
+            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+            const revenueChart = new Chart(revenueCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Historical (2021)', 'Year 1 (2025)', 'Year 2 (2026)', 'Year 3 (2027)', 'Year 4 (2028)', 'Year 5 (2029)'],
+                    datasets: [{
+                        label: 'Revenue ($M)',
+                        data: [20, 12, 28, 46, 95, 180],
+                        backgroundColor: [
+                            '#6b21a8',
+                            '#db2777',
+                            '#db2777',
+                            '#db2777',
+                            '#db2777',
+                            '#db2777'
+                        ],
+                        borderWidth: 0,
+                        borderRadius: 4
+                    }]
                 },
-                plugins: {
-                    legend: {
-                        display: false
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 25, 35, 0.8)',
+                            titleColor: '#ff2a6d',
+                            bodyColor: '#f5f5f5',
+                            titleFont: { size: 14, weight: 'bold' },
+                            bodyFont: { size: 12 },
+                            padding: 12,
+                            displayColors: false
+                        }
                     },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return '$' + context.parsed.y + 'M';
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.05)'
+                            },
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 0.7)',
+                                font: { size: 10 },
+                                callback: function(value) {
+                                    return '$' + value + 'M';
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 0.7)',
+                                font: { size: 8 },
+                                maxRotation: 45,
+                                minRotation: 45
                             }
                         }
                     }
                 }
-            }
-        });
-        
-        // 2025 Revenue Breakdown Chart
-        const breakdown2025Ctx = document.getElementById('breakdownChart2025').getContext('2d');
-        const breakdown2025Chart = new Chart(breakdown2025Ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['The Legend', 'Bananium.ai', 'MHSProd Services', 'Other'],
-                datasets: [{
-                    data: [5.5, 4, 2, 0.5],
-                    backgroundColor: [
-                        'rgba(255, 42, 109, 0.8)',
-                        'rgba(255, 159, 26, 0.8)',
-                        'rgba(138, 43, 226, 0.8)',
-                        'rgba(50, 115, 220, 0.8)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 42, 109, 1)',
-                        'rgba(255, 159, 26, 1)',
-                        'rgba(138, 43, 226, 1)',
-                        'rgba(50, 115, 220, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'right',
-                        labels: {
-                            color: '#f5f5f5',
-                            boxWidth: 15,
-                            padding: 10,
-                            font: {
-                                size: 11
+            });
+            
+            // Breakdown Charts
+            const breakdown2025Ctx = document.getElementById('breakdownChart2025').getContext('2d');
+            new Chart(breakdown2025Ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['The Legend', 'Bananium.ai', 'MHSProd Services'],
+                    datasets: [{
+                        data: [65, 25, 10],
+                        backgroundColor: [
+                            '#ff2a6d',
+                            '#f28f3b',
+                            '#8967e0'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: 'rgba(255, 255, 255, 0.7)',
+                                font: { size: 9 },
+                                boxWidth: 10,
+                                padding: 5
                             }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 25, 35, 0.8)',
+                            titleColor: '#ff2a6d',
+                            bodyColor: '#f5f5f5',
+                            titleFont: { size: 12, weight: 'bold' },
+                            bodyFont: { size: 10 },
+                            padding: 8,
+                            displayColors: false
                         }
                     },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return context.label + ': $' + context.parsed + 'M (' + Math.round(context.parsed / 12 * 100) + '%)';
-                            }
-                        }
-                    }
+                    cutout: '65%'
+                }
+            });
+            
+            const breakdown2027Ctx = document.getElementById('breakdownChart2027').getContext('2d');
+            new Chart(breakdown2027Ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['The Legend', 'Bananium.ai', 'MHSProd Services', 'New Ventures'],
+                    datasets: [{
+                        data: [45, 30, 15, 10],
+                        backgroundColor: [
+                            '#ff2a6d',
+                            '#f28f3b',
+                            '#8967e0',
+                            '#43b929'
+                        ],
+                        borderWidth: 0
+                    }]
                 },
-                cutout: '65%'
-            }
-        });
-        
-        // 2027 Revenue Breakdown Chart
-        const breakdown2027Ctx = document.getElementById('breakdownChart2027').getContext('2d');
-        const breakdown2027Chart = new Chart(breakdown2027Ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['The Legend', 'Bananium.ai', 'MHSProd Services', 'Hologram Tech', 'New IPs'],
-                datasets: [{
-                    data: [18, 12, 5, 8, 7],
-                    backgroundColor: [
-                        'rgba(255, 42, 109, 0.8)',
-                        'rgba(255, 159, 26, 0.8)',
-                        'rgba(138, 43, 226, 0.8)',
-                        'rgba(50, 115, 220, 0.8)',
-                        'rgba(72, 199, 142, 0.8)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 42, 109, 1)',
-                        'rgba(255, 159, 26, 1)',
-                        'rgba(138, 43, 226, 1)',
-                        'rgba(50, 115, 220, 1)',
-                        'rgba(72, 199, 142, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'right',
-                        labels: {
-                            color: '#f5f5f5',
-                            boxWidth: 15,
-                            padding: 10,
-                            font: {
-                                size: 11
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: 'rgba(255, 255, 255, 0.7)',
+                                font: { size: 9 },
+                                boxWidth: 10,
+                                padding: 5
                             }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 25, 35, 0.8)',
+                            titleColor: '#ff2a6d',
+                            bodyColor: '#f5f5f5',
+                            titleFont: { size: 12, weight: 'bold' },
+                            bodyFont: { size: 10 },
+                            padding: 8,
+                            displayColors: false
                         }
                     },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return context.label + ': $' + context.parsed + 'M (' + Math.round(context.parsed / 50 * 100) + '%)';
-                            }
-                        }
-                    }
-                },
-                cutout: '65%'
-            }
+                    cutout: '65%'
+                }
+            });
         });
     </script>
 </body>

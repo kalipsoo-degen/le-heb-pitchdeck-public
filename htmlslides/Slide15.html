@@ -17,7 +17,7 @@
         }
         .slide {
             width: 1280px;
-            min-height: 720px;
+            height: 720px;
             margin: 0 auto;
             padding: 0;
             position: relative;
@@ -132,6 +132,33 @@
             border: 1px solid rgba(6, 182, 212, 0.3);
             animation: pulse 4s ease-in-out infinite;
         }
+    
+        
+        /* Additional styles for compact layout */
+        .grid { margin-bottom: 0 !important; }
+        .text-4xl { font-size: 1.5rem !important; line-height: 1.75rem !important; }
+        .text-3xl { font-size: 1.25rem !important; line-height: 1.5rem !important; }
+        .text-2xl { font-size: 1.125rem !important; line-height: 1.35rem !important; }
+        .text-xl { font-size: 1rem !important; line-height: 1.25rem !important; }
+        .text-lg { font-size: 0.9rem !important; line-height: 1.1rem !important; }
+        p { margin-bottom: 0.375rem !important; line-height: 1.2 !important; }
+        .p-3 { padding: 0.5rem !important; }
+        .p-2 { padding: 0.375rem !important; }
+        .py-4 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+        .py-3 { padding-top: 0.375rem !important; padding-bottom: 0.375rem !important; }
+        .px-4 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+        .px-3 { padding-left: 0.375rem !important; padding-right: 0.375rem !important; }
+        .rounded-xl { border-radius: 0.375rem !important; }
+        .rounded-lg { border-radius: 0.25rem !important; }
+        .h-16, .w-16 { height: 2.5rem !important; width: 2.5rem !important; }
+        .h-14, .w-14 { height: 2.25rem !important; width: 2.25rem !important; }
+        .h-12, .w-12 { height: 2rem !important; width: 2rem !important; }
+        .h-10, .w-10 { height: 1.75rem !important; width: 1.75rem !important; }
+        .h-8, .w-8 { height: 1.5rem !important; width: 1.5rem !important; }
+        .h-5, .w-5 { height: 1.125rem !important; width: 1.125rem !important; }
+        .space-y-4 > * + * { margin-top: 0.5rem !important; }
+        .space-y-3 > * + * { margin-top: 0.375rem !important; }
+        .space-y-2 > * + * { margin-top: 0.25rem !important; }
     </style>
 </head>
 <body>
@@ -145,55 +172,55 @@
         <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
         
         <!-- Content -->
-        <div class="content-wrapper w-full px-16 py-12">
-            <div class="flex justify-between items-center mb-6">
+        <div class="content-wrapper w-full px-8 pt-5 pb-4">
+            <div class="flex justify-between items-center mb-2">
                 <div class="flex items-center">
-                    <i class="fas fa-flag-checkered text-3xl text-cyan-500 mr-4"></i>
+                    <i class="fas fa-flag-checkered text-lg text-cyan-500 mr-4"></i>
                     <h2 class="text-4xl font-bold gradient-text">THE NEXT HORIZON</h2>
                 </div>
                 <div class="text-sm text-gray-400">HEB STUDIOS | 15/15</div>
             </div>
             
-            <div class="mb-8 text-center">
-                <h3 class="text-2xl font-semibold text-cyan-400 mb-3">JOIN US IN REVOLUTIONIZING ENTERTAINMENT</h3>
-                <p class="text-gray-300 text-lg max-w-3xl mx-auto">As the digital and physical worlds converge, Next Horizon Studios is positioned to lead the future of interactive experiences through our unique vision, technological prowess, and strategic execution.</p>
+            <div class="mb-2 text-center">
+                <h3 class="text-base font-semibold text-cyan-400 mb-3">JOIN US IN REVOLUTIONIZING ENTERTAINMENT</h3>
+                <p class="text-gray-300 text-base max-w-3xl mx-auto">As the digital and physical worlds converge, Next Horizon Studios is positioned to lead the future of interactive experiences through our unique vision, technological prowess, and strategic execution.</p>
             </div>
             
-            <div class="grid grid-cols-3 gap-8 mb-10">
-                <div class="highlight-card bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+            <div class="grid grid-cols-3 gap-2 mb-2">
+                <div class="highlight-card bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
                     <div class="flex flex-col items-center text-center">
-                        <div class="w-16 h-16 rounded-full bg-cyan-900 flex items-center justify-center mb-4">
-                            <i class="fas fa-users text-2xl text-cyan-400"></i>
+                        <div class="w-16 h-16 rounded-full bg-cyan-900 flex items-center justify-center mb-2">
+                            <i class="fas fa-users text-base text-cyan-400"></i>
                         </div>
-                        <h4 class="font-semibold text-xl mb-2">Proven Team</h4>
+                        <h4 class="font-semibold text-base mb-2">Proven Team</h4>
                         <p class="text-gray-300 text-sm">Leadership with track record of success in gaming and technology, backed by elite 3D production capabilities</p>
                     </div>
                 </div>
                 
-                <div class="highlight-card bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+                <div class="highlight-card bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
                     <div class="flex flex-col items-center text-center">
-                        <div class="w-16 h-16 rounded-full bg-blue-900 flex items-center justify-center mb-4">
-                            <i class="fas fa-chart-line text-2xl text-blue-400"></i>
+                        <div class="w-16 h-16 rounded-full bg-blue-900 flex items-center justify-center mb-2">
+                            <i class="fas fa-chart-line text-base text-blue-400"></i>
                         </div>
-                        <h4 class="font-semibold text-xl mb-2">Massive Market</h4>
+                        <h4 class="font-semibold text-base mb-2">Massive Market</h4>
                         <p class="text-gray-300 text-sm">Targeting growing industries with $119B+ TAM by 2028, at the intersection of gaming, metaverse and holographic tech</p>
                     </div>
                 </div>
                 
-                <div class="highlight-card bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
+                <div class="highlight-card bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
                     <div class="flex flex-col items-center text-center">
-                        <div class="w-16 h-16 rounded-full bg-indigo-900 flex items-center justify-center mb-4">
-                            <i class="fas fa-rocket text-2xl text-indigo-400"></i>
+                        <div class="w-16 h-16 rounded-full bg-indigo-900 flex items-center justify-center mb-2">
+                            <i class="fas fa-rocket text-base text-indigo-400"></i>
                         </div>
-                        <h4 class="font-semibold text-xl mb-2">Clear Path to $1B</h4>
+                        <h4 class="font-semibold text-base mb-2">Clear Path to $1B</h4>
                         <p class="text-gray-300 text-sm">Strategic roadmap with multiple revenue streams and technological advantages to reach billion-dollar valuation</p>
                     </div>
                 </div>
             </div>
             
-            <div class="grid grid-cols-2 gap-8 mb-10">
-                <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
-                    <h3 class="text-xl font-semibold text-cyan-400 mb-4">INVESTMENT OPPORTUNITY</h3>
+            <div class="grid grid-cols-2 gap-2 mb-3">
+                <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
+                    <h3 class="text-base font-semibold text-cyan-400 mb-2">INVESTMENT OPPORTUNITY</h3>
                     
                     <div class="space-y-4">
                         <div class="flex items-start">
@@ -238,10 +265,10 @@
                     </div>
                 </div>
                 
-                <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow flex flex-col justify-between">
-                    <h3 class="text-xl font-semibold text-cyan-400 mb-4">CONTACT & NEXT STEPS</h3>
+                <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow flex flex-col justify-between">
+                    <h3 class="text-base font-semibold text-cyan-400 mb-2">CONTACT & NEXT STEPS</h3>
                     
-                    <div class="space-y-4 mb-6">
+                    <div class="space-y-4 mb-2">
                         <div class="flex items-center">
                             <div class="w-10 h-10 rounded-full bg-cyan-900 flex items-center justify-center mr-3 flex-shrink-0">
                                 <i class="fas fa-user text-cyan-400"></i>
@@ -273,9 +300,9 @@
                         </div>
                     </div>
                     
-                    <div class="cta-card p-5 rounded-xl text-center">
-                        <h4 class="text-xl font-bold text-white mb-3">Ready to join the revolution?</h4>
-                        <p class="text-gray-300 mb-4">Schedule a demo to see our technology in action and discuss investment opportunities.</p>
+                    <div class="cta-card p-3 rounded-xl text-center">
+                        <h4 class="text-base font-bold text-white mb-3">Ready to join the revolution?</h4>
+                        <p class="text-gray-300 mb-2">Schedule a demo to see our technology in action and discuss investment opportunities.</p>
                         <button class="contact-button text-white font-bold py-3 px-8 rounded-full">
                             SCHEDULE A DEMO
                         </button>
@@ -284,13 +311,13 @@
             </div>
             
             <div class="text-center">
-                <div class="text-3xl font-bold gradient-text glow mb-3">THANK YOU</div>
+                <div class="text-lg font-bold gradient-text glow mb-3">THANK YOU</div>
                 <p class="text-gray-400">Join us in building the future of entertainment</p>
             </div>
         </div>
         
         <!-- Footer -->
-        <div class="absolute bottom-6 right-8 text-gray-500 text-sm">
+        <div class="absolute bottom-0.5 right-4 text-gray-500 text-xs opacity-80">
             Confidential
         </div>
     </div>

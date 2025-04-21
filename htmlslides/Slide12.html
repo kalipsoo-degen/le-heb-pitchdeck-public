@@ -17,7 +17,7 @@
         }
         .slide {
             width: 1280px;
-            min-height: 720px;
+            height: 720px;
             margin: 0 auto;
             padding: 0;
             position: relative;
@@ -89,6 +89,33 @@
             transform: translateX(5px);
             border-left-color: #10b981;
         }
+    
+        
+        /* Additional styles for compact layout */
+        .grid { margin-bottom: 0 !important; }
+        .text-4xl { font-size: 1.5rem !important; line-height: 1.75rem !important; }
+        .text-3xl { font-size: 1.25rem !important; line-height: 1.5rem !important; }
+        .text-2xl { font-size: 1.125rem !important; line-height: 1.35rem !important; }
+        .text-xl { font-size: 1rem !important; line-height: 1.25rem !important; }
+        .text-lg { font-size: 0.9rem !important; line-height: 1.1rem !important; }
+        p { margin-bottom: 0.375rem !important; line-height: 1.2 !important; }
+        .p-3 { padding: 0.5rem !important; }
+        .p-2 { padding: 0.375rem !important; }
+        .py-4 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+        .py-3 { padding-top: 0.375rem !important; padding-bottom: 0.375rem !important; }
+        .px-4 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+        .px-3 { padding-left: 0.375rem !important; padding-right: 0.375rem !important; }
+        .rounded-xl { border-radius: 0.375rem !important; }
+        .rounded-lg { border-radius: 0.25rem !important; }
+        .h-16, .w-16 { height: 2.5rem !important; width: 2.5rem !important; }
+        .h-14, .w-14 { height: 2.25rem !important; width: 2.25rem !important; }
+        .h-12, .w-12 { height: 2rem !important; width: 2rem !important; }
+        .h-10, .w-10 { height: 1.75rem !important; width: 1.75rem !important; }
+        .h-8, .w-8 { height: 1.5rem !important; width: 1.5rem !important; }
+        .h-5, .w-5 { height: 1.125rem !important; width: 1.125rem !important; }
+        .space-y-4 > * + * { margin-top: 0.5rem !important; }
+        .space-y-3 > * + * { margin-top: 0.375rem !important; }
+        .space-y-2 > * + * { margin-top: 0.25rem !important; }
     </style>
 </head>
 <body>
@@ -102,65 +129,65 @@
         <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
         
         <!-- Content -->
-        <div class="content-wrapper w-full px-16 py-12">
-            <div class="flex justify-between items-center mb-8">
+        <div class="content-wrapper w-full px-8 pt-5 pb-4">
+            <div class="flex justify-between items-center mb-2">
                 <div class="flex items-center">
-                    <i class="fas fa-seedling text-3xl text-green-400 mr-4"></i>
+                    <i class="fas fa-seedling text-lg text-green-400 mr-4"></i>
                     <h2 class="text-4xl font-bold gradient-text">SUSTAINABLE GROWTH</h2>
                 </div>
                 <div class="text-sm text-gray-400">HEB STUDIOS | 12/15</div>
             </div>
             
-            <div class="grid grid-cols-12 gap-8">
+            <div class="grid grid-cols-12 gap-2">
                 <!-- Left Column - Growth Strategy (5 columns wide) -->
                 <div class="col-span-5">
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
-                        <h3 class="text-2xl font-semibold text-green-400 mb-5">GROWTH STRATEGY</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
+                        <h3 class="text-base font-semibold text-green-400 mb-2">GROWTH STRATEGY</h3>
                         
                         <div class="space-y-4">
-                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
                                         <i class="fas fa-users text-green-400"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-lg">Community Growth</h4>
+                                        <h4 class="font-semibold text-base">Community Growth</h4>
                                         <p class="text-sm text-gray-300">Build and nurture an engaged player community through events, tournaments, and creator programs.</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
                                         <i class="fas fa-handshake text-green-400"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-lg">Strategic Partnerships</h4>
+                                        <h4 class="font-semibold text-base">Strategic Partnerships</h4>
                                         <p class="text-sm text-gray-300">Form alliances with complementary tech companies, game publishers, and entertainment brands.</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
                                         <i class="fas fa-chart-line text-green-400"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-lg">Vertical Integration</h4>
+                                        <h4 class="font-semibold text-base">Vertical Integration</h4>
                                         <p class="text-sm text-gray-300">Expand capabilities across the production chain from content creation to distribution and marketing.</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
                                         <i class="fas fa-globe text-green-400"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-lg">Global Expansion</h4>
+                                        <h4 class="font-semibold text-base">Global Expansion</h4>
                                         <p class="text-sm text-gray-300">Penetrate key markets in Asia, Europe, and Latin America through localized content and regional partnerships.</p>
                                     </div>
                                 </div>
@@ -171,8 +198,8 @@
                 
                 <!-- Middle Column - Revenue Diversification (3 columns wide) -->
                 <div class="col-span-3">
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow mb-6">
-                        <h3 class="text-xl font-semibold text-green-400 mb-4">REVENUE MIX (2025)</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow mb-2">
+                        <h3 class="text-base font-semibold text-green-400 mb-2">REVENUE MIX (2025)</h3>
                         
                         <div class="space-y-4">
                             <div class="relative pt-1">
@@ -188,7 +215,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-800">
+                                <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-800">
                                     <div style="width:40%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
                                 </div>
                             </div>
@@ -206,7 +233,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-800">
+                                <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-800">
                                     <div style="width:25%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
                                 </div>
                             </div>
@@ -224,7 +251,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-800">
+                                <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-800">
                                     <div style="width:20%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
                                 </div>
                             </div>
@@ -242,7 +269,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-800">
+                                <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-800">
                                     <div style="width:10%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
                                 </div>
                             </div>
@@ -260,15 +287,15 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-800">
+                                <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-800">
                                     <div style="width:5%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
-                        <h3 class="text-xl font-semibold text-green-400 mb-4">SUSTAINABILITY FOCUS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
+                        <h3 class="text-base font-semibold text-green-400 mb-2">SUSTAINABILITY FOCUS</h3>
                         
                         <ul class="text-sm space-y-2 text-gray-300">
                             <li class="flex items-start">
@@ -293,8 +320,8 @@
                 
                 <!-- Right Column - Projections (4 columns wide) -->
                 <div class="col-span-4">
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow mb-6">
-                        <h3 class="text-xl font-semibold text-green-400 mb-4">5-YEAR PROJECTIONS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow mb-2">
+                        <h3 class="text-base font-semibold text-green-400 mb-2">5-YEAR PROJECTIONS</h3>
                         
                         <table class="min-w-full text-sm">
                             <thead>
@@ -334,31 +361,31 @@
                         </table>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
-                        <h3 class="text-xl font-semibold text-green-400 mb-4">KEY GROWTH METRICS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
+                        <h3 class="text-base font-semibold text-green-400 mb-2">KEY GROWTH METRICS</h3>
                         
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="text-sm text-green-400 mb-1">Retention Rate</div>
-                                <div class="text-2xl font-bold">68%</div>
+                                <div class="text-base font-bold">68%</div>
                                 <div class="text-xs text-gray-400">Targeting 75% by Year 3</div>
                             </div>
                             
-                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="text-sm text-green-400 mb-1">CAC Payback</div>
-                                <div class="text-2xl font-bold">9 months</div>
+                                <div class="text-base font-bold">9 months</div>
                                 <div class="text-xs text-gray-400">Improving to 7 months</div>
                             </div>
                             
-                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="text-sm text-green-400 mb-1">User LTV</div>
-                                <div class="text-2xl font-bold">$85</div>
+                                <div class="text-base font-bold">$85</div>
                                 <div class="text-xs text-gray-400">Growing by 15% annually</div>
                             </div>
                             
-                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="text-sm text-green-400 mb-1">ARR Growth</div>
-                                <div class="text-2xl font-bold">42%</div>
+                                <div class="text-base font-bold">42%</div>
                                 <div class="text-xs text-gray-400">Year-over-Year</div>
                             </div>
                         </div>
@@ -368,7 +395,7 @@
         </div>
         
         <!-- Footer -->
-        <div class="absolute bottom-6 right-8 text-gray-500 text-sm">
+        <div class="absolute bottom-0.5 right-4 text-gray-500 text-xs opacity-80">
             Confidential
         </div>
     </div>

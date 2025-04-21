@@ -17,7 +17,7 @@
         }
         .slide {
             width: 1280px;
-            min-height: 720px;
+            height: 720px;
             margin: 0 auto;
             padding: 0;
             position: relative;
@@ -156,6 +156,33 @@
             background: #ec4899;
             box-shadow: 0 0 10px #ec4899;
         }
+    
+        
+        /* Additional styles for compact layout */
+        .grid { margin-bottom: 0 !important; }
+        .text-4xl { font-size: 1.5rem !important; line-height: 1.75rem !important; }
+        .text-3xl { font-size: 1.25rem !important; line-height: 1.5rem !important; }
+        .text-2xl { font-size: 1.125rem !important; line-height: 1.35rem !important; }
+        .text-xl { font-size: 1rem !important; line-height: 1.25rem !important; }
+        .text-lg { font-size: 0.9rem !important; line-height: 1.1rem !important; }
+        p { margin-bottom: 0.375rem !important; line-height: 1.2 !important; }
+        .p-3 { padding: 0.5rem !important; }
+        .p-2 { padding: 0.375rem !important; }
+        .py-4 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+        .py-3 { padding-top: 0.375rem !important; padding-bottom: 0.375rem !important; }
+        .px-4 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+        .px-3 { padding-left: 0.375rem !important; padding-right: 0.375rem !important; }
+        .rounded-xl { border-radius: 0.375rem !important; }
+        .rounded-lg { border-radius: 0.25rem !important; }
+        .h-16, .w-16 { height: 2.5rem !important; width: 2.5rem !important; }
+        .h-14, .w-14 { height: 2.25rem !important; width: 2.25rem !important; }
+        .h-12, .w-12 { height: 2rem !important; width: 2rem !important; }
+        .h-10, .w-10 { height: 1.75rem !important; width: 1.75rem !important; }
+        .h-8, .w-8 { height: 1.5rem !important; width: 1.5rem !important; }
+        .h-5, .w-5 { height: 1.125rem !important; width: 1.125rem !important; }
+        .space-y-4 > * + * { margin-top: 0.5rem !important; }
+        .space-y-3 > * + * { margin-top: 0.375rem !important; }
+        .space-y-2 > * + * { margin-top: 0.25rem !important; }
     </style>
 </head>
 <body>
@@ -169,16 +196,16 @@
         <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
         
         <!-- Content -->
-        <div class="content-wrapper w-full px-16 py-12">
-            <div class="flex justify-between items-center mb-8">
+        <div class="content-wrapper w-full px-8 pt-5 pb-4">
+            <div class="flex justify-between items-center mb-2">
                 <div class="flex items-center">
-                    <i class="fas fa-road text-3xl text-pink-500 mr-4"></i>
+                    <i class="fas fa-road text-lg text-pink-500 mr-4"></i>
                     <h2 class="text-4xl font-bold gradient-text">GROWTH ROADMAP</h2>
                 </div>
                 <div class="text-sm text-gray-400">HEB STUDIOS | 14/15</div>
             </div>
             
-            <div class="timeline relative mb-10">
+            <div class="timeline relative mb-3">
                 <div class="timeline-line"></div>
                 
                 <!-- Timeline Points -->
@@ -208,13 +235,13 @@
                 </div>
             </div>
             
-            <div class="grid grid-cols-2 gap-10">
+            <div class="grid grid-cols-2 gap-2">
                 <!-- Left Column -->
                 <div>
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 mb-6 card-glow">
-                        <h3 class="text-2xl font-semibold text-pink-400 mb-4">BILLION-DOLLAR JOURNEY</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 mb-2 card-glow">
+                        <h3 class="text-base font-semibold text-pink-400 mb-2">BILLION-DOLLAR JOURNEY</h3>
                         
-                        <p class="text-gray-300 mb-5">Our roadmap to becoming a billion-dollar studio focuses on executing a strategic growth plan that capitalizes on both immediate market opportunities and long-term technology trends in gaming, metaverse, and holographic entertainment.</p>
+                        <p class="text-gray-300 mb-2">Our roadmap to becoming a billion-dollar studio focuses on executing a strategic growth plan that capitalizes on both immediate market opportunities and long-term technology trends in gaming, metaverse, and holographic entertainment.</p>
                         
                         <div class="space-y-4">
                             <div class="roadmap-item pl-6">
@@ -247,11 +274,11 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
-                        <h3 class="text-xl font-semibold text-pink-400 mb-4">CAPITAL STRATEGY</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
+                        <h3 class="text-base font-semibold text-pink-400 mb-2">CAPITAL STRATEGY</h3>
                         
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-pink-900 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                                         <i class="fas fa-seedling text-pink-400"></i>
@@ -263,7 +290,7 @@
                                 </div>
                             </div>
                             
-                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-pink-900 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                                         <i class="fas fa-chart-line text-pink-400"></i>
@@ -275,7 +302,7 @@
                                 </div>
                             </div>
                             
-                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-pink-900 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                                         <i class="fas fa-building text-pink-400"></i>
@@ -287,7 +314,7 @@
                                 </div>
                             </div>
                             
-                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-pink-900 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                                         <i class="fas fa-door-open text-pink-400"></i>
@@ -304,34 +331,34 @@
                 
                 <!-- Right Column -->
                 <div>
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 mb-6 card-glow">
-                        <h3 class="text-xl font-semibold text-pink-400 mb-4">GROWTH METRICS & TARGETS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 mb-2 card-glow">
+                        <h3 class="text-base font-semibold text-pink-400 mb-2">GROWTH METRICS & TARGETS</h3>
                         
-                        <div class="grid grid-cols-2 gap-6 mb-6">
-                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg text-center">
+                        <div class="grid grid-cols-2 gap-2 mb-2">
+                            <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg text-center">
                                 <div class="text-sm text-gray-400 mb-1">Annual Revenue (2027)</div>
-                                <div class="text-3xl font-bold text-pink-300">$50M</div>
+                                <div class="text-lg font-bold text-pink-300">$50M</div>
                                 <div class="text-xs text-gray-500 mt-1">From $12M in Year 1</div>
                             </div>
-                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg text-center">
+                            <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg text-center">
                                 <div class="text-sm text-gray-400 mb-1">User Base (2027)</div>
-                                <div class="text-3xl font-bold text-pink-300">5M+</div>
+                                <div class="text-lg font-bold text-pink-300">5M+</div>
                                 <div class="text-xs text-gray-500 mt-1">Monthly active users</div>
                             </div>
-                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg text-center">
+                            <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg text-center">
                                 <div class="text-sm text-gray-400 mb-1">Team Size (2027)</div>
-                                <div class="text-3xl font-bold text-pink-300">150+</div>
+                                <div class="text-lg font-bold text-pink-300">150+</div>
                                 <div class="text-xs text-gray-500 mt-1">Across all studios</div>
                             </div>
-                            <div class="bg-gray-800 bg-opacity-60 p-4 rounded-lg text-center">
+                            <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg text-center">
                                 <div class="text-sm text-gray-400 mb-1">Projects (2027)</div>
-                                <div class="text-3xl font-bold text-pink-300">10+</div>
+                                <div class="text-lg font-bold text-pink-300">10+</div>
                                 <div class="text-xs text-gray-500 mt-1">Active revenue streams</div>
                             </div>
                         </div>
                         
-                        <div class="bg-pink-900 bg-opacity-30 p-4 rounded-lg mb-3">
-                            <h4 class="text-lg font-semibold text-white mb-2">Key Growth Drivers</h4>
+                        <div class="bg-pink-900 bg-opacity-30 p-2 rounded-lg mb-3">
+                            <h4 class="text-base font-semibold text-white mb-2">Key Growth Drivers</h4>
                             <div class="grid grid-cols-2 gap-3">
                                 <div class="flex items-start">
                                     <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
@@ -365,11 +392,11 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
-                        <h3 class="text-xl font-semibold text-pink-400 mb-4">INVESTMENT OPPORTUNITY HIGHLIGHTS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
+                        <h3 class="text-base font-semibold text-pink-400 mb-2">INVESTMENT OPPORTUNITY HIGHLIGHTS</h3>
                         
                         <div class="space-y-3">
-                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-pink-900 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                                         <i class="fas fa-bolt text-pink-400"></i>
@@ -381,7 +408,7 @@
                                 </div>
                             </div>
                             
-                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-pink-900 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                                         <i class="fas fa-users text-pink-400"></i>
@@ -393,7 +420,7 @@
                                 </div>
                             </div>
                             
-                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-pink-900 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                                         <i class="fas fa-rocket text-pink-400"></i>
@@ -405,7 +432,7 @@
                                 </div>
                             </div>
                             
-                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="highlight-item bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-pink-900 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                                         <i class="fas fa-cubes text-pink-400"></i>
@@ -423,7 +450,7 @@
         </div>
         
         <!-- Footer -->
-        <div class="absolute bottom-6 right-8 text-gray-500 text-sm">
+        <div class="absolute bottom-0.5 right-4 text-gray-500 text-xs opacity-80">
             Confidential
         </div>
     </div>

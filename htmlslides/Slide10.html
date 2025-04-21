@@ -17,7 +17,7 @@
         }
         .slide {
             width: 1280px;
-            min-height: 720px;
+            height: 720px;
             margin: 0 auto;
             padding: 0;
             position: relative;
@@ -153,6 +153,33 @@
             height: 100%;
             pointer-events: none;
         }
+    
+        
+        /* Additional styles for compact layout */
+        .grid { margin-bottom: 0 !important; }
+        .text-4xl { font-size: 1.5rem !important; line-height: 1.75rem !important; }
+        .text-3xl { font-size: 1.25rem !important; line-height: 1.5rem !important; }
+        .text-2xl { font-size: 1.125rem !important; line-height: 1.35rem !important; }
+        .text-xl { font-size: 1rem !important; line-height: 1.25rem !important; }
+        .text-lg { font-size: 0.9rem !important; line-height: 1.1rem !important; }
+        p { margin-bottom: 0.375rem !important; line-height: 1.2 !important; }
+        .p-3 { padding: 0.5rem !important; }
+        .p-2 { padding: 0.375rem !important; }
+        .py-4 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+        .py-3 { padding-top: 0.375rem !important; padding-bottom: 0.375rem !important; }
+        .px-4 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+        .px-3 { padding-left: 0.375rem !important; padding-right: 0.375rem !important; }
+        .rounded-xl { border-radius: 0.375rem !important; }
+        .rounded-lg { border-radius: 0.25rem !important; }
+        .h-16, .w-16 { height: 2.5rem !important; width: 2.5rem !important; }
+        .h-14, .w-14 { height: 2.25rem !important; width: 2.25rem !important; }
+        .h-12, .w-12 { height: 2rem !important; width: 2rem !important; }
+        .h-10, .w-10 { height: 1.75rem !important; width: 1.75rem !important; }
+        .h-8, .w-8 { height: 1.5rem !important; width: 1.5rem !important; }
+        .h-5, .w-5 { height: 1.125rem !important; width: 1.125rem !important; }
+        .space-y-4 > * + * { margin-top: 0.5rem !important; }
+        .space-y-3 > * + * { margin-top: 0.375rem !important; }
+        .space-y-2 > * + * { margin-top: 0.25rem !important; }
     </style>
 </head>
 <body>
@@ -166,20 +193,20 @@
         <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
         
         <!-- Content -->
-        <div class="content-wrapper w-full px-16 py-12">
-            <div class="flex justify-between items-center mb-8">
+        <div class="content-wrapper w-full px-8 pt-5 pb-4">
+            <div class="flex justify-between items-center mb-2">
                 <div class="flex items-center">
-                    <i class="fas fa-chess-knight text-3xl text-blue-400 mr-4"></i>
+                    <i class="fas fa-chess-knight text-lg text-blue-400 mr-4"></i>
                     <h2 class="text-4xl font-bold gradient-text">COMPETITIVE LANDSCAPE</h2>
                 </div>
                 <div class="text-sm text-gray-400">HEB STUDIOS | 10/15</div>
             </div>
             
-            <div class="grid grid-cols-5 gap-8">
+            <div class="grid grid-cols-5 gap-2">
                 <!-- Left Column (3/5 width) -->
                 <div class="col-span-3">
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow mb-6">
-                        <h3 class="text-xl font-semibold text-blue-400 mb-4">MARKET POSITION MATRIX</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow mb-2">
+                        <h3 class="text-base font-semibold text-blue-400 mb-2">MARKET POSITION MATRIX</h3>
                         
                         <div class="quadrant-grid rounded-lg relative">
                             <!-- Quadrant labels -->
@@ -236,11 +263,11 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow">
-                        <h3 class="text-xl font-semibold text-blue-400 mb-4">COMPETITIVE ADVANTAGES</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
+                        <h3 class="text-base font-semibold text-blue-400 mb-2">COMPETITIVE ADVANTAGES</h3>
                         
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="advantage-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="advantage-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-3 mt-1">
                                         <i class="fas fa-cubes text-blue-400"></i>
@@ -252,7 +279,7 @@
                                 </div>
                             </div>
                             
-                            <div class="advantage-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="advantage-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center mr-3 mt-1">
                                         <i class="fas fa-vr-cardboard text-purple-400"></i>
@@ -264,7 +291,7 @@
                                 </div>
                             </div>
                             
-                            <div class="advantage-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="advantage-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-pink-900 flex items-center justify-center mr-3 mt-1">
                                         <i class="fas fa-history text-pink-400"></i>
@@ -276,7 +303,7 @@
                                 </div>
                             </div>
                             
-                            <div class="advantage-card bg-gray-800 bg-opacity-60 p-4 rounded-lg">
+                            <div class="advantage-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-indigo-900 flex items-center justify-center mr-3 mt-1">
                                         <i class="fas fa-rocket text-indigo-400"></i>
@@ -293,8 +320,8 @@
                 
                 <!-- Right Column (2/5 width) -->
                 <div class="col-span-2">
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-6 card-glow mb-6">
-                        <h3 class="text-xl font-semibold text-blue-400 mb-4">COMPETITOR ANALYSIS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow mb-2">
+                        <h3 class="text-base font-semibold text-blue-400 mb-2">COMPETITOR ANALYSIS</h3>
                         
                         <div class="space-y-3">
                             <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg">
@@ -331,8 +358,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gradient-to-br from-blue-900 to-purple-900 bg-opacity-70 rounded-xl p-6 card-glow">
-                        <h3 class="text-xl font-semibold text-white mb-4">OUR DIFFERENTIATION STRATEGY</h3>
+                    <div class="bg-gradient-to-br from-blue-900 to-purple-900 bg-opacity-70 rounded-xl p-2 card-glow">
+                        <h3 class="text-base font-semibold text-white mb-2">OUR DIFFERENTIATION STRATEGY</h3>
                         
                         <div class="space-y-4">
                             <div class="flex items-start">
@@ -371,7 +398,7 @@
         </div>
         
         <!-- Footer -->
-        <div class="absolute bottom-6 right-8 text-gray-500 text-sm">
+        <div class="absolute bottom-0.5 right-4 text-gray-500 text-xs opacity-80">
             Confidential
         </div>
     </div>
