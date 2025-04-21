@@ -7,8 +7,8 @@ body {
     overflow: hidden;
 }
 .slide {
-    width: 1280px;
-    height: 720px;
+    width: 1600px;
+    height: 900px;
     margin: 0 auto;
     padding: 0;
     position: relative;
@@ -248,11 +248,54 @@ tr:nth-child(even) {
     top: 0;
     left: 0;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 1;
 }
 
 .slide-frame.active {
     opacity: 1;
-    z-index: 10;
+    z-index: 5;
+}
+
+/* Add this to ensure slides are centered and scaled properly */
+@media (min-width: 1600px) {
+    .slides-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1599px) {
+    .slides-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        overflow: auto;
+    }
+    
+    .slide, .slide-frame {
+        transform: scale(0.9);
+        transform-origin: center center;
+    }
+}
+
+@media (max-width: 1440px) {
+    .slide, .slide-frame {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 1280px) {
+    .slide, .slide-frame {
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 1024px) {
+    .slide, .slide-frame {
+        transform: scale(0.6);
+    }
 } 
