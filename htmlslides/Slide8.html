@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Financial Deck - Financial Projections</title>
+    <title>Hologram Market in Entertainment Industry</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
@@ -23,185 +23,228 @@
             padding: 0;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, #0f1923 0%, #1a2c39 100%);
+            background: #121a24;
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #ff2a6d, #d1225b, #5f0f4e);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+        .section-header {
+            color: #e83e8c;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
         }
-        .glow {
-            text-shadow: 0 0 15px rgba(255, 42, 109, 0.7);
+        .main-section {
+            background-color: #151e2c;
+            border: 2px solid #e83e8c;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 10px rgba(232, 62, 140, 0.4);
         }
-        .bg-pattern {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(255, 42, 109, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 80% 70%, rgba(209, 34, 91, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 50% 50%, rgba(95, 15, 78, 0.05) 0%, transparent 50%);
-            z-index: 0;
+        .card {
+            background-color: #1c2533;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(232, 62, 140, 0.2);
+            box-shadow: 0 0 15px rgba(232, 62, 140, 0.15);
         }
-        .hexagon {
-            position: absolute;
-            width: 200px;
-            height: 173px;
-            background: linear-gradient(135deg, rgba(255, 42, 109, 0.1) 0%, rgba(95, 15, 78, 0.05) 100%);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            z-index: 0;
+        .metric-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
         }
-        .content-wrapper {
-            position: relative;
-            z-index: 10;
+        .metric-box {
+            text-align: center;
+            background-color: #1c2533;
+            border: 1px solid rgba(232, 62, 140, 0.15);
+            box-shadow: 0 0 10px rgba(232, 62, 140, 0.1);
         }
-        .floating {
-            animation: float 6s ease-in-out infinite;
+        .metric-label {
+            color: #a0aec0;
+            font-size: 0.8rem;
+            margin-bottom: 0.25rem;
         }
-        .pulse {
-            animation: pulse 3s ease-in-out infinite;
+        .metric-value {
+            color: #e83e8c;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
-        @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(1deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
-        }
-        @keyframes pulse {
-            0% { opacity: 0.7; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.05); }
-            100% { opacity: 0.7; transform: scale(1); }
-        }
-        .card-glow {
-            box-shadow: 0 0 20px rgba(255, 42, 109, 0.3);
-            transition: all 0.3s ease;
-        }
-        .card-glow:hover {
-            box-shadow: 0 0 30px rgba(255, 42, 109, 0.5);
-            transform: translateY(-5px);
+        .metric-period {
+            color: #718096;
+            font-size: 0.7rem;
         }
         .chart-container {
             position: relative;
-            height: 150px;
+            height: 220px;
             width: 100%;
         }
-        .kpi-card {
-            transition: all 0.3s ease;
-            border-left: 3px solid transparent;
-        }
-        .kpi-card:hover {
-            transform: translateX(5px);
-            border-left-color: #ff2a6d;
-        }
-        .highlight-number {
-            font-size: 1.5rem !important;
-            font-weight: bold;
-            background: linear-gradient(90deg, #ff2a6d, #d1225b);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            display: inline-block;
-        }
-        .financial-milestone {
-            position: relative;
-            padding-left: 20px;
-        }
-        .financial-milestone:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background: linear-gradient(to bottom, #ff2a6d, rgba(209, 34, 91, 0.2));
-        }
-        .milestone-dot {
-            position: absolute;
-            left: -4px;
-            top: 10px;
-            width: 10px;
-            height: 10px;
+        .icon-circle {
+            width: 2rem;
+            height: 2rem;
             border-radius: 50%;
-            background: #ff2a6d;
-            box-shadow: 0 0 10px #ff2a6d;
+            background-color: rgba(232, 62, 140, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
         }
-    
-        
-        /* Additional styles for compact layout */
-        .grid { margin-bottom: 0 !important; }
-        .text-4xl { font-size: 1.5rem !important; line-height: 1.75rem !important; }
-        .text-3xl { font-size: 1.25rem !important; line-height: 1.5rem !important; }
-        .text-2xl { font-size: 1.125rem !important; line-height: 1.35rem !important; }
-        .text-xl { font-size: 1rem !important; line-height: 1.25rem !important; }
-        .text-lg { font-size: 0.9rem !important; line-height: 1.1rem !important; }
-        p { margin-bottom: 0.375rem !important; line-height: 1.2 !important; }
-        .p-3 { padding: 0.5rem !important; }
-        .p-2 { padding: 0.375rem !important; }
-        .py-4 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
-        .py-3 { padding-top: 0.375rem !important; padding-bottom: 0.375rem !important; }
-        .px-4 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
-        .px-3 { padding-left: 0.375rem !important; padding-right: 0.375rem !important; }
-        .rounded-xl { border-radius: 0.375rem !important; }
-        .rounded-lg { border-radius: 0.25rem !important; }
-        .h-16, .w-16 { height: 2.5rem !important; width: 2.5rem !important; }
-        .h-14, .w-14 { height: 2.25rem !important; width: 2.25rem !important; }
-        .h-12, .w-12 { height: 2rem !important; width: 2rem !important; }
-        .h-10, .w-10 { height: 1.75rem !important; width: 1.75rem !important; }
-        .h-8, .w-8 { height: 1.5rem !important; width: 1.5rem !important; }
-        .h-5, .w-5 { height: 1.125rem !important; width: 1.125rem !important; }
-        .space-y-4 > * + * { margin-top: 0.5rem !important; }
-        .space-y-3 > * + * { margin-top: 0.375rem !important; }
-        .space-y-2 > * + * { margin-top: 0.25rem !important; }
+        .app-item {
+            background-color: #1c2533;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+            border: 1px solid rgba(232, 62, 140, 0.15);
+            box-shadow: 0 0 10px rgba(232, 62, 140, 0.1);
+        }
+        .tech-item {
+            background-color: #1c2533;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+            border: 1px solid rgba(232, 62, 140, 0.15);
+            box-shadow: 0 0 10px rgba(232, 62, 140, 0.1);
+        }
+        ul.bulleted {
+            list-style-type: disc;
+            padding-left: 1.25rem;
+            color: #a0aec0;
+            font-size: 0.8rem;
+        }
+        ul.bulleted li {
+            margin-bottom: 0.25rem;
+        }
+        .growth-phase {
+            text-align: center;
+            background-color: #1c2533;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid rgba(232, 62, 140, 0.15);
+            box-shadow: 0 0 10px rgba(232, 62, 140, 0.1);
+        }
+        .phase-header {
+            color: #e83e8c;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .phase-years {
+            color: #a0aec0;
+            font-size: 0.7rem;
+        }
+        .phase-cagr {
+            color: #f5f5f5;
+            font-size: 0.7rem;
+            margin-top: 0.25rem;
+        }
+        .app-item, .tech-item, .metric-box, .growth-phase {
+            border: 1px solid rgba(232, 62, 140, 0.15);
+            box-shadow: 0 0 10px rgba(232, 62, 140, 0.1);
+        }
+        .outer-container {
+            border: 2px solid #e83e8c;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-top: 0.5rem;
+            background-color: #121a24;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
     </style>
 </head>
 <body>
-    <div class="slide flex flex-col items-start justify-start relative financial-custom">
-        <!-- Background Pattern -->
-        <div class="bg-pattern"></div>
-        
-        <!-- Hexagons for futuristic styling -->
-        <div class="hexagon" style="top: 120px; right: 180px; opacity: 0.5;"></div>
-        <div class="hexagon" style="bottom: 150px; left: 220px; opacity: 0.6;"></div>
-        <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
-        
-        <!-- Content -->
-        <div class="content-wrapper w-full px-8 pt-5 pb-4">
-            <div class="flex justify-between items-center mb-3">
-                <div class="flex items-center">
-                    <i class="fas fa-chart-pie text-lg text-pink-500 mr-3"></i>
-                    <h2 class="text-lg font-bold gradient-text">FINANCIAL PROJECTIONS</h2>
-                </div>
-                <div class="text-xs text-gray-400">HEB STUDIOS | 8/15</div>
+    <div class="slide p-6">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-3">
+            <div class="flex items-center">
+                <i class="fas fa-cube text-pink-500 mr-3"></i>
+                <h1 class="text-pink-500 text-xl font-bold">HOLOGRAM MARKET IN ENTERTAINMENT INDUSTRY</h1>
             </div>
-            
-            <div class="grid grid-cols-2 gap-2">
+            <div class="text-gray-400 text-sm">HEB STUDIOS | 8/15</div>
+        </div>
+        
+        <div class="outer-container">
+            <!-- Main Content Grid -->
+            <div class="grid grid-cols-2 gap-5">
                 <!-- Left Column -->
                 <div>
-                    <div class="bg-gray-900 bg-opacity-70 rounded-lg p-3 mb-3 card-glow">
-                        <h3 class="text-lg font-semibold text-pink-400 mb-2">REVENUE FORECAST</h3>
+                    <!-- Market Overview -->
+                    <div class="main-section">
+                        <h2 class="section-header">MARKET OVERVIEW</h2>
+                        <p class="text-gray-300 text-sm">The hologram market is experiencing unprecedented growth, transforming how audiences experience sports events. Unlike traditional 2D broadcasts, holographic technology creates immersive, three-dimensional representations viewable from multiple angles.</p>
                         
-                        <div class="chart-container mb-1">
-                            <canvas id="revenueChart"></canvas>
-                        </div>
-                        
-                        <div class="flex justify-center text-xs text-gray-400 italic financial-small-text">
-                            * Projections assume successful funding and market conditions aligned with industry growth rates
+                        <div class="grid grid-cols-3 gap-3 mt-4">
+                            <div class="metric-box p-3 rounded">
+                                <div class="metric-label">Current Market Size</div>
+                                <div class="metric-value">$44.3B</div>
+                                <div class="metric-period">2024</div>
+                            </div>
+                            <div class="metric-box p-3 rounded">
+                                <div class="metric-label">CAGR</div>
+                                <div class="metric-value">6.9%</div>
+                                <div class="metric-period">2025-2029</div>
+                            </div>
+                            <div class="metric-box p-3 rounded">
+                                <div class="metric-label">Projected Size</div>
+                                <div class="metric-value">$62.08B</div>
+                                <div class="metric-period">2029</div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-lg p-3 card-glow">
-                        <h3 class="text-base font-semibold text-pink-400 mb-2">REVENUE BREAKDOWN BY PROJECT</h3>
-                        
+                    <!-- Key Market Segments -->
+                    <div class="main-section">
+                        <h2 class="section-header">KEY MARKET SEGMENTS</h2>
+                        <div class="chart-container">
+                            <canvas id="marketSegmentsChart"></canvas>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-400 mt-2">
+                            <div>Holographic Display Hardware (28%)</div>
+                            <div>Holographic Software (22%)</div>
+                            <div>Volumetric Capture (25%)</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Technology Enablers -->
+                    <div class="main-section">
+                        <h2 class="section-header">TECHNOLOGY ENABLERS</h2>
                         <div class="grid grid-cols-2 gap-3">
-                            <div class="chart-container">
-                                <canvas id="breakdownChart2025"></canvas>
-                                <div class="text-center text-xs font-semibold mt-1">Year 1 (2025)</div>
+                            <div class="tech-item">
+                                <div class="icon-circle text-pink-500">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white text-sm font-semibold">Volumetric Capture</div>
+                                    <p class="text-gray-400 text-xs">3D models of athletes and events in real-time</p>
+                                </div>
                             </div>
-                            <div class="chart-container">
-                                <canvas id="breakdownChart2027"></canvas>
-                                <div class="text-center text-xs font-semibold mt-1">Year 3 (2027)</div>
+                            <div class="tech-item">
+                                <div class="icon-circle text-pink-500">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white text-sm font-semibold">Unreal Engine</div>
+                                    <p class="text-gray-400 text-xs">Real-time rendering for holographic content</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <div class="icon-circle text-pink-500">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white text-sm font-semibold">AI Integration</div>
+                                    <p class="text-gray-400 text-xs">Enhanced interactions and reduced computing needs</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <div class="icon-circle text-pink-500">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white text-sm font-semibold">5G/6G Infrastructure</div>
+                                    <p class="text-gray-400 text-xs">High-bandwidth networks for data transmission</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -209,108 +252,96 @@
                 
                 <!-- Right Column -->
                 <div>
-                    <div class="bg-gray-900 bg-opacity-70 rounded-lg p-3 mb-3 card-glow">
-                        <h3 class="text-base font-semibold text-pink-400 mb-2">KEY FINANCIAL METRICS</h3>
-                        
-                        <div class="grid grid-cols-2 gap-3 mb-3">
-                            <div class="kpi-card bg-gray-800 bg-opacity-60 rounded-lg">
-                                <div class="text-xs text-gray-400 mb-0">Projected EBITDA Margin</div>
-                                <div class="highlight-number">28-35%</div>
-                                <div class="text-xs text-gray-500">Increasing with scale</div>
-                            </div>
-                            <div class="kpi-card bg-gray-800 bg-opacity-60 rounded-lg">
-                                <div class="text-xs text-gray-400 mb-0">Cash Runway</div>
-                                <div class="highlight-number">24+ months</div>
-                                <div class="text-xs text-gray-500">Post-investment</div>
-                            </div>
-                            <div class="kpi-card bg-gray-800 bg-opacity-60 rounded-lg">
-                                <div class="text-xs text-gray-400 mb-0">Operating Expenses</div>
-                                <div class="highlight-number">$5.8M</div>
-                                <div class="text-xs text-gray-500">Year 1 estimate</div>
-                            </div>
-                            <div class="kpi-card bg-gray-800 bg-opacity-60 rounded-lg">
-                                <div class="text-xs text-gray-400 mb-0">Time to Profitability</div>
-                                <div class="highlight-number">18 months</div>
-                                <div class="text-xs text-gray-500">From investment date</div>
-                            </div>
+                    <!-- Growth Projections -->
+                    <div class="main-section">
+                        <h2 class="section-header">GROWTH PROJECTIONS (2025-2034)</h2>
+                        <div class="chart-container">
+                            <canvas id="growthProjectionsChart"></canvas>
                         </div>
                         
-                        <h3 class="text-base font-semibold text-pink-400 mb-2">Cost Structure (Year 1)</h3>
-                        
-                        <div class="space-y-1 mb-1 financial-small-text">
-                            <div class="flex items-center justify-between">
-                                <span>Development</span>
-                                <span class="text-pink-400 font-semibold">45%</span>
+                        <div class="grid grid-cols-3 gap-3 mt-3">
+                            <div class="growth-phase">
+                                <div class="phase-header">Short-Term</div>
+                                <div class="phase-years">2025-2027</div>
+                                <div class="phase-cagr">CAGR: 7.3-8.1%</div>
                             </div>
-                            <div class="w-full bg-gray-800 h-1.5 rounded-full mb-1">
-                                <div class="bg-pink-500 h-1.5 rounded-full" style="width: 45%"></div>
+                            <div class="growth-phase">
+                                <div class="phase-header">Mid-Term</div>
+                                <div class="phase-years">2028-2030</div>
+                                <div class="phase-cagr">CAGR: 14.5-17.2%</div>
                             </div>
-                            
-                            <div class="flex items-center justify-between">
-                                <span>Marketing</span>
-                                <span class="text-pink-400 font-semibold">25%</span>
-                            </div>
-                            <div class="w-full bg-gray-800 h-1.5 rounded-full mb-1">
-                                <div class="bg-pink-400 h-1.5 rounded-full" style="width: 25%"></div>
-                            </div>
-                            
-                            <div class="flex items-center justify-between">
-                                <span>Operations</span>
-                                <span class="text-pink-400 font-semibold">20%</span>
-                            </div>
-                            <div class="w-full bg-gray-800 h-1.5 rounded-full mb-1">
-                                <div class="bg-pink-300 h-1.5 rounded-full" style="width: 20%"></div>
-                            </div>
-                            
-                            <div class="flex items-center justify-between">
-                                <span>Admin & Legal</span>
-                                <span class="text-pink-400 font-semibold">10%</span>
-                            </div>
-                            <div class="w-full bg-gray-800 h-1.5 rounded-full mb-1">
-                                <div class="bg-pink-200 h-1.5 rounded-full" style="width: 10%"></div>
+                            <div class="growth-phase">
+                                <div class="phase-header">Long-Term</div>
+                                <div class="phase-years">2031-2034</div>
+                                <div class="phase-cagr">CAGR: 21.4-25.5%</div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-lg p-3 card-glow">
-                        <h3 class="text-base font-semibold text-pink-400 mb-2">FINANCIAL MILESTONES</h3>
-                        
-                        <div class="space-y-1 financial-small-text">
-                            <div class="flex items-start mb-1">
-                                <div class="w-7 h-7 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-900 text-pink-400 mr-2">
-                                    <i class="fas fa-flag-checkered text-xs"></i>
+                    <!-- Primary Applications -->
+                    <div class="main-section">
+                        <h2 class="section-header">PRIMARY APPLICATIONS IN SPORTS</h2>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="app-item">
+                                <div class="icon-circle text-pink-500">
+                                    <i class="fas fa-home"></i>
                                 </div>
                                 <div>
-                                    <div class="font-semibold">Q3 2025: $2M Revenue Milestone</div>
-                                    <p class="text-gray-400">First major revenue threshold from NFT sales and initial game launches</p>
+                                    <div class="text-white text-sm font-semibold">At-Home Viewing</div>
+                                    <p class="text-gray-400 text-xs">Holographic reproduction of live sports events</p>
                                 </div>
                             </div>
-                            <div class="flex items-start mb-1">
-                                <div class="w-7 h-7 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-900 text-pink-400 mr-2">
-                                    <i class="fas fa-chart-line text-xs"></i>
+                            <div class="app-item">
+                                <div class="icon-circle text-pink-500">
+                                    <i class="fas fa-landmark"></i>
                                 </div>
                                 <div>
-                                    <div class="font-semibold">Q1 2026: Break-Even Point</div>
-                                    <p class="text-gray-400">Monthly revenue exceeds operating expenses</p>
+                                    <div class="text-white text-sm font-semibold">In-Stadium Enhancements</div>
+                                    <p class="text-gray-400 text-xs">Holographic replays and enhanced viewing</p>
                                 </div>
                             </div>
-                            <div class="flex items-start mb-1">
-                                <div class="w-7 h-7 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-900 text-pink-400 mr-2">
-                                    <i class="fas fa-hand-holding-usd text-xs"></i>
+                            <div class="app-item">
+                                <div class="icon-circle text-pink-500">
+                                    <i class="fas fa-running"></i>
                                 </div>
                                 <div>
-                                    <div class="font-semibold">Q4 2026: $12M Annual Run Rate</div>
-                                    <p class="text-gray-400">Sustained revenue across all product offerings</p>
+                                    <div class="text-white text-sm font-semibold">Training & Simulation</div>
+                                    <p class="text-gray-400 text-xs">Sports training systems for athletes</p>
                                 </div>
                             </div>
-                            <div class="flex items-start">
-                                <div class="w-7 h-7 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-900 text-pink-400 mr-2">
-                                    <i class="fas fa-gem text-xs"></i>
+                            <div class="app-item">
+                                <div class="icon-circle text-pink-500">
+                                    <i class="fas fa-users"></i>
                                 </div>
                                 <div>
-                                    <div class="font-semibold">2028: Series B Funding Round</div>
-                                    <p class="text-gray-400">Strategic expansion funding at $150M+ valuation</p>
+                                    <div class="text-white text-sm font-semibold">Fan Engagement</div>
+                                    <p class="text-gray-400 text-xs">Interactive holographic collectibles</p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Market Dynamics -->
+                    <div class="main-section">
+                        <h2 class="section-header">MARKET DYNAMICS</h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-pink-400 text-sm font-semibold mb-2">Growth Drivers</h3>
+                                <ul class="bulleted">
+                                    <li>Increasing demand for immersive experiences</li>
+                                    <li>Advancements in 3D visualization</li>
+                                    <li>Growing investment in AR/VR infrastructure</li>
+                                    <li>Rising sports viewership</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-pink-400 text-sm font-semibold mb-2">Challenges</h3>
+                                <ul class="bulleted">
+                                    <li>High implementation costs</li>
+                                    <li>Bandwidth limitations</li>
+                                    <li>Technical complexity of capturing events</li>
+                                    <li>Consumer adoption hurdles</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -319,48 +350,112 @@
         </div>
         
         <!-- Footer -->
-        <div class="absolute bottom-0.5 right-4 text-gray-500 text-xs opacity-80">
+        <div class="absolute bottom-2 right-6 text-gray-500 text-xs">
             Confidential
         </div>
     </div>
     
     <script>
-        // Chart initialization scripts
         document.addEventListener('DOMContentLoaded', function() {
-            // Revenue Chart
-            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
-            const revenueChart = new Chart(revenueCtx, {
-                type: 'bar',
+            // Market Segments Chart
+            const segmentsCtx = document.getElementById('marketSegmentsChart').getContext('2d');
+            new Chart(segmentsCtx, {
+                type: 'doughnut',
                 data: {
-                    labels: ['Historical (2021)', 'Year 1 (2025)', 'Year 2 (2026)', 'Year 3 (2027)', 'Year 4 (2028)', 'Year 5 (2029)'],
+                    labels: ['Holographic Display Hardware', 'Holographic Software', 'Volumetric Capture', 'Holographic Services', 'Other Components'],
                     datasets: [{
-                        label: 'Revenue ($M)',
-                        data: [20, 12, 28, 46, 95, 180],
+                        data: [28, 22, 25, 15, 10],
                         backgroundColor: [
-                            '#6b21a8',
-                            '#db2777',
-                            '#db2777',
-                            '#db2777',
-                            '#db2777',
-                            '#db2777'
+                            '#e83e8c',
+                            '#fd7e14',
+                            '#9f7aea',
+                            '#48bb78',
+                            '#4299e1'
                         ],
-                        borderWidth: 0,
-                        borderRadius: 4
+                        borderWidth: 0
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { display: false },
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: 'rgba(255, 255, 255, 0.7)',
+                                font: { size: 9 },
+                                boxWidth: 10,
+                                padding: 5
+                            }
+                        },
                         tooltip: {
                             backgroundColor: 'rgba(15, 25, 35, 0.8)',
-                            titleColor: '#ff2a6d',
+                            titleColor: '#e83e8c',
                             bodyColor: '#f5f5f5',
-                            titleFont: { size: 14, weight: 'bold' },
-                            bodyFont: { size: 12 },
-                            padding: 12,
+                            titleFont: { size: 11 },
+                            bodyFont: { size: 10 },
+                            padding: 8,
                             displayColors: false
+                        }
+                    },
+                    cutout: '65%'
+                }
+            });
+            
+            // Growth Projections Chart
+            const growthCtx = document.getElementById('growthProjectionsChart').getContext('2d');
+            new Chart(growthCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],
+                    datasets: [
+                        {
+                            label: 'Overall Hologram Market',
+                            data: [44.3, 47.6, 51.1, 55.8, 59.9, 62.1, 67.8, 74.5, 82.3, 91.5, 101.2],
+                            borderColor: '#e83e8c',
+                            backgroundColor: 'rgba(232, 62, 140, 0.1)',
+                            borderWidth: 2,
+                            tension: 0.3,
+                            fill: true
+                        },
+                        {
+                            label: 'Sports & Entertainment Segment',
+                            data: [2.85, 3.9, 5.2, 6.8, 8.5, 11.2, 14.8, 18.7, 22.3, 26.8, 31.5],
+                            borderColor: '#9f7aea',
+                            backgroundColor: 'rgba(159, 122, 234, 0.1)',
+                            borderWidth: 2,
+                            tension: 0.3,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            align: 'end',
+                            labels: {
+                                color: 'rgba(255, 255, 255, 0.7)',
+                                font: { size: 10 },
+                                boxWidth: 12,
+                                padding: 8
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 25, 35, 0.8)',
+                            titleColor: '#e83e8c',
+                            bodyColor: '#f5f5f5',
+                            titleFont: { size: 11 },
+                            bodyFont: { size: 10 },
+                            padding: 8,
+                            displayColors: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': $' + context.raw + 'B';
+                                }
+                            }
                         }
                     },
                     scales: {
@@ -373,7 +468,7 @@
                                 color: 'rgba(255, 255, 255, 0.7)',
                                 font: { size: 10 },
                                 callback: function(value) {
-                                    return '$' + value + 'M';
+                                    return '$' + value + 'B';
                                 }
                             }
                         },
@@ -383,98 +478,10 @@
                             },
                             ticks: {
                                 color: 'rgba(255, 255, 255, 0.7)',
-                                font: { size: 8 },
-                                maxRotation: 45,
-                                minRotation: 45
+                                font: { size: 9 }
                             }
                         }
                     }
-                }
-            });
-            
-            // Breakdown Charts
-            const breakdown2025Ctx = document.getElementById('breakdownChart2025').getContext('2d');
-            new Chart(breakdown2025Ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['The Legend', 'Bananium.ai', 'MHSProd Services'],
-                    datasets: [{
-                        data: [65, 25, 10],
-                        backgroundColor: [
-                            '#ff2a6d',
-                            '#f28f3b',
-                            '#8967e0'
-                        ],
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: {
-                                color: 'rgba(255, 255, 255, 0.7)',
-                                font: { size: 9 },
-                                boxWidth: 10,
-                                padding: 5
-                            }
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(15, 25, 35, 0.8)',
-                            titleColor: '#ff2a6d',
-                            bodyColor: '#f5f5f5',
-                            titleFont: { size: 12, weight: 'bold' },
-                            bodyFont: { size: 10 },
-                            padding: 8,
-                            displayColors: false
-                        }
-                    },
-                    cutout: '65%'
-                }
-            });
-            
-            const breakdown2027Ctx = document.getElementById('breakdownChart2027').getContext('2d');
-            new Chart(breakdown2027Ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['The Legend', 'Bananium.ai', 'MHSProd Services', 'New Ventures'],
-                    datasets: [{
-                        data: [45, 30, 15, 10],
-                        backgroundColor: [
-                            '#ff2a6d',
-                            '#f28f3b',
-                            '#8967e0',
-                            '#43b929'
-                        ],
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: {
-                                color: 'rgba(255, 255, 255, 0.7)',
-                                font: { size: 9 },
-                                boxWidth: 10,
-                                padding: 5
-                            }
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(15, 25, 35, 0.8)',
-                            titleColor: '#ff2a6d',
-                            bodyColor: '#f5f5f5',
-                            titleFont: { size: 12, weight: 'bold' },
-                            bodyFont: { size: 10 },
-                            padding: 8,
-                            displayColors: false
-                        }
-                    },
-                    cutout: '65%'
                 }
             });
         });
