@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to create all slides using iframes
     function createSlides() {
         // Define the order of slides
-        const slideOrder = [1, 9, 2, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 3, 15];
+        const slideOrder = [1, 2, 9, 4, 5, 3, 6, 7, 14, 8, 12, 13, 10, 15, 11];
         
         for (let i = 0; i < slideOrder.length; i++) {
             const slideNum = slideOrder[i];
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             iframe.setAttribute('scrolling', 'no');
             
             // Make the first slide active
-            if (i === 0) iframe.classList.add('active');
+            if (slideNum === 1) iframe.classList.add('active');
             
             // Add iframe to container
             slidesContainer.appendChild(iframe);
