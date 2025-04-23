@@ -54,9 +54,28 @@
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             z-index: 0;
         }
-        .content-wrapper {
+        .card-glow {
+            box-shadow: 0 0 20px rgba(166, 110, 250, 0.3);
+            transition: all 0.3s ease;
+            margin-bottom: 0.35rem !important;
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 30px rgba(166, 110, 250, 0.5);
+            transform: translateY(-5px);
+        }
+        .chart-container {
             position: relative;
-            z-index: 10;
+            height: 150px;
+            width: 100%;
+        }
+        .funding-card {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            margin-bottom: 0.25rem !important;
+        }
+        .funding-card:hover {
+            transform: translateX(5px);
+            border-left-color: #a66efa;
         }
         .floating {
             animation: float 6s ease-in-out infinite;
@@ -74,78 +93,149 @@
             50% { opacity: 1; transform: scale(1.05); }
             100% { opacity: 0.7; transform: scale(1); }
         }
-        .card-glow {
-            box-shadow: 0 0 20px rgba(166, 110, 250, 0.3);
-            transition: all 0.3s ease;
-        }
-        .card-glow:hover {
-            box-shadow: 0 0 30px rgba(166, 110, 250, 0.5);
-            transform: translateY(-5px);
-        }
-        .chart-container {
+        .milestone-point { margin-bottom: 0.3rem !important; }
+        .milestone-point h4 { margin-bottom: 0.1rem !important; }
+        .milestone-point p { font-size: 0.7rem !important; line-height: 1.1 !important; }
+    
+        
+        /* Additional styles for compact layout */
+        .grid { margin-bottom: 0 !important; }
+        .text-4xl { font-size: 1.75rem !important; line-height: 2rem !important; }
+        .text-3xl { font-size: 1.5rem !important; line-height: 1.75rem !important; }
+        .text-2xl { font-size: 1.35rem !important; line-height: 1.5rem !important; }
+        .text-xl { font-size: 1.2rem !important; line-height: 1.4rem !important; }
+        .text-lg { font-size: 1.1rem !important; line-height: 1.3rem !important; }
+        p { margin-bottom: 0.5rem !important; line-height: 1.4 !important; }
+        .p-3 { padding: 0.75rem !important; }
+        .p-2 { padding: 0.625rem !important; }
+        .py-4 { padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; }
+        .py-3 { padding-top: 0.625rem !important; padding-bottom: 0.625rem !important; }
+        .px-4 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+        .px-3 { padding-left: 0.625rem !important; padding-right: 0.625rem !important; }
+        .rounded-xl { border-radius: 0.5rem !important; }
+        .rounded-lg { border-radius: 0.375rem !important; }
+        .h-16, .w-16 { height: 3rem !important; width: 3rem !important; }
+        .h-14, .w-14 { height: 2.75rem !important; width: 2.75rem !important; }
+        .h-12, .w-12 { height: 2.5rem !important; width: 2.5rem !important; }
+        .h-10, .w-10 { height: 2rem !important; width: 2rem !important; }
+        .h-8, .w-8 { height: 1.75rem !important; width: 1.75rem !important; }
+        .h-5, .w-5 { height: 1.25rem !important; width: 1.25rem !important; }
+        .space-y-4 > * + * { margin-top: 0.75rem !important; }
+        .space-y-3 > * + * { margin-top: 0.5rem !important; }
+        .space-y-2 > * + * { margin-top: 0.375rem !important; }
+        
+        /* Additional styles to ensure content fits */
+        .content-wrapper { 
             position: relative;
-            height: 150px;
-            width: 100%;
+            z-index: 10;
+            height: 835px; 
+            overflow: hidden; 
+            padding-bottom: 0 !important; 
         }
-        .funding-card {
-            transition: all 0.3s ease;
-            border-left: 3px solid transparent;
-        }
-        .funding-card:hover {
-            transform: translateX(5px);
-            border-left-color: #a66efa;
-        }
+        .mb-2 { margin-bottom: 0.5rem !important; }
+        .mb-3 { margin-bottom: 0.625rem !important; }
+        ul.space-y-1 > * + * { margin-top: 0.25rem !important; }
+        ul.space-y-2 > * + * { margin-top: 0.375rem !important; }
+        .space-y-4 { margin-top: 0.5rem !important; }
+        .portfolio-section ul { margin-top: 0.25rem !important; }
+        .portfolio-section h5 { margin-bottom: 0.25rem !important; }
+        .portfolio-section { margin-bottom: 0.375rem !important; }
+        .h-48 { height: 10rem !important; }
+        
+        /* Further optimizations */
+        .gap-2 { gap: 0.625rem !important; }
+        .pt-5 { padding-top: 1rem !important; }
+        .pb-4 { padding-bottom: 0.75rem !important; }
+        .px-8 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+        .ml-4 { margin-left: 0.75rem !important; }
+        .text-xs { font-size: 0.8rem !important; line-height: 1.2 !important; }
+        .text-sm { font-size: 0.9rem !important; line-height: 1.3 !important; }
+        .pl-10 { padding-left: 2.5rem !important; }
+        .space-y-3 > * + * { margin-top: 0.5rem !important; }
+        .h-10, .w-10 { height: 2rem !important; width: 2rem !important; }
+        
+        /* Additional legibility improvements */
+        .milestone-point p { font-size: 0.85rem !important; line-height: 1.3 !important; }
+        .milestone-point { margin-bottom: 0.625rem !important; }
+        .h-36 { height: 10rem !important; }
+        .card-glow { margin-bottom: 0.75rem !important; }
+        .funding-card { margin-bottom: 0.625rem !important; }
+        .text-base { font-size: 1.05rem !important; line-height: 1.35rem !important; }
+        .font-semibold { font-weight: 600 !important; }
+        .font-bold { font-weight: 700 !important; }
+        
+        /* Additional styles to ensure Investment Highlights are fully visible */
         .milestone-point {
+            margin-bottom: 0.75rem !important;
             position: relative;
+            padding-bottom: 0.25rem;
+        }
+        .milestone-point p {
+            font-size: 0.85rem !important;
+            line-height: 1.3 !important;
+            max-width: 95%;
+            margin-bottom: 0 !important;
+        }
+        .milestone-point h4 {
+            font-size: 0.95rem !important;
+            margin-bottom: 0 !important;
+        }
+        .milestone-point:last-child {
+            margin-bottom: 0 !important;
         }
         .milestone-point::before {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 0.95rem;
             left: -30px;
             width: 20px;
-            height: 3px;
+            height: 2px;
             background: linear-gradient(90deg, #a66efa, transparent);
         }
         .milestone-point::after {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 0.95rem;
             left: -35px;
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: #a66efa;
             transform: translateY(-50%);
             box-shadow: 0 0 10px rgba(166, 110, 250, 0.7);
         }
-    
-        
-        /* Additional styles for compact layout */
-        .grid { margin-bottom: 0 !important; }
-        .text-4xl { font-size: 1.5rem !important; line-height: 1.75rem !important; }
-        .text-3xl { font-size: 1.25rem !important; line-height: 1.5rem !important; }
-        .text-2xl { font-size: 1.125rem !important; line-height: 1.35rem !important; }
-        .text-xl { font-size: 1rem !important; line-height: 1.25rem !important; }
-        .text-lg { font-size: 0.9rem !important; line-height: 1.1rem !important; }
-        p { margin-bottom: 0.375rem !important; line-height: 1.2 !important; }
-        .p-3 { padding: 0.5rem !important; }
-        .p-2 { padding: 0.375rem !important; }
-        .py-4 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
-        .py-3 { padding-top: 0.375rem !important; padding-bottom: 0.375rem !important; }
-        .px-4 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
-        .px-3 { padding-left: 0.375rem !important; padding-right: 0.375rem !important; }
-        .rounded-xl { border-radius: 0.375rem !important; }
-        .rounded-lg { border-radius: 0.25rem !important; }
-        .h-16, .w-16 { height: 2.5rem !important; width: 2.5rem !important; }
-        .h-14, .w-14 { height: 2.25rem !important; width: 2.25rem !important; }
-        .h-12, .w-12 { height: 2rem !important; width: 2rem !important; }
-        .h-10, .w-10 { height: 1.75rem !important; width: 1.75rem !important; }
-        .h-8, .w-8 { height: 1.5rem !important; width: 1.5rem !important; }
-        .h-5, .w-5 { height: 1.125rem !important; width: 1.125rem !important; }
-        .space-y-4 > * + * { margin-top: 0.5rem !important; }
-        .space-y-3 > * + * { margin-top: 0.375rem !important; }
-        .space-y-2 > * + * { margin-top: 0.25rem !important; }
+        .content-wrapper {
+            height: auto !important; /* Change to auto height */
+            min-height: 870px;
+            overflow: visible !important;
+            padding-bottom: 30px !important;
+        }
+        /* Special style for investment highlights */
+        .investment-highlights {
+            margin-bottom: 0 !important;
+        }
+        /* Ensure the right column has proper spacing after timeline removal */
+        .gap-2 {
+            gap: 0.75rem !important;
+        }
+        /* Improve spacing for investment highlights section */
+        .pl-10 {
+            padding-left: 2.75rem !important;
+        }
+        .space-y-2 > * + * {
+            margin-top: 0.375rem !important;
+        }
+        /* Further optimize card spacing */
+        .card-glow {
+            margin-bottom: 0.5rem !important;
+        }
+        /* Ensure the slide can contain all content */
+        .slide {
+            overflow: visible !important;
+        }
+        body {
+            overflow-y: auto !important;
+        }
     </style>
 </head>
 <body>
@@ -160,9 +250,9 @@
         
         <!-- Content -->
         <div class="content-wrapper w-full px-8 pt-5 pb-4">
-            <div class="flex justify-between items-center mb-2">
+            <div class="flex justify-between items-center mb-1">
                 <div class="flex items-center">
-                    <i class="fas fa-gem text-lg text-purple-400 mr-4"></i>
+                    <i class="fas fa-globe text-xl text-purple-400 mr-4"></i>
                     <h2 class="text-4xl font-bold gradient-text">INVESTMENT OPPORTUNITY</h2>
                 </div>
                 <div class="text-sm text-gray-400">HEB STUDIOS | 9/15</div>
@@ -182,13 +272,13 @@
                             </div>
                             <div class="bg-purple-900 bg-opacity-30 p-2 rounded-lg text-center">
                                 <div class="text-sm text-gray-400 mb-1">Valuation Cap</div>
-                                <div class="text-lg font-bold text-white">$40M</div>
+                                <div class="text-lg font-bold text-white">$10M</div>
                                 <div class="text-xs text-gray-500 mt-1">Pre-money</div>
                             </div>
                         </div>
                         
                         <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg mb-2">
-                            <h4 class="text-base font-semibold text-purple-300 mb-3">Key Terms</h4>
+                            <h4 class="text-base font-semibold text-purple-300 mb-2">Key Terms</h4>
                             <div class="grid grid-cols-2 gap-3">
                                 <div class="flex items-start">
                                     <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
@@ -201,7 +291,7 @@
                                     <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
                                     <div>
                                         <div class="text-sm font-medium">Pro-Rata Rights</div>
-                                        <div class="text-xs text-gray-400">For investors above $500K</div>
+                                        <div class="text-xs text-gray-400">For investors above $200K</div>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
@@ -222,7 +312,7 @@
                         </div>
                         
                         <div class="bg-indigo-900 bg-opacity-30 p-2 rounded-lg">
-                            <h4 class="text-base font-semibold text-indigo-300 mb-3">Why SAFE Agreements?</h4>
+                            <h4 class="text-base font-semibold text-indigo-300 mb-2">Why SAFE Agreements?</h4>
                             <ul class="text-sm text-gray-300 space-y-2">
                                 <li class="flex items-start">
                                     <i class="fas fa-angle-right text-indigo-400 mt-1 mr-2"></i>
@@ -244,7 +334,36 @@
                         </div>
                     </div>
                     
-                    <!-- Investment Timeline section removed -->
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 mb-2 card-glow investment-highlights">
+                        <h3 class="text-base font-semibold text-purple-400 mb-2">INVESTMENT HIGHLIGHTS</h3>
+                        
+                        <div class="pl-10 space-y-2">
+                            <div class="milestone-point">
+                                <h4 class="text-base font-semibold text-white">Proven Track Record</h4>
+                                <p class="text-sm text-gray-300">Successful revenue of $18M from initial The Legend NFT collection during demonstrates strong IP</p>
+                            </div>
+                            
+                            <div class="milestone-point">
+                                <h4 class="text-base font-semibold text-white">Strategic Dual IP Approach</h4>
+                                <p class="text-sm text-gray-300">Two complementary IPs targeting different market segments provides diversified revenue potential and cross-promotion opportunities</p>
+                            </div>
+                            
+                            <div class="milestone-point">
+                                <h4 class="text-base font-semibold text-white">Rapidly Growing Market</h4>
+                                <p class="text-sm text-gray-300">Web3 gaming projected to reach $118.3B by 2034 with increasing mainstream adoption (33.2% CAGR)</p>
+                            </div>
+                            
+                            <div class="milestone-point">
+                                <h4 class="text-base font-semibold text-white">Multiple Revenue Streams</h4>
+                                <p class="text-sm text-gray-300">Diversified income from NFT mints, tournament fees, spectator betting, royalties, and virtual land sales</p>
+                            </div>
+                            
+                            <div class="milestone-point">
+                                <h4 class="text-base font-semibold text-white">Path to $1B+ Valuation</h4>
+                                <p class="text-sm text-gray-300">Clear roadmap to billion-dollar studio through platform growth, IP expansion, holographic technology development and metaverse experience development</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Right Column -->
@@ -255,55 +374,55 @@
                         <div class="grid grid-cols-1 gap-3 mb-2">
                             <div class="funding-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center mr-3">
+                                    <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center mr-2">
                                         <i class="fas fa-code text-purple-400"></i>
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-semibold">Product Development</h4>
-                                        <p class="text-xs text-gray-400">Accelerate development of The Legend metaverse and Bananium.ai platforms</p>
+                                        <p class="text-xs text-gray-400">Core technology for both The Legend metaverse and Bananium battle engine</p>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="funding-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-indigo-900 flex items-center justify-center mr-3">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-900 flex items-center justify-center mr-2">
                                         <i class="fas fa-users text-indigo-400"></i>
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-semibold">Team Expansion</h4>
-                                        <p class="text-xs text-gray-400">Hire key technical and creative talent to scale operations</p>
+                                        <p class="text-xs text-gray-400">Technical and creative talent to scale operations</p>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="funding-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-3">
+                                    <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-2">
                                         <i class="fas fa-bullhorn text-blue-400"></i>
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-semibold">Marketing & Community</h4>
-                                        <p class="text-xs text-gray-400">Build engaged user communities and drive acquisition</p>
+                                        <p class="text-xs text-gray-400">User acquisition and engagement strategies</p>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="funding-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-teal-900 flex items-center justify-center mr-3">
+                                    <div class="w-10 h-10 rounded-full bg-teal-900 flex items-center justify-center mr-2">
                                         <i class="fas fa-vr-cardboard text-teal-400"></i>
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-semibold">R&D (Holographic Tech)</h4>
-                                        <p class="text-xs text-gray-400">Invest in next-gen holographic entertainment technology</p>
+                                        <p class="text-xs text-gray-400">Investment in next-gen holographic entertainment technology</p>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="funding-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center mr-3">
+                                    <div class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center mr-2">
                                         <i class="fas fa-dollar-sign text-gray-400"></i>
                                     </div>
                                     <div class="flex-1">
@@ -315,36 +434,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
-                        <h3 class="text-base font-semibold text-purple-400 mb-2">INVESTMENT HIGHLIGHTS</h3>
-                        
-                        <div class="pl-10 space-y-4">
-                            <div class="milestone-point">
-                                <h4 class="text-base font-semibold text-white">Proven Track Record</h4>
-                                <p class="text-sm text-gray-300">Previous revenue of $18M during bull market demonstrates execution capability</p>
-                            </div>
-                            
-                            <div class="milestone-point">
-                                <h4 class="text-base font-semibold text-white">Strategic Acquisition</h4>
-                                <p class="text-sm text-gray-300">MHSProd integration provides competitive advantage in 3D production capabilities</p>
-                            </div>
-                            
-                            <div class="milestone-point">
-                                <h4 class="text-base font-semibold text-white">Rapidly Growing Market</h4>
-                                <p class="text-sm text-gray-300">Metaverse gaming projected to reach $119.2B by 2028 (39.3% CAGR)</p>
-                            </div>
-                            
-                            <div class="milestone-point">
-                                <h4 class="text-base font-semibold text-white">Multiple Revenue Streams</h4>
-                                <p class="text-sm text-gray-300">Diversified income from NFTs, events, royalties, and technology services</p>
-                            </div>
-                            
-                            <div class="milestone-point">
-                                <h4 class="text-base font-semibold text-white">Path to $1B+ Valuation</h4>
-                                <p class="text-sm text-gray-300">Clear roadmap to billion-dollar studio through platform growth and IP development</p>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Add some extra space to balance the layout after timeline removal -->
+                    <div class="h-36"></div>
                 </div>
             </div>
         </div>
@@ -356,8 +447,9 @@
     </div>
     
     <script>
-        // Removing the Investment Timeline Chart code
+        // Investment Timeline Chart code removed
     </script>
 </body>
 </html>
+
 
