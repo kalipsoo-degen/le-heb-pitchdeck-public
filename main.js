@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to create all slides using iframes
     function createSlides() {
         // Define the order of slides
-        const slideOrder = [1, 2, 9, 4, 5, 3, 6, 8, 14, 12, 13, 10, 15, 11, 16, 17];
+        const slideOrder = [1, 2, 9, 4, 5, 3, 6, 14, 12, 13, 10, 15, 11, 16, 17, 18];
         
         for (let i = 0; i < slideOrder.length; i++) {
             const slideNum = slideOrder[i];
