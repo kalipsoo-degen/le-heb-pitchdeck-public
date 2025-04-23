@@ -148,8 +148,30 @@
         .mb-3 { margin-bottom: 0.5rem !important; }
         .mb-4 { margin-bottom: 1rem !important; }
         .mb-5 { margin-bottom: 1.25rem !important; }
-        .gap-4 { gap: 1rem !important; }
-        .gap-5 { gap: 1.25rem !important; }
+        .gap-4 { gap: 1.25rem !important; }
+        .gap-5 { gap: 1.5rem !important; }
+        .gap-6 { gap: 1.75rem !important; }
+        .grid-cols-12 {
+            column-gap: 1.5rem;
+        }
+        .mb-3 {
+            margin-bottom: 0.75rem !important;
+        }
+        .mb-4 {
+            margin-bottom: 1.25rem !important;
+        }
+        .p-2 {
+            padding: 0.5rem !important;
+        }
+        .p-3 {
+            padding: 0.75rem !important;
+        }
+        .p-4 {
+            padding: 1rem !important;
+        }
+        .p-5 {
+            padding: 1.25rem !important;
+        }
         
         /* New styles for better scaling */
         .slide-content {
@@ -248,6 +270,32 @@
         
         .collectibles-feature {
             padding: 10px;
+        }
+        
+        /* Core Products section adjustments */
+        .core-products-container {
+            max-height: 100%;
+            overflow-y: auto;
+        }
+        .legend-small-text .bg-gray-800 {
+            padding: 0.75rem !important;
+            margin-bottom: 0.75rem !important;
+        }
+        .legend-small-text .text-xs {
+            font-size: 0.85rem !important;
+            line-height: 1.2rem !important;
+        }
+        
+        /* Roadmap spacing improvements */
+        .roadmap-item {
+            margin-bottom: 1rem !important;
+        }
+        .relative.pl-4.mb-3 {
+            margin-bottom: 1rem !important;
+        }
+        .bg-indigo-900.bg-opacity-30.rounded-lg.p-1.mb-2 {
+            margin-bottom: 0.75rem !important;
+            padding: 0.5rem !important;
         }
     </style>
 </head>
@@ -348,44 +396,50 @@
                     
                     <!-- Middle Column - Core Features (2 columns wide) -->
                     <div class="col-span-2">
-                        <div class="bg-gray-900 bg-opacity-70 rounded-lg p-4 mb-3 h-full card-glow">
+                        <div class="bg-gray-900 bg-opacity-70 rounded-lg p-4 mb-3 h-full card-glow core-products-container">
                             <h3 class="text-lg font-semibold text-purple-300 mb-3">CORE PRODUCTS</h3>
                             
                             <div class="space-y-3 legend-small-text">
                                 <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg">
                                     <i class="fas fa-shield-alt text-lg text-indigo-400 mb-2"></i>
                                     <div class="text-base font-semibold mb-1">Battle Simulator</div>
-                                    <p class="text-sm text-gray-400">High-stakes battles with deadly action</p>
+                                    <p class="text-xs text-gray-400">High-stakes battles with deadly action</p>
                                 </div>
                                 
                                 <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg">
                                     <i class="fas fa-crosshairs text-lg text-indigo-400 mb-2"></i>
                                     <div class="text-base font-semibold mb-1">Unique Weapons</div>
-                                    <p class="text-sm text-gray-400">Cross-platform compatible 3D models</p>
+                                    <p class="text-xs text-gray-400">Cross-platform compatible 3D models</p>
                                 </div>
                                 
                                 <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg">
                                     <i class="fas fa-vr-cardboard text-lg text-indigo-400 mb-2"></i>
                                     <div class="text-base font-semibold mb-1">Metaverse Experience</div>
-                                    <p class="text-sm text-gray-400">Immersive environment for Legends</p>
+                                    <p class="text-xs text-gray-400">Immersive environment for Legends</p>
                                 </div>
                                 
                                 <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg">
                                     <i class="fas fa-gem text-lg text-indigo-400 mb-2"></i>
                                     <div class="text-base font-semibold mb-1">Legendary Stones</div>
-                                    <p class="text-sm text-gray-400">Upgrade resources for character enhancement</p>
+                                    <p class="text-xs text-gray-400">Upgrade resources for character enhancement</p>
                                 </div>
                                 
                                 <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg">
                                     <i class="fas fa-users text-lg text-indigo-400 mb-2"></i>
                                     <div class="text-base font-semibold mb-1">DAO Governance</div>
-                                    <p class="text-sm text-gray-400">Community-driven development decisions</p>
+                                    <p class="text-xs text-gray-400">Community-driven development decisions</p>
                                 </div>
                                 
-                                <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg mb-1">
+                                <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg">
                                     <i class="fas fa-cube text-lg text-indigo-400 mb-2"></i>
                                     <div class="text-base font-semibold mb-1">NFT Mints</div>
-                                    <p class="text-sm text-gray-400">Season 2 - Full 3D character mint</p>
+                                    <p class="text-xs text-gray-400">Season 2 - Full 3D character mint</p>
+                                </div>
+                                
+                                <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg">
+                                    <i class="fas fa-comments text-lg text-indigo-400 mb-2"></i>
+                                    <div class="text-base font-semibold mb-1">Discord Community</div>
+                                    <p class="text-xs text-gray-400">Engaged community with 50,000 members</p>
                                 </div>
                             </div>
                         </div>
@@ -459,27 +513,34 @@
                         </div>
                         
                         <div class="bg-gray-900 bg-opacity-70 rounded-lg p-5 card-glow">
-                            <h3 class="text-lg font-semibold text-purple-300 mb-3">DEVELOPMENT ROADMAP</h3>
+                            <h3 class="text-lg font-semibold text-purple-300 mb-4">DEVELOPMENT ROADMAP</h3>
                             
-                            <div class="grid grid-cols-2 gap-4">
+                            <div class="grid grid-cols-2 gap-5">
                                 <div class="relative">
                                     <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-purple-800"></div>
                                     
-                                    <div class="relative pl-4 mb-2">
-                                        <div class="absolute left-0 top-1 w-2 h-2 rounded-full bg-purple-500"></div>
-                                        <h4 class="text-sm font-semibold mb-0">Q2 2025</h4>
-                                        <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-1">
+                                    <div class="relative pl-4 mb-4">
+                                        <div class="absolute left-0 top-1 w-2.5 h-2.5 rounded-full bg-purple-500"></div>
+                                        <h4 class="text-sm font-semibold mb-2">2025 Releases</h4>
+                                        
+                                        <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-2 mb-3">
                                             <div class="text-sm font-semibold">Battle Simulator Beta Launch</div>
                                             <p class="text-xs text-gray-400">First community tournaments and competitions</p>
                                         </div>
-                                    </div>
-                                    
-                                    <div class="relative pl-4 mb-2">
-                                        <div class="absolute left-0 top-1 w-2 h-2 rounded-full bg-purple-500"></div>
-                                        <h4 class="text-sm font-semibold mb-0">Q4 2025</h4>
-                                        <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-1">
-                                            <div class="text-sm font-semibold">Metaverse Alpha Launch</div>
-                                            <p class="text-xs text-gray-400">First access to virtual world for Legends</p>
+                                        
+                                        <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-2 mb-3">
+                                            <div class="text-sm font-semibold">Weapon NFT Sale</div>
+                                            <p class="text-xs text-gray-400">Launch of 3D asset marketplace</p>
+                                        </div>
+                                        
+                                        <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-2 mb-3">
+                                            <div class="text-sm font-semibold">Season 2 3D Collection</div>
+                                            <p class="text-xs text-gray-400">Full 3D character NFT mint</p>
+                                        </div>
+                                        
+                                        <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-2">
+                                            <div class="text-sm font-semibold">Ancillary</div>
+                                            <p class="text-xs text-gray-400">Merchandise and additional revenue streams</p>
                                         </div>
                                     </div>
                                 </div>
@@ -487,31 +548,19 @@
                                 <div class="relative">
                                     <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-purple-800"></div>
                                     
-                                    <div class="relative pl-4 mb-2">
-                                        <div class="absolute left-0 top-1 w-2 h-2 rounded-full bg-purple-500"></div>
-                                        <h4 class="text-sm font-semibold mb-0">Q3 2025</h4>
-                                        <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-1">
-                                            <div class="text-sm font-semibold">Weapons & Equipment Release</div>
-                                            <p class="text-xs text-gray-400">Launch of 3D asset marketplace</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="relative pl-4 mb-2">
-                                        <div class="absolute left-0 top-1 w-2 h-2 rounded-full bg-purple-500"></div>
-                                        <h4 class="text-sm font-semibold mb-0">Q1 2026</h4>
-                                        <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-1">
-                                            <div class="text-sm font-semibold">DAO Governance Activation</div>
+                                    <div class="relative pl-4 mb-4">
+                                        <div class="absolute left-0 top-1 w-2.5 h-2.5 rounded-full bg-purple-500"></div>
+                                        <h4 class="text-sm font-semibold mb-2">2026 and Beyond</h4>
+                                        
+                                        <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-2 mb-3">
+                                            <div class="text-sm font-semibold">DAO Governance</div>
                                             <p class="text-xs text-gray-400">Community-driven development decisions</p>
                                         </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="relative pl-4 col-span-2">
-                                    <div class="absolute left-0 top-1 w-2 h-2 rounded-full bg-purple-500"></div>
-                                    <h4 class="text-sm font-semibold mb-0">Q3 2026+</h4>
-                                    <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-1">
-                                        <div class="text-sm font-semibold">Holographic Integration</div>
-                                        <p class="text-xs text-gray-400">Revolutionary AR/hologram experiences</p>
+                                        
+                                        <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-2">
+                                            <div class="text-sm font-semibold">Metaverse Experience</div>
+                                            <p class="text-xs text-gray-400">Customizable lands and virtual world for Legends</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
