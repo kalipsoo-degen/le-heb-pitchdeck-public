@@ -177,7 +177,7 @@
                         <div class="grid grid-cols-2 gap-2 mb-2">
                             <div class="bg-purple-900 bg-opacity-30 p-2 rounded-lg text-center">
                                 <div class="text-sm text-gray-400 mb-1">Target Raise</div>
-                                <div class="text-lg font-bold text-white">$5.5M</div>
+                                <div class="text-lg font-bold text-white">$1M</div>
                                 <div class="text-xs text-gray-500 mt-1">SAFE Agreements</div>
                             </div>
                             <div class="bg-purple-900 bg-opacity-30 p-2 rounded-lg text-center">
@@ -244,13 +244,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
-                        <h3 class="text-base font-semibold text-purple-400 mb-2">INVESTMENT TIMELINE</h3>
-                        
-                        <div class="chart-container">
-                            <canvas id="timelineChart"></canvas>
-                        </div>
-                    </div>
+                    <!-- Investment Timeline section removed -->
                 </div>
                 
                 <!-- Right Column -->
@@ -268,7 +262,6 @@
                                         <h4 class="font-semibold">Product Development</h4>
                                         <p class="text-xs text-gray-400">Accelerate development of The Legend metaverse and Bananium.ai platforms</p>
                                     </div>
-                                    <div class="text-base font-bold text-purple-300">40%</div>
                                 </div>
                             </div>
                             
@@ -281,7 +274,6 @@
                                         <h4 class="font-semibold">Team Expansion</h4>
                                         <p class="text-xs text-gray-400">Hire key technical and creative talent to scale operations</p>
                                     </div>
-                                    <div class="text-base font-bold text-indigo-300">25%</div>
                                 </div>
                             </div>
                             
@@ -294,7 +286,6 @@
                                         <h4 class="font-semibold">Marketing & Community</h4>
                                         <p class="text-xs text-gray-400">Build engaged user communities and drive acquisition</p>
                                     </div>
-                                    <div class="text-base font-bold text-blue-300">20%</div>
                                 </div>
                             </div>
                             
@@ -307,7 +298,6 @@
                                         <h4 class="font-semibold">R&D (Holographic Tech)</h4>
                                         <p class="text-xs text-gray-400">Invest in next-gen holographic entertainment technology</p>
                                     </div>
-                                    <div class="text-base font-bold text-teal-300">10%</div>
                                 </div>
                             </div>
                             
@@ -320,7 +310,6 @@
                                         <h4 class="font-semibold">Working Capital</h4>
                                         <p class="text-xs text-gray-400">Operational expenses and financial reserves</p>
                                     </div>
-                                    <div class="text-base font-bold text-gray-300">5%</div>
                                 </div>
                             </div>
                         </div>
@@ -332,7 +321,7 @@
                         <div class="pl-10 space-y-4">
                             <div class="milestone-point">
                                 <h4 class="text-base font-semibold text-white">Proven Track Record</h4>
-                                <p class="text-sm text-gray-300">Previous revenue of $20M during bull market demonstrates execution capability</p>
+                                <p class="text-sm text-gray-300">Previous revenue of $18M during bull market demonstrates execution capability</p>
                             </div>
                             
                             <div class="milestone-point">
@@ -367,64 +356,7 @@
     </div>
     
     <script>
-        // Investment Timeline Chart
-        const timelineCtx = document.getElementById('timelineChart').getContext('2d');
-        const timelineChart = new Chart(timelineCtx, {
-            type: 'line',
-            data: {
-                labels: ['Now', 'SAFE Round', 'Series A', 'Series B', 'Potential Exit'],
-                datasets: [{
-                    label: 'Projected Valuation ($M)',
-                    data: [40, 40, 150, 500, 1200],
-                    backgroundColor: 'rgba(166, 110, 250, 0.2)',
-                    borderColor: 'rgba(166, 110, 250, 1)',
-                    borderWidth: 2,
-                    pointBackgroundColor: 'rgba(166, 110, 250, 1)',
-                    pointRadius: 6,
-                    pointHoverRadius: 8,
-                    fill: true,
-                    tension: 0.4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
-                        },
-                        ticks: {
-                            color: '#f5f5f5',
-                            callback: function(value) {
-                                return '$' + value + 'M';
-                            }
-                        }
-                    },
-                    x: {
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
-                        },
-                        ticks: {
-                            color: '#f5f5f5'
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return 'Valuation: $' + context.parsed.y + 'M';
-                            }
-                        }
-                    }
-                }
-            }
-        });
+        // Removing the Investment Timeline Chart code
     </script>
 </body>
 </html>
