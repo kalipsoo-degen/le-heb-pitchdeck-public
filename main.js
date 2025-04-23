@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fullscreenBtn = document.getElementById('fullscreenBtn');
     const navControls = document.querySelector('.nav-controls');
     
-    const totalSlides = 16;
+    const totalSlides = 17;
     let currentSlideIndex = 0;
     let navTimeout;
     let isNavVisible = true;
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to create all slides using iframes
     function createSlides() {
         // Define the order of slides
-        const slideOrder = [1, 2, 9, 4, 5, 3, 6, 14, 12, 13, 10, 15, 11, 16, 17, 18];
+        const slideOrder = [1, 2, 9, 4, 5, 3, 6, 14, 12, 13, 10, 15, 11, 16, 17, 18, 19];
         
         for (let i = 0; i < slideOrder.length; i++) {
             const slideNum = slideOrder[i];

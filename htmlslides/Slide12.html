@@ -129,8 +129,8 @@
         <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
         
         <!-- Content -->
-        <div class="content-wrapper w-full px-8 pt-5 pb-4">
-            <div class="flex justify-between items-center mb-2">
+        <div class="content-wrapper w-full px-8 pt-5 pb-4 h-full flex flex-col">
+            <div class="flex justify-between items-center mb-6">
                 <div class="flex items-center">
                     <i class="fas fa-seedling text-lg text-green-400 mr-4"></i>
                     <h2 class="text-4xl font-bold gradient-text">SUSTAINABLE GROWTH</h2>
@@ -138,21 +138,45 @@
                 <div class="text-sm text-gray-400">HEB STUDIOS | 12/15</div>
             </div>
             
-            <div class="grid grid-cols-12 gap-2">
-                <!-- Left Column - Growth Strategy (5 columns wide) -->
-                <div class="col-span-5">
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
-                        <h3 class="text-base font-semibold text-green-400 mb-2">GROWTH STRATEGY</h3>
+            <div class="grid grid-cols-12 gap-6 flex-grow">
+                <!-- Left Column - The Four Pillars (4 columns wide) -->
+                <div class="col-span-4 flex flex-col">
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 card-glow mb-6">
+                        <h3 class="text-base font-semibold text-green-400 mb-3">FOUR PILLARS OF SUSTAINABLE WEB3 GAMING</h3>
                         
                         <div class="space-y-4">
+                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <i class="fas fa-door-open text-green-400"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-base">Accessible Onboarding</h4>
+                                        <p class="text-sm text-gray-300">Progressive introduction of Web3, free-to-play entry, intuitive UX, and cross-platform compatibility.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <i class="fas fa-coins text-green-400"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-base">Balanced Tokenomics</h4>
+                                        <p class="text-sm text-gray-300">Value capture mechanisms, controlled inflation, utility focus, and long-term incentive alignment.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <div class="strategy-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
                                         <i class="fas fa-users text-green-400"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-base">Community Growth</h4>
-                                        <p class="text-sm text-gray-300">Build and nurture an engaged player community through events, tournaments, and creator programs.</p>
+                                        <h4 class="font-semibold text-base">Community Ownership</h4>
+                                        <p class="text-sm text-gray-300">Governance integration, creator economies, transparent communication, and shared identity.</p>
                                     </div>
                                 </div>
                             </div>
@@ -160,35 +184,11 @@
                             <div class="strategy-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
-                                        <i class="fas fa-handshake text-green-400"></i>
+                                        <i class="fas fa-gamepad text-green-400"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-base">Strategic Partnerships</h4>
-                                        <p class="text-sm text-gray-300">Form alliances with complementary tech companies, game publishers, and entertainment brands.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
-                                <div class="flex items-start">
-                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
-                                        <i class="fas fa-chart-line text-green-400"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-base">Vertical Integration</h4>
-                                        <p class="text-sm text-gray-300">Expand capabilities across the production chain from content creation to distribution and marketing.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="strategy-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
-                                <div class="flex items-start">
-                                    <div class="w-10 h-10 rounded-full bg-green-900 flex items-center justify-center mr-3 flex-shrink-0">
-                                        <i class="fas fa-globe text-green-400"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-base">Global Expansion</h4>
-                                        <p class="text-sm text-gray-300">Penetrate key markets in Asia, Europe, and Latin America through localized content and regional partnerships.</p>
+                                        <h4 class="font-semibold text-base">Engaging Gameplay Loop</h4>
+                                        <p class="text-sm text-gray-300">Intrinsic motivation, skill-based progression, regular content updates, and competitive elements.</p>
                                     </div>
                                 </div>
                             </div>
@@ -196,197 +196,102 @@
                     </div>
                 </div>
                 
-                <!-- Middle Column - Revenue Diversification (3 columns wide) -->
-                <div class="col-span-3">
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow mb-2">
-                        <h3 class="text-base font-semibold text-green-400 mb-2">REVENUE MIX (2025)</h3>
+                <!-- Middle Column - Tokenomics & Community (4 columns wide) -->
+                <div class="col-span-4 flex flex-col">
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 card-glow mb-6">
+                        <h3 class="text-base font-semibold text-green-400 mb-3">SUSTAINABLE TOKENOMICS DESIGN</h3>
                         
-                        <div class="space-y-4">
-                            <div class="relative pt-1">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <span class="text-xs font-semibold inline-block text-green-400">
-                                            Game Sales
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span class="text-xs font-semibold inline-block text-green-400">
-                                            40%
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-800">
-                                    <div style="width:40%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="relative pt-1">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <span class="text-xs font-semibold inline-block text-green-400">
-                                            Subscriptions
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span class="text-xs font-semibold inline-block text-green-400">
-                                            25%
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-800">
-                                    <div style="width:25%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="relative pt-1">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <span class="text-xs font-semibold inline-block text-green-400">
-                                            In-App Purchases
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span class="text-xs font-semibold inline-block text-green-400">
-                                            20%
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-800">
-                                    <div style="width:20%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="relative pt-1">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <span class="text-xs font-semibold inline-block text-green-400">
-                                            Licensing & IP
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span class="text-xs font-semibold inline-block text-green-400">
-                                            10%
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-800">
-                                    <div style="width:10%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="relative pt-1">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <span class="text-xs font-semibold inline-block text-green-400">
-                                            Hardware & Other
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span class="text-xs font-semibold inline-block text-green-400">
-                                            5%
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-800">
-                                    <div style="width:5%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="text-sm space-y-3 text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span><span class="text-green-400 font-semibold">Governance & Ownership:</span> Reward value-adding participation with decision rights</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span><span class="text-green-400 font-semibold">Supply Management:</span> Clear policies on supply caps, distribution methods</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span><span class="text-green-400 font-semibold">Strategic Token Sinks:</span> Remove tokens from circulation to counter inflation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span><span class="text-green-400 font-semibold">Value Beyond Trading:</span> Ensure tokens have in-game utility</span>
+                            </li>
+                        </ul>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
-                        <h3 class="text-base font-semibold text-green-400 mb-2">SUSTAINABILITY FOCUS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 card-glow">
+                        <h3 class="text-base font-semibold text-green-400 mb-3">COMMUNITY BUILDING TACTICS</h3>
                         
-                        <ul class="text-sm space-y-2 text-gray-300">
+                        <ul class="text-sm space-y-3 text-gray-300">
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                                <span>Carbon-neutral server operations</span>
+                                <span><span class="text-green-400 font-semibold">Clear Roadmaps:</span> Transparent development and regular updates</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                                <span>Green development practices</span>
+                                <span><span class="text-green-400 font-semibold">User-Generated Content:</span> Enable players to create and monetize</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                                <span>Ethical content & community policies</span>
+                                <span><span class="text-green-400 font-semibold">Governance Participation:</span> DAO voting and input mechanisms</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                                <span>Diversity & inclusion initiatives</span>
+                                <span><span class="text-green-400 font-semibold">Regular Events:</span> Tournaments and creative contests</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 
-                <!-- Right Column - Projections (4 columns wide) -->
-                <div class="col-span-4">
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow mb-2">
-                        <h3 class="text-base font-semibold text-green-400 mb-2">5-YEAR PROJECTIONS</h3>
+                <!-- Right Column - Implementation (4 columns wide) -->
+                <div class="col-span-4 flex flex-col">
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 card-glow mb-6">
+                        <h3 class="text-base font-semibold text-green-400 mb-3">PLAYER-DRIVEN ECONOMIES</h3>
                         
-                        <table class="min-w-full text-sm">
-                            <thead>
-                                <tr>
-                                    <th class="py-2 text-left text-green-400">Metric</th>
-                                    <th class="py-2 text-center text-green-400">Year 1</th>
-                                    <th class="py-2 text-center text-green-400">Year 3</th>
-                                    <th class="py-2 text-center text-green-400">Year 5</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-gray-300">
-                                <tr class="border-t border-gray-800">
-                                    <td class="py-2">Revenue ($M)</td>
-                                    <td class="py-2 text-center">12</td>
-                                    <td class="py-2 text-center">38</td>
-                                    <td class="py-2 text-center">75</td>
-                                </tr>
-                                <tr class="border-t border-gray-800">
-                                    <td class="py-2">User Base (M)</td>
-                                    <td class="py-2 text-center">0.8</td>
-                                    <td class="py-2 text-center">2.5</td>
-                                    <td class="py-2 text-center">6.0</td>
-                                </tr>
-                                <tr class="border-t border-gray-800">
-                                    <td class="py-2">EBITDA Margin</td>
-                                    <td class="py-2 text-center">18%</td>
-                                    <td class="py-2 text-center">24%</td>
-                                    <td class="py-2 text-center">32%</td>
-                                </tr>
-                                <tr class="border-t border-gray-800">
-                                    <td class="py-2">Team Size</td>
-                                    <td class="py-2 text-center">65</td>
-                                    <td class="py-2 text-center">120</td>
-                                    <td class="py-2 text-center">200</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <ul class="text-sm space-y-3 text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span><span class="text-green-400 font-semibold">True Digital Ownership:</span> Verifiable ownership of in-game assets</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span><span class="text-green-400 font-semibold">Open Secondary Markets:</span> Infrastructure for seamless asset trading</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span><span class="text-green-400 font-semibold">Cross-Game Asset Utility:</span> Value across multiple games</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span><span class="text-green-400 font-semibold">Balanced Economic Design:</span> Controls to prevent hyperinflation</span>
+                            </li>
+                        </ul>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
-                        <h3 class="text-base font-semibold text-green-400 mb-2">KEY GROWTH METRICS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 card-glow">
+                        <h3 class="text-base font-semibold text-green-400 mb-3">IMPLEMENTATION ROADMAP</h3>
                         
-                        <div class="grid grid-cols-2 gap-2">
+                        <div class="space-y-3">
                             <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg">
-                                <div class="text-sm text-green-400 mb-1">Retention Rate</div>
-                                <div class="text-base font-bold">68%</div>
-                                <div class="text-xs text-gray-400">Targeting 75% by Year 3</div>
+                                <div class="text-sm text-green-400 mb-1">Phase 1: Foundation (0-3 Months)</div>
+                                <div class="text-xs text-gray-300">Core gameplay loop, progressive onboarding, community channels</div>
                             </div>
                             
                             <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg">
-                                <div class="text-sm text-green-400 mb-1">CAC Payback</div>
-                                <div class="text-base font-bold">9 months</div>
-                                <div class="text-xs text-gray-400">Improving to 7 months</div>
+                                <div class="text-sm text-green-400 mb-1">Phase 2: Early Adoption (3-6 Months)</div>
+                                <div class="text-xs text-gray-300">Free-to-play entry, basic Web3 features, community initiatives</div>
                             </div>
                             
                             <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg">
-                                <div class="text-sm text-green-400 mb-1">User LTV</div>
-                                <div class="text-base font-bold">$85</div>
-                                <div class="text-xs text-gray-400">Growing by 15% annually</div>
+                                <div class="text-sm text-green-400 mb-1">Phase 3: Expansion (6-12 Months)</div>
+                                <div class="text-xs text-gray-300">Advanced economic features, governance participation, creator tools</div>
                             </div>
                             
                             <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg">
-                                <div class="text-sm text-green-400 mb-1">ARR Growth</div>
-                                <div class="text-base font-bold">42%</div>
-                                <div class="text-xs text-gray-400">Year-over-Year</div>
+                                <div class="text-sm text-green-400 mb-1">Phase 4: Sustainable Growth (12+ Months)</div>
+                                <div class="text-xs text-gray-300">Cross-game utility, long-term retention, community-driven initiatives</div>
                             </div>
                         </div>
                     </div>

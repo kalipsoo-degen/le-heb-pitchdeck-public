@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Financial Deck - Competitive Landscape</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f1923;
+            color: #f5f5f5;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1600px;
+            height: 900px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f1923 0%, #1a2c39 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #1e88e5, #5e35b1, #d81b60);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glow {
+            text-shadow: 0 0 15px rgba(30, 136, 229, 0.7);
+        }
+        .bg-pattern {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(30, 136, 229, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(94, 53, 177, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(216, 27, 96, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+        .hexagon {
+            position: absolute;
+            width: 200px;
+            height: 173px;
+            background: linear-gradient(135deg, rgba(30, 136, 229, 0.1) 0%, rgba(94, 53, 177, 0.05) 100%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            z-index: 0;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        .pulse {
+            animation: pulse 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        @keyframes pulse {
+            0% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 0.7; transform: scale(1); }
+        }
+        .card-glow {
+            box-shadow: 0 0 20px rgba(30, 136, 229, 0.3);
+            transition: all 0.3s ease;
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 30px rgba(30, 136, 229, 0.5);
+            transform: translateY(-5px);
+        }
+        .quadrant-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 2px;
+            width: 100%;
+            height: 360px;
+            background-color: rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        .quadrant {
+            background-color: rgba(26, 44, 57, 0.8);
+            padding: 10px;
+            position: relative;
+        }
+        .competitor {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .competitor:hover {
+            transform: scale(1.1);
+            z-index: 20;
+        }
+        .competitor-label {
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+        }
+        .advantage-card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        .advantage-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #1e88e5, transparent);
+            transition: all 0.5s ease;
+        }
+        .advantage-card:hover::after {
+            left: 0;
+        }
+        .advantage-card:hover {
+            transform: translateY(-3px);
+        }
+        .axes-label {
+            position: absolute;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .axes-arrow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    
+        
+        /* Additional styles for compact layout */
+        .grid { margin-bottom: 0 !important; }
+        .text-4xl { font-size: 1.5rem !important; line-height: 1.75rem !important; }
+        .text-3xl { font-size: 1.25rem !important; line-height: 1.5rem !important; }
+        .text-2xl { font-size: 1.125rem !important; line-height: 1.35rem !important; }
+        .text-xl { font-size: 1rem !important; line-height: 1.25rem !important; }
+        .text-lg { font-size: 0.9rem !important; line-height: 1.1rem !important; }
+        p { margin-bottom: 0.375rem !important; line-height: 1.2 !important; }
+        .p-3 { padding: 0.5rem !important; }
+        .p-2 { padding: 0.375rem !important; }
+        .py-4 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+        .py-3 { padding-top: 0.375rem !important; padding-bottom: 0.375rem !important; }
+        .px-4 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+        .px-3 { padding-left: 0.375rem !important; padding-right: 0.375rem !important; }
+        .rounded-xl { border-radius: 0.375rem !important; }
+        .rounded-lg { border-radius: 0.25rem !important; }
+        .h-16, .w-16 { height: 2.5rem !important; width: 2.5rem !important; }
+        .h-14, .w-14 { height: 2.25rem !important; width: 2.25rem !important; }
+        .h-12, .w-12 { height: 2rem !important; width: 2rem !important; }
+        .h-10, .w-10 { height: 1.75rem !important; width: 1.75rem !important; }
+        .h-8, .w-8 { height: 1.5rem !important; width: 1.5rem !important; }
+        .h-5, .w-5 { height: 1.125rem !important; width: 1.125rem !important; }
+        .space-y-4 > * + * { margin-top: 0.5rem !important; }
+        .space-y-3 > * + * { margin-top: 0.375rem !important; }
+        .space-y-2 > * + * { margin-top: 0.25rem !important; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col items-start justify-start relative">
+        <!-- Background Pattern -->
+        <div class="bg-pattern"></div>
+        
+        <!-- Hexagons for futuristic styling -->
+        <div class="hexagon" style="top: 120px; right: 180px; opacity: 0.5;"></div>
+        <div class="hexagon" style="bottom: 150px; left: 220px; opacity: 0.6;"></div>
+        <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
+        
+        <!-- Content -->
+        <div class="content-wrapper w-full px-8 pt-5 pb-4">
+            <div class="flex justify-between items-center mb-2">
+                <div class="flex items-center">
+                    <i class="fas fa-chess-knight text-lg text-blue-400 mr-4"></i>
+                    <h2 class="text-4xl font-bold gradient-text">COMPETITIVE LANDSCAPE</h2>
+                </div>
+                <div class="text-sm text-gray-400">HEB STUDIOS | 10/15</div>
+            </div>
+            
+            <div class="grid grid-cols-5 gap-2">
+                <!-- Left Column (3/5 width) -->
+                <div class="col-span-3">
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow mb-2">
+                        <h3 class="text-base font-semibold text-blue-400 mb-2">MARKET POSITION MATRIX</h3>
+                        
+                        <div class="quadrant-grid rounded-lg relative">
+                            <!-- Quadrant labels -->
+                            <div class="axes-label" style="top: -25px; left: 50%; transform: translateX(-50%);">HIGH INNOVATION</div>
+                            <div class="axes-label" style="bottom: -25px; left: 50%; transform: translateX(-50%);">LOW INNOVATION</div>
+                            <div class="axes-label" style="left: -30px; top: 50%; transform: translateY(-50%) rotate(-90deg);">LOW RESOURCES</div>
+                            <div class="axes-label" style="right: -30px; top: 50%; transform: translateY(-50%) rotate(90deg);">HIGH RESOURCES</div>
+                            
+                            <!-- Axes arrows -->
+                            <div class="axes-arrow">
+                                <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0; pointer-events: none;">
+                                    <line x1="50%" y1="0" x2="50%" y2="100%" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                                    <line x1="0" y1="50%" x2="100%" y2="50%" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                                </svg>
+                            </div>
+                            
+                            <!-- Quadrants -->
+                            <div class="quadrant rounded-tl-lg"></div>
+                            <div class="quadrant rounded-tr-lg"></div>
+                            <div class="quadrant rounded-bl-lg"></div>
+                            <div class="quadrant rounded-br-lg"></div>
+                            
+                            <!-- Our studio position -->
+                            <div class="competitor bg-blue-600 pulse" style="top: 25%; left: 65%; z-index: 10; width: 100px; height: 100px; border: 3px solid #1e88e5; box-shadow: 0 0 20px rgba(30, 136, 229, 0.7);">
+                                <span>HEB STUDIOS</span>
+                                <span class="competitor-label">Vertically Integrated<br>Metaverse & Hologram</span>
+                            </div>
+                            
+                            <!-- Competitors -->
+                            <div class="competitor bg-red-600" style="top: 75%; left: 80%;">
+                                <span>AAA</span>
+                                <span class="competitor-label">Traditional Gaming Giants</span>
+                            </div>
+                            
+                            <div class="competitor bg-green-600" style="top: 25%; left: 25%;">
+                                <span>INDIE</span>
+                                <span class="competitor-label">Indie Game Studios</span>
+                            </div>
+                            
+                            <div class="competitor bg-yellow-600" style="top: 20%; left: 75%;">
+                                <span>TECH</span>
+                                <span class="competitor-label">Tech Conglomerates</span>
+                            </div>
+                            
+                            <div class="competitor bg-purple-600" style="top: 15%; left: 40%;">
+                                <span>WEB3</span>
+                                <span class="competitor-label">Pure Web3 Studios</span>
+                            </div>
+                            
+                            <div class="competitor bg-pink-600" style="top: 80%; left: 35%;">
+                                <span>ENT</span>
+                                <span class="competitor-label">Traditional Entertainment</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
+                        <h3 class="text-base font-semibold text-blue-400 mb-2">COMPETITIVE ADVANTAGES</h3>
+                        
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="advantage-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-3 mt-1">
+                                        <i class="fas fa-cubes text-blue-400"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Complete Vertical Integration</h4>
+                                        <p class="text-sm text-gray-300">In-house 3D production capabilities through MHSProd acquisition enables higher quality assets at lower cost</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="advantage-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center mr-3 mt-1">
+                                        <i class="fas fa-vr-cardboard text-purple-400"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Metaverse + Holographic Focus</h4>
+                                        <p class="text-sm text-gray-300">Unique positioning at intersection of metaverse, gaming, and holographic technology</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="advantage-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-pink-900 flex items-center justify-center mr-3 mt-1">
+                                        <i class="fas fa-history text-pink-400"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Proven Revenue Generation</h4>
+                                        <p class="text-sm text-gray-300">Historical $20M revenue achievement demonstrates monetization capability</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="advantage-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-900 flex items-center justify-center mr-3 mt-1">
+                                        <i class="fas fa-rocket text-indigo-400"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Venture Studio Efficiency</h4>
+                                        <p class="text-sm text-gray-300">Optimized resource sharing and rapid development across multiple projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column (2/5 width) -->
+                <div class="col-span-2">
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow mb-2">
+                        <h3 class="text-base font-semibold text-blue-400 mb-2">COMPETITOR ANALYSIS</h3>
+                        
+                        <div class="space-y-3">
+                            <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-semibold">AAA Game Studios</span>
+                                    <span class="text-sm text-gray-400">High Resources, Low Innovation</span>
+                                </div>
+                                <p class="text-xs text-gray-300">Slow to adapt to metaverse trends; focused on traditional gaming experiences with gradual blockchain integration</p>
+                            </div>
+                            
+                            <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-semibold">Tech Conglomerates</span>
+                                    <span class="text-sm text-gray-400">High Resources, High Innovation</span>
+                                </div>
+                                <p class="text-xs text-gray-300">Building broad metaverse platforms but lack specialized gaming and content creation expertise</p>
+                            </div>
+                            
+                            <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-semibold">Web3 Native Studios</span>
+                                    <span class="text-sm text-gray-400">Medium Resources, High Innovation</span>
+                                </div>
+                                <p class="text-xs text-gray-300">Strong on blockchain integration, but often lack production quality and mainstream appeal</p>
+                            </div>
+                            
+                            <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-semibold">Entertainment Companies</span>
+                                    <span class="text-sm text-gray-400">High Resources, Low Innovation</span>
+                                </div>
+                                <p class="text-xs text-gray-300">Strong IP, but slow technological adoption and resistance to new business models</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-blue-900 to-purple-900 bg-opacity-70 rounded-xl p-2 card-glow">
+                        <h3 class="text-base font-semibold text-white mb-2">OUR DIFFERENTIATION STRATEGY</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                    <i class="fas fa-crosshairs text-blue-300"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Targeting the Entertainment Gap</h4>
+                                    <p class="text-sm text-gray-300">Focus on the transition from traditional entertainment (like horse riding and MMA) to immersive digital experiences</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                    <i class="fas fa-layer-group text-blue-300"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Multi-Technology Integration</h4>
+                                    <p class="text-sm text-gray-300">Unique combination of metaverse, holographic tech, and AI-driven experiences that no single competitor offers</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                    <i class="fas fa-users text-blue-300"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Community-Centric Approach</h4>
+                                    <p class="text-sm text-gray-300">Building products with active user participation through DAO governance and interactive experiences</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="absolute bottom-0.5 right-4 text-gray-500 text-xs opacity-80">
+            Confidential
+        </div>
+    </div>
+</body>
+</html> 
