@@ -165,42 +165,38 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Function to create all slides using iframes
     function createSlides() {
-        // Define the order of slides
-        const slideOrder = [1, 2, 9, 4, 5, 3, 6, 14, 12, 13, 10, 15, 16];
+        // Create an array of slide information with correct ordering
+        const slides = [
+            { number: 1, file: "01_Introduction.html", title: "Introduction" },
+            { number: 2, file: "02_StudioOverview.html", title: "Studio Overview" },
+            { number: 3, file: "03_InvestmentOpportunity.html", title: "Investment Opportunity" },
+            { number: 4, file: "04_TheLegend.html", title: "The Legend" },
+            { number: 5, file: "05_Bananium.html", title: "Bananium" },
+            { number: 6, file: "06_MHSProd.html", title: "MHSProd" },
+            { number: 7, file: "07_MarketOpportunity.html", title: "Market Opportunity" },
+            { number: 8, file: "08_Partnerships.html", title: "Partnerships" },
+            { number: 9, file: "09_SustainableGrowth.html", title: "Sustainable Growth" },
+            { number: 10, file: "10_RiskAssessment.html", title: "Risk Assessment" },
+            { number: 11, file: "11_CompetitiveLandscape.html", title: "Competitive Landscape" },
+            { number: 12, file: "12_FinancialProjections.html", title: "Financial Projections" },
+            { number: 13, file: "13_Contact.html", title: "Contact" }
+        ];
         
-        // Define the titles for each slide
-        const slideTitles = {
-            1: "Introduction",
-            2: "StudioOverview", 
-            3: "MHSProd",
-            4: "TheLegend",
-            5: "Bananium",
-            6: "MarketOpportunity",
-            9: "BusinessModel",
-            10: "FinancialProjections",
-            12: "Team",
-            13: "Roadmap",
-            14: "Partnerships",
-            15: "Investment",
-            16: "Contact"
-        };
-        
-        for (let i = 0; i < slideOrder.length; i++) {
-            const slideNum = slideOrder[i];
-            const slideTitle = slideTitles[slideNum];
-            const slideIndex = (i + 1).toString().padStart(2, '0');
+        // Create slides in the specified order
+        for (let i = 0; i < slides.length; i++) {
+            const slide = slides[i];
             
             // Create iframe element
             const iframe = document.createElement('iframe');
-            iframe.src = `htmlslides/${slideIndex}_${slideTitle}.html`;
+            iframe.src = `htmlslides/${slide.file}`;
             iframe.className = 'slide-frame';
-            iframe.id = `slide${slideNum}`;
-            iframe.title = `Slide ${slideNum} - ${slideTitle}`;
+            iframe.id = `slide${i + 1}`;
+            iframe.title = `Slide ${slide.number} - ${slide.title}`;
             iframe.setAttribute('frameborder', '0');
             iframe.setAttribute('scrolling', 'no');
             
             // Make the first slide active
-            if (slideNum === 1) iframe.classList.add('active');
+            if (i === 0) iframe.classList.add('active');
             
             // Add iframe to container
             slidesContainer.appendChild(iframe);
