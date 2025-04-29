@@ -168,15 +168,34 @@ document.addEventListener('DOMContentLoaded', () => {
         // Define the order of slides
         const slideOrder = [1, 2, 9, 4, 5, 3, 6, 14, 12, 13, 10, 15, 16];
         
+        // Define the titles for each slide
+        const slideTitles = {
+            1: "Introduction",
+            2: "StudioOverview", 
+            3: "MHSProd",
+            4: "TheLegend",
+            5: "Bananium",
+            6: "MarketOpportunity",
+            9: "BusinessModel",
+            10: "FinancialProjections",
+            12: "Team",
+            13: "Roadmap",
+            14: "Partnerships",
+            15: "Investment",
+            16: "Contact"
+        };
+        
         for (let i = 0; i < slideOrder.length; i++) {
             const slideNum = slideOrder[i];
+            const slideTitle = slideTitles[slideNum];
+            const slideIndex = (i + 1).toString().padStart(2, '0');
             
             // Create iframe element
             const iframe = document.createElement('iframe');
-            iframe.src = `htmlslides/Slide${slideNum}.html`;
+            iframe.src = `htmlslides/${slideIndex}_${slideTitle}.html`;
             iframe.className = 'slide-frame';
             iframe.id = `slide${slideNum}`;
-            iframe.title = `Slide ${slideNum}`;
+            iframe.title = `Slide ${slideNum} - ${slideTitle}`;
             iframe.setAttribute('frameborder', '0');
             iframe.setAttribute('scrolling', 'no');
             
