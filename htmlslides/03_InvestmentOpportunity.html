@@ -57,7 +57,7 @@
         .card-glow {
             box-shadow: 0 0 20px rgba(166, 110, 250, 0.3);
             transition: all 0.3s ease;
-            margin-bottom: 0.35rem !important;
+            margin-bottom: 0.5rem !important;
         }
         .card-glow:hover {
             box-shadow: 0 0 30px rgba(166, 110, 250, 0.5);
@@ -71,7 +71,8 @@
         .funding-card {
             transition: all 0.3s ease;
             border-left: 3px solid transparent;
-            margin-bottom: 0.25rem !important;
+            margin-bottom: 0.5rem !important;
+            padding: 0.75rem !important;
         }
         .funding-card:hover {
             transform: translateX(5px);
@@ -93,7 +94,10 @@
             50% { opacity: 1; transform: scale(1.05); }
             100% { opacity: 0.7; transform: scale(1); }
         }
-        .milestone-point { margin-bottom: 0.3rem !important; }
+        .milestone-point { 
+            margin-bottom: 0.5rem !important; 
+            padding: 0.25rem 0;
+        }
         .milestone-point::before {
             content: "";
             position: absolute;
@@ -116,7 +120,10 @@
             box-shadow: 0 0 10px rgba(166, 110, 250, 0.7);
         }
         .milestone-point h4 { margin-bottom: 0.1rem !important; }
-        .milestone-point p { font-size: 0.7rem !important; line-height: 1.1 !important; }
+        .milestone-point p { 
+            font-size: 0.8rem !important; 
+            line-height: 1.2 !important; 
+        }
     
         
         /* Additional styles for compact layout */
@@ -128,7 +135,7 @@
         .text-lg { font-size: 0.9rem !important; line-height: 1.1rem !important; }
         p { margin-bottom: 0.375rem !important; line-height: 1.2 !important; }
         .p-3 { padding: 0.5rem !important; }
-        .p-2 { padding: 0.375rem !important; }
+        .p-2 { padding: 0.5rem !important; }
         .py-4 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
         .py-3 { padding-top: 0.375rem !important; padding-bottom: 0.375rem !important; }
         .px-4 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
@@ -169,7 +176,8 @@
         .pb-4 { padding-bottom: 0.25rem !important; }
         .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
         .ml-4 { margin-left: 0.5rem !important; }
-        .text-xs { font-size: 0.65rem !important; line-height: 1 !important; }
+        .text-sm { font-size: 0.8rem !important; line-height: 1.2 !important; }
+        .text-xs { font-size: 0.7rem !important; line-height: 1.1 !important; }
         .text-sm { font-size: 0.75rem !important; line-height: 1.1 !important; }
         .pl-10 { padding-left: 2rem !important; }
         .space-y-3 > * + * { margin-top: 0.25rem !important; }
@@ -188,70 +196,65 @@
         
         <!-- Content -->
         <div class="content-wrapper w-full px-8 pt-5 pb-4">
-            <div class="flex justify-between items-center mb-1">
+            <div class="flex justify-between items-center mb-3">
                 <div class="flex items-center">
                     <i class="fas fa-globe text-lg text-purple-400 mr-4"></i>
                     <h2 class="text-4xl font-bold gradient-text">INVESTMENT OPPORTUNITY</h2>
                 </div>
-                <div class="text-sm text-gray-400">HEB STUDIOS | 3/13</div>
+                <div class="text-sm text-gray-400">HEB STUDIOS | 9/15</div>
             </div>
             
-            <div class="grid grid-cols-2 gap-2">
+            <div class="grid grid-cols-2 gap-4">
                 <!-- Left Column -->
                 <div>
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 mb-2 card-glow">
-                        <h3 class="text-base font-semibold text-purple-400 mb-1">FUNDRAISING ROUND</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 mb-4 card-glow">
+                        <h3 class="text-xl font-semibold text-purple-400 mb-2">FUNDRAISING ROUND</h3>
                         
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <div class="bg-purple-900 bg-opacity-30 p-2 rounded-lg text-center">
+                        <div class="mb-3">
+                            <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg text-center">
                                 <div class="text-sm text-gray-400 mb-1">Target Raise</div>
-                                <div class="text-lg font-bold text-white">$1M</div>
+                                <div class="text-2xl font-bold text-white">$1M</div>
                                 <div class="text-xs text-gray-500 mt-1">SAFE Agreements</div>
                             </div>
-                            <div class="bg-purple-900 bg-opacity-30 p-2 rounded-lg text-center">
-                                <div class="text-sm text-gray-400 mb-1">Valuation Cap</div>
-                                <div class="text-lg font-bold text-white">$40M</div>
-                                <div class="text-xs text-gray-500 mt-1">Pre-money</div>
-                            </div>
                         </div>
                         
-                        <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg mb-2">
-                            <h4 class="text-base font-semibold text-purple-300 mb-1">Key Terms</h4>
-                            <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-gray-800 bg-opacity-60 p-3 rounded-lg mb-3">
+                            <h4 class="text-lg font-semibold text-purple-300 mb-2">Key Terms</h4>
+                            <div class="grid grid-cols-2 gap-4">
                                 <div class="flex items-start">
                                     <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
                                     <div>
-                                        <div class="text-sm font-medium">No Discount</div>
-                                        <div class="text-xs text-gray-400">Conversion at valuation cap</div>
+                                        <div class="text-base font-medium">No Discount</div>
+                                        <div class="text-sm text-gray-400">Conversion at valuation cap</div>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
                                     <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
                                     <div>
-                                        <div class="text-sm font-medium">Pro-Rata Rights</div>
-                                        <div class="text-xs text-gray-400">For investors above $200K</div>
+                                        <div class="text-base font-medium">Pro-Rata Rights</div>
+                                        <div class="text-sm text-gray-400">For investors above $200K</div>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
                                     <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
                                     <div>
-                                        <div class="text-sm font-medium">Board Observer</div>
-                                        <div class="text-xs text-gray-400">For lead investor</div>
+                                        <div class="text-base font-medium">Board Observer</div>
+                                        <div class="text-sm text-gray-400">For lead investor</div>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
                                     <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
                                     <div>
-                                        <div class="text-sm font-medium">Information Rights</div>
-                                        <div class="text-xs text-gray-400">Quarterly updates</div>
+                                        <div class="text-base font-medium">Information Rights</div>
+                                        <div class="text-sm text-gray-400">Quarterly updates</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="bg-indigo-900 bg-opacity-30 p-2 rounded-lg">
-                            <h4 class="text-base font-semibold text-indigo-300 mb-1">Why SAFE Agreements?</h4>
-                            <ul class="text-sm text-gray-300 space-y-1">
+                        <div class="bg-indigo-900 bg-opacity-30 p-3 rounded-lg">
+                            <h4 class="text-lg font-semibold text-indigo-300 mb-2">Why SAFE Agreements?</h4>
+                            <ul class="text-base text-gray-300 space-y-2">
                                 <li class="flex items-start">
                                     <i class="fas fa-angle-right text-indigo-400 mt-1 mr-2"></i>
                                     <span>Streamlined process with minimal legal costs</span>
@@ -272,152 +275,33 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 mb-2 card-glow">
-                        <h3 class="text-base font-semibold text-purple-400 mb-1">PORTFOLIO OVERVIEW</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 mb-4 card-glow">
+                        <h3 class="text-xl font-semibold text-purple-400 mb-2">INVESTMENT HIGHLIGHTS</h3>
                         
-                        <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg mb-2">
-                            <div class="flex items-center mb-1">
-                                <div class="w-8 h-8 rounded-full bg-purple-900 flex items-center justify-center mr-2">
-                                    <i class="fas fa-gamepad text-purple-400"></i>
-                                </div>
-                                <h4 class="text-base font-semibold text-purple-300">THE LEGEND</h4>
+                        <div class="pl-10 space-y-3">
+                            <div class="milestone-point">
+                                <h4 class="text-lg font-semibold text-white">Proven Track Record</h4>
+                                <p class="text-base text-gray-300">Successful revenue of $18M from initial The Legend NFT collection during demonstrates strong IP</p>
                             </div>
                             
-                            <div class="mb-2 portfolio-section">
-                                <h5 class="text-sm font-semibold text-white mb-1">Current Traction:</h5>
-                                <ul class="text-xs text-gray-300 space-y-1 ml-4">
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-purple-400 mt-0.5 mr-2"></i>
-                                        <span>12,345 NFTs Sold</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-purple-400 mt-0.5 mr-2"></i>
-                                        <span>50,000+ Discord Community</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-purple-400 mt-0.5 mr-2"></i>
-                                        <span>Established IP with loyal following</span>
-                                    </li>
-                                </ul>
+                            <div class="milestone-point">
+                                <h4 class="text-lg font-semibold text-white">Strategic Dual IP Approach</h4>
+                                <p class="text-base text-gray-300">Two complementary IPs targeting different market segments provides diversified revenue potential and cross-promotion opportunities</p>
                             </div>
                             
-                            <div class="mb-2 portfolio-section">
-                                <h5 class="text-sm font-semibold text-white mb-1">Year 1 Roadmap:</h5>
-                                <ul class="text-xs text-gray-300 space-y-1 ml-4">
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-purple-400 mt-0.5 mr-2"></i>
-                                        <span>Weapon NFT mint expansion</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-purple-400 mt-0.5 mr-2"></i>
-                                        <span>PvP auto-battler launch</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-purple-400 mt-0.5 mr-2"></i>
-                                        <span>Season 2 mint with 3D asset conversion</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-purple-400 mt-0.5 mr-2"></i>
-                                        <span>Engagement-boosting minigames</span>
-                                    </li>
-                                </ul>
+                            <div class="milestone-point">
+                                <h4 class="text-lg font-semibold text-white">Rapidly Growing Market</h4>
+                                <p class="text-base text-gray-300">Web3 gaming projected to reach $118.3B by 2034 with increasing mainstream adoption (33.2% CAGR)</p>
                             </div>
                             
-                            <div class="portfolio-section">
-                                <h5 class="text-sm font-semibold text-white mb-1">Long-Term Vision:</h5>
-                                <ul class="text-xs text-gray-300 space-y-1 ml-4">
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-purple-400 mt-0.5 mr-2"></i>
-                                        <span>Fully realized metaverse with customizable lands</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-purple-400 mt-0.5 mr-2"></i>
-                                        <span>Subscription-based land ownership model</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-purple-400 mt-0.5 mr-2"></i>
-                                        <span>Immersive 3D social experiences</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-purple-400 mt-0.5 mr-2"></i>
-                                        <span>Creator economy for user-generated content</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-gray-800 bg-opacity-60 p-2 rounded-lg">
-                            <div class="flex items-center mb-1">
-                                <div class="w-8 h-8 rounded-full bg-yellow-900 flex items-center justify-center mr-2">
-                                    <i class="fas fa-rocket text-yellow-400"></i>
-                                </div>
-                                <h4 class="text-base font-semibold text-yellow-300">BANANIUM</h4>
+                            <div class="milestone-point">
+                                <h4 class="text-lg font-semibold text-white">Multiple Revenue Streams</h4>
+                                <p class="text-base text-gray-300">Diversified income from NFT mints, tournament fees, spectator betting, royalties, and virtual land sales</p>
                             </div>
                             
-                            <div class="mb-2">
-                                <h5 class="text-sm font-semibold text-white mb-1">Competitive Edge:</h5>
-                                <ul class="text-xs text-gray-300 space-y-1 ml-4">
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-yellow-400 mt-0.5 mr-2"></i>
-                                        <span>Unique battle royale experience on Unreal Engine 5</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-yellow-400 mt-0.5 mr-2"></i>
-                                        <span>Season 1: 4,096 NFTs battle for prize pool</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-yellow-400 mt-0.5 mr-2"></i>
-                                        <span>Top 8 players share 25% of total mint funds</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-yellow-400 mt-0.5 mr-2"></i>
-                                        <span>Custom-built battle engine with spectator features</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="mb-2">
-                                <h5 class="text-sm font-semibold text-white mb-1">Revenue Model:</h5>
-                                <ul class="text-xs text-gray-300 space-y-1 ml-4">
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-yellow-400 mt-0.5 mr-2"></i>
-                                        <span>Primary NFT mints</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-yellow-400 mt-0.5 mr-2"></i>
-                                        <span>Tournament entry fees</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-yellow-400 mt-0.5 mr-2"></i>
-                                        <span>Spectator betting platform</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-yellow-400 mt-0.5 mr-2"></i>
-                                        <span>Character customization marketplace</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                            <div>
-                                <h5 class="text-sm font-semibold text-white mb-1">Innovation Timeline:</h5>
-                                <ul class="text-xs text-gray-300 space-y-1 ml-4">
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-yellow-400 mt-0.5 mr-2"></i>
-                                        <span>2025-26: Seasons 1-2 launch and tournament structure</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-yellow-400 mt-0.5 mr-2"></i>
-                                        <span>2026-27: Betting platform and expanded competitions</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-yellow-400 mt-0.5 mr-2"></i>
-                                        <span>2027-29: R&D for holographic integration</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-circle text-xs text-yellow-400 mt-0.5 mr-2"></i>
-                                        <span>2030+: Real-time holographic battles in physical spaces</span>
-                                    </li>
-                                </ul>
+                            <div class="milestone-point">
+                                <h4 class="text-lg font-semibold text-white">Path to $1B+ Valuation</h4>
+                                <p class="text-base text-gray-300">Clear roadmap to billion-dollar studio through platform growth, IP expansion, holographic technology development and metaverse experience development</p>
                             </div>
                         </div>
                     </div>
@@ -425,121 +309,114 @@
                 
                 <!-- Right Column -->
                 <div>
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 mb-2 card-glow">
-                        <h3 class="text-base font-semibold text-purple-400 mb-1">USE OF FUNDS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 mb-4 card-glow">
+                        <h3 class="text-xl font-semibold text-purple-400 mb-2">USE OF FUNDS</h3>
                         
-                        <div class="grid grid-cols-1 gap-3 mb-2">
-                            <div class="funding-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
+                        <div class="grid grid-cols-1 gap-4 mb-2">
+                            <div class="funding-card bg-gray-800 bg-opacity-60 rounded-lg">
                                 <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center mr-2">
-                                        <i class="fas fa-code text-purple-400"></i>
+                                    <div class="w-12 h-12 rounded-full bg-purple-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-code text-purple-400 text-lg"></i>
                                     </div>
                                     <div class="flex-1">
-                                        <h4 class="font-semibold">Product Development</h4>
-                                        <p class="text-xs text-gray-400">Core technology for both The Legend metaverse and Bananium battle engine</p>
-                                        <p class="text-xs font-semibold text-white">40%</p>
+                                        <h4 class="text-lg font-semibold">Product Development</h4>
+                                        <p class="text-sm text-gray-400">Core technology for both The Legend metaverse and Bananium battle engine</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="funding-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
+                            <div class="funding-card bg-gray-800 bg-opacity-60 rounded-lg">
                                 <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-indigo-900 flex items-center justify-center mr-2">
-                                        <i class="fas fa-users text-indigo-400"></i>
+                                    <div class="w-12 h-12 rounded-full bg-indigo-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-users text-indigo-400 text-lg"></i>
                                     </div>
                                     <div class="flex-1">
-                                        <h4 class="font-semibold">Team Expansion</h4>
-                                        <p class="text-xs text-gray-400">Technical and creative talent to scale operations</p>
-                                        <p class="text-xs font-semibold text-white">25%</p>
+                                        <h4 class="text-lg font-semibold">Team Expansion</h4>
+                                        <p class="text-sm text-gray-400">Technical and creative talent to scale operations</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="funding-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
+                            <div class="funding-card bg-gray-800 bg-opacity-60 rounded-lg">
                                 <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-2">
-                                        <i class="fas fa-bullhorn text-blue-400"></i>
+                                    <div class="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-bullhorn text-blue-400 text-lg"></i>
                                     </div>
                                     <div class="flex-1">
-                                        <h4 class="font-semibold">Marketing & Community</h4>
-                                        <p class="text-xs text-gray-400">User acquisition and engagement strategies</p>
-                                        <p class="text-xs font-semibold text-white">15%</p>
+                                        <h4 class="text-lg font-semibold">Marketing & Community</h4>
+                                        <p class="text-sm text-gray-400">User acquisition and engagement strategies</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="funding-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
+                            <div class="funding-card bg-gray-800 bg-opacity-60 rounded-lg">
                                 <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-teal-900 flex items-center justify-center mr-2">
-                                        <i class="fas fa-vr-cardboard text-teal-400"></i>
+                                    <div class="w-12 h-12 rounded-full bg-teal-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-vr-cardboard text-teal-400 text-lg"></i>
                                     </div>
                                     <div class="flex-1">
-                                        <h4 class="font-semibold">R&D (Holographic Tech)</h4>
-                                        <p class="text-xs text-gray-400">Investment in next-gen holographic entertainment technology</p>
-                                        <p class="text-xs font-semibold text-white">10%</p>
+                                        <h4 class="text-lg font-semibold">R&D (Holographic Tech)</h4>
+                                        <p class="text-sm text-gray-400">Investment in next-gen holographic entertainment technology</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="funding-card bg-gray-800 bg-opacity-60 p-2 rounded-lg">
+                            <div class="funding-card bg-gray-800 bg-opacity-60 rounded-lg">
                                 <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center mr-2">
-                                        <i class="fas fa-dollar-sign text-gray-400"></i>
+                                    <div class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-dollar-sign text-gray-400 text-lg"></i>
                                     </div>
                                     <div class="flex-1">
-                                        <h4 class="font-semibold">Working Capital</h4>
-                                        <p class="text-xs text-gray-400">Operational expenses and financial reserves</p>
-                                        <p class="text-xs font-semibold text-white">10%</p>
+                                        <h4 class="text-lg font-semibold">Working Capital</h4>
+                                        <p class="text-sm text-gray-400">Operational expenses and financial reserves</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
-                        <h3 class="text-base font-semibold text-purple-400 mb-1">INVESTMENT HIGHLIGHTS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 card-glow">
+                        <h3 class="text-xl font-semibold text-purple-400 mb-2">MARKET TAILWINDS</h3>
                         
-                        <div class="pl-10 space-y-2">
-                            <div class="milestone-point">
-                                <h4 class="text-base font-semibold text-white">Proven Track Record</h4>
-                                <p class="text-sm text-gray-300">Successful revenue of $[X]M from initial The Legend NFT collection during challenging market conditions demonstrates execution capability</p>
+                        <div class="grid grid-cols-1 gap-4 mb-2">
+                            <div class="funding-card bg-gray-800 bg-opacity-60 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-green-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-chart-line text-green-400 text-lg"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-lg font-semibold">Capital is flowing back into Web3 gaming:</h4>
+                                        <p class="text-sm text-gray-400">35% QoQ rebound in Q1-2023</p>
+                                        <p class="text-sm text-gray-500">GAMES.GG</p>
+                                    </div>
+                                </div>
                             </div>
                             
-                            <div class="milestone-point">
-                                <h4 class="text-base font-semibold text-white">Strategic Dual IP Approach</h4>
-                                <p class="text-sm text-gray-300">Two complementary IPs targeting different market segments provides diversified revenue potential and cross-promotion opportunities</p>
+                            <div class="funding-card bg-gray-800 bg-opacity-60 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-brain text-blue-400 text-lg"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-lg font-semibold">AI is the narrative multiplier:</h4>
+                                        <p class="text-sm text-gray-400">Media and investors frame 2025 as "Web3 gaming's breakout year thanks to AI"</p>
+                                        <p class="text-sm text-gray-500">CCN.com</p>
+                                    </div>
+                                </div>
                             </div>
                             
-                            <div class="milestone-point">
-                                <h4 class="text-base font-semibold text-white">Rapidly Growing Market</h4>
-                                <p class="text-sm text-gray-300">Web3 gaming projected to reach $118.3B by 2034 with increasing mainstream adoption (33.2% CAGR)</p>
+                            <div class="funding-card bg-gray-800 bg-opacity-60 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-purple-900 flex items-center justify-center mr-3">
+                                        <i class="fas fa-trophy text-purple-400 text-lg"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-lg font-semibold">Success blue-print:</h4>
+                                        <p class="text-sm text-gray-400">Pudgy Penguins revived its NFT brand by rebuilding community and launching mass-market toys, securing >3,100 Walmart stores</p>
+                                        <p class="text-sm text-gray-500">VLR   Axios</p>
+                                    </div>
+                                </div>
                             </div>
-                            
-                            <div class="milestone-point">
-                                <h4 class="text-base font-semibold text-white">Multiple Revenue Streams</h4>
-                                <p class="text-sm text-gray-300">Diversified income from NFT mints, tournament fees, spectator betting, royalties, and virtual land sales</p>
-                            </div>
-                            
-                            <div class="milestone-point">
-                                <h4 class="text-base font-semibold text-white">Path to $1B+ Valuation</h4>
-                                <p class="text-sm text-gray-300">Clear roadmap to billion-dollar studio through platform growth, IP expansion, and holographic technology development</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-2 card-glow">
-                        <h3 class="text-base font-semibold text-purple-400 mb-1">INVESTMENT TIMELINE</h3>
-                        
-                        <div class="w-full h-36 relative mb-1">
-                            <canvas id="investmentTimeline" width="400" height="200"></canvas>
-                        </div>
-                        
-                        <div class="flex justify-between text-xs text-gray-400 px-2">
-                            <div class="text-center">Now</div>
-                            <div class="text-center">SAFE<br>Round</div>
-                            <div class="text-center">Series A</div>
-                            <div class="text-center">Series B</div>
-                            <div class="text-center">Potential<br>Exit</div>
                         </div>
                     </div>
                 </div>
