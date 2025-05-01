@@ -143,6 +143,21 @@
         .gap-4 { gap: 0.5rem !important; }
         .text-xs { font-size: 0.65rem !important; }
         .text-sm { font-size: 0.75rem !important; }
+        
+        /* Additional styles for financial projections slide */
+        .bg-gray-900.card-glow {
+            margin-top: 15px !important;
+        }
+        table th {
+            padding: 0.5rem 0.75rem !important;
+            font-weight: bold;
+        }
+        table td {
+            padding: 0.4rem 0.6rem !important;
+        }
+        .content-wrapper {
+            padding-top: 60px !important;
+        }
     </style>
 </head>
 <body>
@@ -157,8 +172,8 @@
         <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
         
         <!-- Content -->
-        <div class="content-wrapper w-full px-8 pt-5 pb-4">
-            <div class="flex justify-between items-center mb-2">
+        <div class="content-wrapper w-full px-8 pt-8 pb-4">
+            <div class="flex justify-between items-center mb-4">
                 <div class="flex items-center">
                     <i class="fas fa-chart-line text-lg text-blue-500 mr-4"></i>
                     <h2 class="text-4xl font-bold gradient-text">FINANCIAL PROJECTIONS</h2>
@@ -169,8 +184,8 @@
             <div class="grid grid-cols-2 gap-4">
                 <!-- Left Column -->
                 <div>
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 mb-3 card-glow">
-                        <h3 class="text-base font-semibold text-blue-400 mb-2">12-MONTH REVENUE FORECAST</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 mb-4 card-glow">
+                        <h3 class="text-base font-semibold text-blue-400 mb-3">12-MONTH REVENUE FORECAST</h3>
                         
                         <div class="overflow-x-auto">
                             <table class="w-full">
@@ -252,38 +267,40 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 card-glow">
-                        <h3 class="text-base font-semibold text-blue-400 mb-2">INVESTMENT OPPORTUNITY</h3>
-                        
-                        <div class="overflow-x-auto">
-                            <table class="w-full">
-                                <thead>
-                                    <tr>
-                                        <th class="text-sm text-blue-300">Investment Needed</th>
-                                        <th class="text-sm text-blue-300">Use of Funds</th>
-                                        <th class="text-sm text-blue-300">Target ROI Timeline</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-xs">
-                                    <tr>
-                                        <td class="text-white font-semibold">$1M</td>
-                                        <td>
-                                            <div class="text-gray-300">� Development (55%)</div>
-                                            <div class="text-gray-300">� Marketing (25%)</div>
-                                            <div class="text-gray-300">� Operations (15%)</div>
-                                            <div class="text-gray-300">� Legal/Compliance (5%)</div>
-                                        </td>
-                                        <td class="text-white">24-36 months</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="grid grid-cols-1 gap-4 mt-4">
+                        <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 mb-4 card-glow">
+                            <h3 class="text-base font-semibold text-blue-400 mb-3">INVESTMENT OPPORTUNITY</h3>
+                            
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-sm text-blue-300">Investment Needed</th>
+                                            <th class="text-sm text-blue-300">Use of Funds</th>
+                                            <th class="text-sm text-blue-300">Target ROI Timeline</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-xs">
+                                        <tr>
+                                            <td class="text-white font-semibold">$1M</td>
+                                            <td>
+                                                <div class="text-gray-300"> Development (55%)</div>
+                                                <div class="text-gray-300"> Marketing (25%)</div>
+                                                <div class="text-gray-300"> Operations (15%)</div>
+                                                <div class="text-gray-300"> Legal/Compliance (5%)</div>
+                                            </td>
+                                            <td class="text-white">24-36 months</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 mt-3 card-glow">
-                        <h3 class="text-base font-semibold text-blue-400 mb-2">NOTES & ASSUMPTIONS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 card-glow">
+                        <h3 class="text-base font-semibold text-blue-400 mb-3">NOTES & ASSUMPTIONS</h3>
                         
-                        <ul class="list-disc pl-5 space-y-1 text-xs text-gray-300">
+                        <ul class="text-xs space-y-2 text-gray-300 list-disc pl-4">
                             <li>Financial projections account for market volatility with conservative growth estimates</li>
                             <li>Revenue primarily driven by NFT sales in Year 1, transitioning to sustainable gameplay economics</li>
                             <li>Betting platform revenue assumes regulatory compliance in key jurisdictions</li>
@@ -296,8 +313,8 @@
                 
                 <!-- Right Column -->
                 <div>
-                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 mb-3 card-glow">
-                        <h3 class="text-base font-semibold text-blue-400 mb-2">KEY METRICS & PROJECTIONS</h3>
+                    <div class="bg-gray-900 bg-opacity-70 rounded-xl p-3 mb-4 card-glow">
+                        <h3 class="text-base font-semibold text-blue-400 mb-3">KEY METRICS & PROJECTIONS</h3>
                         
                         <div class="mb-2">
                             <div class="text-sm font-semibold text-blue-300 mb-1">Player Base Growth</div>

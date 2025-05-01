@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         slide.style.flexDirection = 'column';
         slide.style.justifyContent = 'center';
         slide.style.alignItems = slide.classList.contains('items-start') ? 'flex-start' : 'center';
-        slide.style.paddingTop = '40px';
+        slide.style.paddingTop = '60px';
         slide.style.paddingBottom = '40px';
         slide.style.boxSizing = 'border-box';
     }
@@ -23,14 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contentWrapper) {
         contentWrapper.style.maxHeight = '820px';
         contentWrapper.style.overflow = 'visible';
-        contentWrapper.style.paddingTop = '30px';
+        contentWrapper.style.paddingTop = '50px';
         contentWrapper.style.paddingBottom = '30px';
     }
     
     // Ensure absolute positioned elements are properly placed
     const headerElements = document.querySelectorAll('.absolute.top-6, [class*="absolute top"]');
     headerElements.forEach(el => {
-        el.style.top = '20px';
+        el.style.top = '30px';
     });
     
     // Update body styles
@@ -42,4 +42,24 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.style.height = '100vh';
     document.body.style.width = '100%';
     document.body.style.overflow = 'hidden';
+    
+    // Specifically target financial projections slide
+    if (document.title.includes('Financial Projections')) {
+        // Ensure the financial table headers are visible
+        const tableHeaders = document.querySelectorAll('th');
+        tableHeaders.forEach(header => {
+            header.style.padding = '0.5rem 0.75rem';
+        });
+        
+        // Adjust the overall slide position
+        if (slide) {
+            slide.style.paddingTop = '70px';
+        }
+        
+        // Make sure the "12-MONTH REVENUE FORECAST" section is fully visible
+        const revenueSection = document.querySelector('.bg-gray-900.card-glow');
+        if (revenueSection) {
+            revenueSection.style.marginTop = '20px';
+        }
+    }
 }); 
