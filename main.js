@@ -223,25 +223,29 @@ document.addEventListener('DOMContentLoaded', () => {
                         slideContent.style.alignItems = 'center';
                         slideContent.style.justifyContent = 'center';
                         slideContent.style.width = '100%';
-                        slideContent.style.height = '900px';
-                        slideContent.style.maxWidth = '1600px';
+                        slideContent.style.height = 'auto';
+                        slideContent.style.minHeight = '100vh';
+                        slideContent.style.maxWidth = '1760px';
                         slideContent.style.margin = '0 auto';
                         slideContent.style.boxSizing = 'border-box';
                         slideContent.style.paddingTop = '40px';
                         slideContent.style.paddingBottom = '40px';
+                        slideContent.style.overflowY = 'visible';
+                        slideContent.style.aspectRatio = '16 / 9';
                     }
                     
                     // Ensure content wrapper is properly styled
                     const contentWrapper = iframeDoc.querySelector('.content-wrapper');
                     if (contentWrapper) {
                         contentWrapper.style.width = '100%';
-                        contentWrapper.style.maxWidth = '1560px';
+                        contentWrapper.style.maxWidth = '100%';
                         contentWrapper.style.margin = '0 auto';
-                        contentWrapper.style.padding = '30px 20px';
+                        contentWrapper.style.padding = '20px 40px';
                         contentWrapper.style.boxSizing = 'border-box';
                         contentWrapper.style.overflowX = 'hidden';
                         contentWrapper.style.overflowY = 'visible';
-                        contentWrapper.style.maxHeight = '820px';
+                        contentWrapper.style.maxHeight = 'none';
+                        contentWrapper.style.height = 'auto';
                     }
                     
                     // Make sure header elements are properly positioned
@@ -249,6 +253,48 @@ document.addEventListener('DOMContentLoaded', () => {
                     headerElements.forEach(el => {
                         el.style.top = '20px';
                     });
+                    
+                    // Function to set consistent dimensions based on 16:9 aspect ratio
+                    function setConsistentDimensions() {
+                        if (slideContent) {
+                            const viewportWidth = Math.min(window.innerWidth, 1760);
+                            const viewportHeight = window.innerHeight;
+                            
+                            // Calculate dimensions based on 16:9 aspect ratio while fitting in viewport
+                            let slideWidth, slideHeight;
+                            
+                            if (viewportWidth / viewportHeight > 16 / 9) {
+                                // If viewport is wider than 16:9, height is the constraint
+                                slideHeight = Math.min(viewportHeight, 990);
+                                slideWidth = slideHeight * (16 / 9);
+                            } else {
+                                // If viewport is narrower than 16:9, width is the constraint
+                                slideWidth = Math.min(viewportWidth, 1760);
+                                slideHeight = slideWidth * (9 / 16);
+                            }
+                            
+                            // Apply calculated dimensions
+                            slideContent.style.width = `${slideWidth}px`;
+                            slideContent.style.height = `${slideHeight}px`;
+                            slideContent.style.minHeight = `${slideHeight}px`;
+                            
+                            // Update iframe height to match
+                            iframe.style.width = `${slideWidth}px`;
+                            iframe.style.height = `${slideHeight}px`;
+                            iframe.style.minHeight = `${slideHeight}px`;
+                            
+                            // Ensure no scroll bars
+                            const allElements = iframeDoc.querySelectorAll('div, section, article');
+                            allElements.forEach(element => {
+                                element.style.maxHeight = 'none';
+                                element.style.overflow = 'visible';
+                            });
+                        }
+                    }
+                    
+                    // Set dimensions immediately and on resize
+                    setConsistentDimensions();
+                    window.addEventListener('resize', setConsistentDimensions);
                 } catch (e) {
                     console.log('Could not access iframe content:', e);
                 }
