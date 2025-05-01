@@ -13,7 +13,25 @@ document.addEventListener('DOMContentLoaded', function() {
         slide.style.flexDirection = 'column';
         slide.style.justifyContent = 'center';
         slide.style.alignItems = slide.classList.contains('items-start') ? 'flex-start' : 'center';
+        slide.style.paddingTop = '40px';
+        slide.style.paddingBottom = '40px';
+        slide.style.boxSizing = 'border-box';
     }
+    
+    // Update content wrapper to ensure all content is visible
+    const contentWrapper = document.querySelector('.content-wrapper');
+    if (contentWrapper) {
+        contentWrapper.style.maxHeight = '820px';
+        contentWrapper.style.overflow = 'visible';
+        contentWrapper.style.paddingTop = '30px';
+        contentWrapper.style.paddingBottom = '30px';
+    }
+    
+    // Ensure absolute positioned elements are properly placed
+    const headerElements = document.querySelectorAll('.absolute.top-6, [class*="absolute top"]');
+    headerElements.forEach(el => {
+        el.style.top = '20px';
+    });
     
     // Update body styles
     document.body.style.margin = '0';

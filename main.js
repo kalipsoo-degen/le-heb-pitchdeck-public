@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fullscreenBtn = document.getElementById('fullscreenBtn');
     const navControls = document.querySelector('.nav-controls');
     
-    const totalSlides = 13;
+    const totalSlides = 12;
     let currentSlideIndex = 0;
     let navTimeout;
     let isNavVisible = true;
@@ -175,11 +175,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { number: 6, file: "06_MHSProd.html", title: "MHSProd" },
             { number: 7, file: "07_MarketOpportunity.html", title: "Market Opportunity" },
             { number: 8, file: "08_Partnerships.html", title: "Partnerships" },
-            { number: 9, file: "09_SustainableGrowth.html", title: "Sustainable Growth" },
-            { number: 10, file: "10_RiskAssessment.html", title: "Risk Assessment" },
-            { number: 11, file: "11_CompetitiveLandscape.html", title: "Competitive Landscape" },
-            { number: 12, file: "12_FinancialProjections.html", title: "Financial Projections" },
-            { number: 13, file: "13_Contact.html", title: "Contact" }
+            { number: 9, file: "10_RiskAssessment.html", title: "Risk Assessment" },
+            { number: 10, file: "11_CompetitiveLandscape.html", title: "Competitive Landscape" },
+            { number: 11, file: "12_FinancialProjections.html", title: "Financial Projections" },
+            { number: 12, file: "13_Contact.html", title: "Contact" }
         ];
         
         // Create slides in the specified order
@@ -228,6 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         slideContent.style.maxWidth = '1600px';
                         slideContent.style.margin = '0 auto';
                         slideContent.style.boxSizing = 'border-box';
+                        slideContent.style.paddingTop = '40px';
+                        slideContent.style.paddingBottom = '40px';
                     }
                     
                     // Ensure content wrapper is properly styled
@@ -236,10 +237,18 @@ document.addEventListener('DOMContentLoaded', () => {
                         contentWrapper.style.width = '100%';
                         contentWrapper.style.maxWidth = '1560px';
                         contentWrapper.style.margin = '0 auto';
-                        contentWrapper.style.padding = '0 20px';
+                        contentWrapper.style.padding = '30px 20px';
                         contentWrapper.style.boxSizing = 'border-box';
                         contentWrapper.style.overflowX = 'hidden';
+                        contentWrapper.style.overflowY = 'visible';
+                        contentWrapper.style.maxHeight = '820px';
                     }
+                    
+                    // Make sure header elements are properly positioned
+                    const headerElements = iframeDoc.querySelectorAll('.absolute.top-6, [class*="absolute top"]');
+                    headerElements.forEach(el => {
+                        el.style.top = '20px';
+                    });
                 } catch (e) {
                     console.log('Could not access iframe content:', e);
                 }
