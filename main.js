@@ -194,12 +194,51 @@ document.addEventListener('DOMContentLoaded', () => {
             iframe.title = `Slide ${slide.number} - ${slide.title}`;
             iframe.setAttribute('frameborder', '0');
             iframe.setAttribute('scrolling', 'no');
+            iframe.setAttribute('allowfullscreen', 'true');
             
             // Make the first slide active
             if (i === 0) iframe.classList.add('active');
             
-            // Add iframe to container
+            // Add to container
             slidesContainer.appendChild(iframe);
+            
+            // Add event listener to ensure content is centered when loaded
+            iframe.onload = function() {
+                try {
+                    // Access iframe document if possible
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    
+                    // Add event listener to iframe content
+                    iframeDoc.addEventListener('mousemove', showNavOnMouseActivity);
+                    
+                    // Make sure slide content is centered
+                    const slideContent = iframeDoc.querySelector('.slide');
+                    if (slideContent) {
+                        slideContent.style.display = 'flex';
+                        slideContent.style.flexDirection = 'column';
+                        slideContent.style.alignItems = 'center';
+                        slideContent.style.justifyContent = 'flex-start';
+                        slideContent.style.width = '100%';
+                        slideContent.style.height = '100vh';
+                        slideContent.style.maxWidth = '1600px';
+                        slideContent.style.margin = '0 auto';
+                        slideContent.style.boxSizing = 'border-box';
+                    }
+                    
+                    // Ensure content wrapper is properly styled
+                    const contentWrapper = iframeDoc.querySelector('.content-wrapper');
+                    if (contentWrapper) {
+                        contentWrapper.style.width = '100%';
+                        contentWrapper.style.maxWidth = '1560px';
+                        contentWrapper.style.margin = '0 auto';
+                        contentWrapper.style.padding = '0 20px';
+                        contentWrapper.style.boxSizing = 'border-box';
+                        contentWrapper.style.overflowX = 'hidden';
+                    }
+                } catch (e) {
+                    console.log('Could not access iframe content:', e);
+                }
+            };
         }
     }
     
