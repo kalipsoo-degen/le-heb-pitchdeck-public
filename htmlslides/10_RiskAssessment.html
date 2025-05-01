@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -176,7 +176,8 @@
     </style>
 </head>
 <body>
-    <div class="slide flex flex-col items-start justify-start relative">
+    <script src="slide-fix.js"></script>
+    <div class="slide flex flex-col items-start justify-center relative">
         <!-- Background Pattern -->
         <div class="bg-pattern"></div>
         
@@ -323,9 +324,9 @@
                         <div class="risk-matrix rounded-lg" style="margin: 25px 30px 25px 50px; width: 90%; height: 280px;">
                             <!-- Axes labels -->
                             <div class="axes-label" style="top: -20px; left: 50%; transform: translateX(-50%);">PROBABILITY</div>
-                            <div class="axes-label" style="bottom: -20px; left: 50%; transform: translateX(-50%);">Low → High</div>
+                            <div class="axes-label" style="bottom: -20px; left: 50%; transform: translateX(-50%);">Low ? High</div>
                             <div class="axes-label" style="left: -40px; top: 50%; transform: translateY(-50%) rotate(-90deg);">IMPACT</div>
-                            <div class="axes-label" style="left: -65px; top: 50%; transform: translateY(-50%) rotate(-90deg);">Low → High</div>
+                            <div class="axes-label" style="left: -65px; top: 50%; transform: translateY(-50%) rotate(-90deg);">Low ? High</div>
                             
                             <!-- Risk matrix cells with color coding -->
                             <div class="risk-cell" style="background-color: rgba(22, 163, 74, 0.2);"></div>

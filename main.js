@@ -211,15 +211,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Add event listener to iframe content
                     iframeDoc.addEventListener('mousemove', showNavOnMouseActivity);
                     
+                    // Inject slide-fix.js script to ensure consistent styling
+                    const script = iframeDoc.createElement('script');
+                    script.src = '/htmlslides/slide-fix.js';
+                    iframeDoc.head.appendChild(script);
+                    
                     // Make sure slide content is centered
                     const slideContent = iframeDoc.querySelector('.slide');
                     if (slideContent) {
                         slideContent.style.display = 'flex';
                         slideContent.style.flexDirection = 'column';
                         slideContent.style.alignItems = 'center';
-                        slideContent.style.justifyContent = 'flex-start';
+                        slideContent.style.justifyContent = 'center';
                         slideContent.style.width = '100%';
-                        slideContent.style.height = '100vh';
+                        slideContent.style.height = '900px';
                         slideContent.style.maxWidth = '1600px';
                         slideContent.style.margin = '0 auto';
                         slideContent.style.boxSizing = 'border-box';
