@@ -6,10 +6,7 @@ const PORT = 3000;
 
 const server = http.createServer((req, res) => {
   // Get the file path
-  let filePath = '.' + req.url;
-  if (filePath === './') {
-    filePath = './index.html';
-  }
+  let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
 
   // Get the file extension
   const extname = path.extname(filePath);
