@@ -155,6 +155,16 @@
         .no-scroll {
             overflow-y: visible;
         }
+        
+        /* Consistent footer style */
+        .footer-confidential {
+            position: fixed !important;
+            bottom: 8px !important;
+            right: 1rem !important;
+            font-size: 0.875rem !important;
+            color: rgba(156, 163, 175, 0.8) !important;
+            z-index: 100 !important;
+        }
     </style>
 </head>
 <body>
@@ -168,14 +178,16 @@
         <div class="hexagon" style="bottom: 150px; left: 220px; opacity: 0.6;"></div>
         <div class="hexagon floating" style="top: 350px; left: 300px; opacity: 0.3; transform: scale(1.5);"></div>
         
+        <!-- Header/Slide Number -->
+        <div class="absolute top-6 right-10 text-sm text-gray-400">HEB STUDIOS | 7/12</div>
+        
         <!-- Content -->
         <div class="content-wrapper w-full px-8 pt-5 pb-4">
-            <div class="flex justify-between items-center mb-4">
+            <div class="flex justify-between items-center mb-3">
                 <div class="flex items-center">
-                    <i class="fas fa-chart-line text-lg text-blue-400 mr-4"></i>
-                    <h2 class="text-4xl font-bold gradient-text">MARKET ANALYSIS</h2>
+                    <i class="fas fa-chart-pie text-lg text-green-400 mr-4"></i>
+                    <h2 class="text-4xl font-bold gradient-text">MARKET OPPORTUNITY</h2>
                 </div>
-                <div class="text-sm text-gray-400">HEB STUDIOS | 7/12</div>
             </div>
             
             <div class="grid grid-cols-2 gap-4">
@@ -362,8 +374,8 @@
         </div>
         
         <!-- Footer -->
-        <div class="absolute bottom-0.5 right-4 text-gray-500 text-xs opacity-80">
-            Confidential
+        <div class="footer-confidential">
+            CONFIDENTIAL
         </div>
     </div>
     

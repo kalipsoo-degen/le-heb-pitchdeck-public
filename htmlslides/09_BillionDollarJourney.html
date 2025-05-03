@@ -180,6 +180,16 @@
             line-height: 1.4;
             font-size: 1rem;
         }
+        
+        /* Consistent footer style */
+        .footer-confidential {
+            position: fixed !important;
+            bottom: 8px !important;
+            right: 1rem !important;
+            font-size: 0.875rem !important;
+            color: rgba(156, 163, 175, 0.8) !important;
+            z-index: 100 !important;
+        }
     </style>
 </head>
 <body>
@@ -187,6 +197,9 @@
     <div class="slide flex flex-col items-center justify-center relative">
         <!-- Background Pattern -->
         <div class="bg-pattern"></div>
+        
+        <!-- Header/Slide Number -->
+        <div class="absolute top-6 right-10 text-sm text-gray-400">HEB STUDIOS | 8/12</div>
         
         <!-- Content -->
         <div class="content-wrapper px-8 py-6">
@@ -332,8 +345,8 @@
         </div>
         
         <!-- Footer -->
-        <div class="absolute bottom-2 right-6 text-gray-400 text-sm">
-            HEB STUDIOS | CONFIDENTIAL
+        <div class="footer-confidential">
+            CONFIDENTIAL
         </div>
     </div>
 </body>
