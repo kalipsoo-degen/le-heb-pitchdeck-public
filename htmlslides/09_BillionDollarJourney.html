@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEB Studios - Billion Dollar Journey</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f1923;
+            color: #f5f5f5;
+            overflow: hidden;
+        }
+        .slide {
+            width: 100%;
+            height: 100vh;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f1923 0%, #1a2c39 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #ec4899, #be185d, #db2777);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glow {
+            text-shadow: 0 0 15px rgba(236, 72, 153, 0.7);
+        }
+        .bg-pattern {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(190, 24, 93, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(219, 39, 119, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            padding: 0 10px;
+        }
+        .timeline {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            margin: 40px auto 60px;
+            padding: 0 5%;
+            box-sizing: border-box;
+        }
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ec4899, #be185d);
+            transform: translateY(-50%);
+        }
+        .timeline-point {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ec4899;
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.7);
+            z-index: 2;
+        }
+        .timeline-label {
+            position: absolute;
+            top: -40px;
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            background: rgba(26, 44, 57, 0.8);
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: visible;
+            width: auto;
+        }
+        .timeline-sublabel {
+            position: absolute;
+            bottom: -30px;
+            transform: translateX(-50%);
+            font-size: 1.1rem;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: visible;
+            width: auto;
+            color: #ec4899;
+        }
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            background: rgba(26, 44, 57, 0.9);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.3);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            margin: 0 auto 30px;
+            width: 96%;
+            max-width: 1280px;
+        }
+        .journey-step {
+            position: relative;
+            padding: 15px 12px;
+            background: rgba(15, 25, 35, 0.5);
+            border-radius: 8px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-top: 3px solid #ec4899;
+        }
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #ec4899;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+        }
+        .step-content {
+            flex: 1;
+            padding: 5px;
+        }
+        .step-content h2 {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+        }
+        .step-content p {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+        .list-items {
+            margin-top: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .list-items li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            padding-right: 5px;
+        }
+        .list-items li i {
+            font-size: 1rem;
+            margin-top: 4px;
+        }
+        .list-items li span {
+            display: inline-block;
+            line-height: 1.4;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <script src="slide-fix.js"></script>
+    <div class="slide flex flex-col items-center justify-center relative">
+        <!-- Background Pattern -->
+        <div class="bg-pattern"></div>
+        
+        <!-- Content -->
+        <div class="content-wrapper px-8 py-6">
+            <div class="text-center mb-6">
+                <h1 class="text-6xl font-bold gradient-text glow">BILLION-DOLLAR JOURNEY</h1>
+                <p class="text-2xl text-gray-300 mt-4 max-w-3xl mx-auto">Our strategic roadmap to building a billion-dollar gaming and entertainment platform</p>
+            </div>
+            
+            <div class="timeline relative">
+                <div class="timeline-line"></div>
+                
+                <!-- Timeline Points -->
+                <div class="timeline-point" style="left: 2%;">
+                    <div class="timeline-label">NOW</div>
+                    <div class="timeline-sublabel">Funding</div>
+                </div>
+                
+                <div class="timeline-point" style="left: 34%;">
+                    <div class="timeline-label">YEAR 1-2</div>
+                    <div class="timeline-sublabel">Platform</div>
+                </div>
+                
+                <div class="timeline-point" style="left: 67%;">
+                    <div class="timeline-label">YEAR 3-4</div>
+                    <div class="timeline-sublabel">Expansion</div>
+                </div>
+                
+                <div class="timeline-point" style="left: 98%;">
+                    <div class="timeline-label">YEAR 5+</div>
+                    <div class="timeline-sublabel">$1B Valuation</div>
+                </div>
+            </div>
+            
+            <div class="journey-grid">
+                <!-- Step 1 -->
+                <div class="journey-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h2 class="text-xl font-bold text-white">First 12 Months</h2>
+                        <p class="text-lg text-pink-300 my-2">Core Platform Development</p>
+                        <div class="list-items">
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Complete The Legend games</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Legends NFT 3D character and weapon collection mint</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Deploy Bananium season 1</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Launch tournament and betting platform</span>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="journey-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h2 class="text-xl font-bold text-white">Years 2-3</h2>
+                        <p class="text-lg text-pink-300 my-2">Expansion & Monetization</p>
+                        <div class="list-items">
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Scale with regular tournaments</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Open betting to web2 users</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Begin metaverse development</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Initiate holographic R&D</span>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="journey-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h2 class="text-xl font-bold text-white">Years 4-5</h2>
+                        <p class="text-lg text-pink-300 my-2">Holographic Revolution</p>
+                        <div class="list-items">
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Launch holographic platform</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Global user base expansion</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Strategic venue partnerships</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Series B funding round</span>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="journey-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h2 class="text-xl font-bold text-white">Year 5+</h2>
+                        <p class="text-lg text-pink-300 my-2">Industry Dominance</p>
+                        <div class="list-items">
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Global holographic leadership</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Multiple active revenue streams</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>5M+ monthly active users</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Acquisition or IPO at $1B+</span>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="absolute bottom-2 right-6 text-gray-400 text-sm">
+            HEB STUDIOS | CONFIDENTIAL
+        </div>
+    </div>
+</body>
+</html> 

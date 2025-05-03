@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fullscreenBtn = document.getElementById('fullscreenBtn');
     const navControls = document.querySelector('.nav-controls');
     
-    const totalSlides = 12;
+    const totalSlides = 13;
     let currentSlideIndex = 0;
     let navTimeout;
     let isNavVisible = true;
@@ -175,10 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
             { number: 6, file: "06_MHSProd.html", title: "MHSProd" },
             { number: 7, file: "07_MarketOpportunity.html", title: "Market Opportunity" },
             { number: 8, file: "08_Partnerships.html", title: "Partnerships" },
-            { number: 9, file: "10_RiskAssessment.html", title: "Risk Assessment" },
-            { number: 10, file: "11_CompetitiveLandscape.html", title: "Competitive Landscape" },
-            { number: 11, file: "12_FinancialProjections.html", title: "Financial Projections" },
-            { number: 12, file: "13_Contact.html", title: "Contact" }
+            { number: 9, file: "09_BillionDollarJourney.html", title: "Billion Dollar Journey" },
+            { number: 10, file: "10_RiskAssessment.html", title: "Risk Assessment" },
+            { number: 11, file: "11_CompetitiveLandscape.html", title: "Competitive Landscape" },
+            { number: 12, file: "12_FinancialProjections.html", title: "Financial Projections" },
+            { number: 13, file: "13_Contact.html", title: "Contact" }
         ];
         
         // Create slides in the specified order
