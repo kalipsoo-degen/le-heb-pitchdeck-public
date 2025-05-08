@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Financial Deck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
             background-color: #0f1923;
             color: #f5f5f5;
             overflow: hidden;
@@ -25,13 +28,13 @@
             background: linear-gradient(135deg, #0f1923 0%, #1a2c39 100%);
         }
         .gradient-text {
-            background: linear-gradient(90deg, #9d4edd, #5a189a, #3a0ca3);
+            background: linear-gradient(90deg, #3c91e6, #1d5b9e, #0a2e50);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
         .glow {
-            text-shadow: 0 0 15px rgba(157, 78, 221, 0.7);
+            text-shadow: 0 0 15px rgba(60, 145, 230, 0.7);
         }
         .bg-pattern {
             position: absolute;
@@ -40,16 +43,16 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 10% 20%, rgba(157, 78, 221, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 80% 70%, rgba(58, 12, 163, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 50% 50%, rgba(90, 24, 154, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 10% 20%, rgba(60, 145, 230, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(10, 46, 80, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(29, 91, 158, 0.05) 0%, transparent 50%);
             z-index: 0;
         }
         .hexagon {
             position: absolute;
             width: 200px;
             height: 173px;
-            background: linear-gradient(135deg, rgba(90, 24, 154, 0.1) 0%, rgba(157, 78, 221, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(29, 91, 158, 0.1) 0%, rgba(60, 145, 230, 0.05) 100%);
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             z-index: 0;
         }
@@ -102,7 +105,48 @@
             color: rgba(156, 163, 175, 0.8) !important;
             z-index: 100 !important;
         }
-    </style>
+
+        
+        /* HEB Studios Theme Colors */
+        body { color: #f5f5f5 !important; }
+        
+        /* Text colors */
+        .text-purple-300 { color: #67a9eb !important; }
+        .text-purple-400 { color: #3c91e6 !important; }
+        .text-indigo-300 { color: #67a9eb !important; }
+        .text-indigo-400 { color: #3c91e6 !important; }
+        .text-blue-300 { color: #67a9eb !important; }
+        .text-blue-400 { color: #3c91e6 !important; }
+        
+        /* Base text color - using off-white from HEB site */
+        .text-white { color: #f5f5f5 !important; }
+        
+        /* Grey accents */
+        .text-gray-300 { color: #d1d5db !important; }
+        .text-gray-400 { color: #9ca3af !important; }
+        .text-gray-500 { color: #6b7280 !important; }
+        
+        /* Border colors */
+        .border-purple-800 { border-color: #1d5b9e !important; }
+        .border-indigo-800 { border-color: #0a2e50 !important; }
+        .border-blue-800 { border-color: #0a2e50 !important; }
+        
+        .border-purple-600 { border-color: #3c91e6 !important; }
+        .border-indigo-600 { border-color: #1d5b9e !important; }
+        .border-blue-600 { border-color: #1d5b9e !important; }
+        
+        /* Background colors */
+        .bg-purple-900, .bg-indigo-900, .bg-blue-900 { background-color: #0a2e50 !important; }
+        .bg-purple-800, .bg-indigo-800, .bg-blue-800 { background-color: #1d5b9e !important; }
+        .bg-purple-700, .bg-indigo-700, .bg-blue-700 { background-color: #3c91e6 !important; }
+        
+        /* Custom HEB colors */
+        .heb-dark-blue { color: #0a2e50 !important; }
+        .heb-blue { color: #1d5b9e !important; }
+        .heb-light-blue { color: #3c91e6 !important; }
+        .heb-off-white { color: #f5f5f5 !important; }
+        .heb-grey { color: #9ca3af !important; }
+</style>
 </head>
 <body>
     <script src="slide-fix.js"></script>

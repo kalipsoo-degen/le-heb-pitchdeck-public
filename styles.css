@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
     background-color: #0f1923;
     color: #f5f5f5;
     overflow: hidden;
@@ -32,13 +32,13 @@ body {
     align-items: center;
 }
 .gradient-text {
-    background: linear-gradient(90deg, #9d4edd, #5a189a, #3a0ca3);
+    background: linear-gradient(90deg, #3c91e6, #1d5b9e, #0a2e50);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 .glow {
-    text-shadow: 0 0 15px rgba(157, 78, 221, 0.7);
+    text-shadow: 0 0 15px rgba(60, 145, 230, 0.7);
 }
 .bg-pattern {
     position: absolute;
@@ -47,16 +47,16 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(circle at 10% 20%, rgba(157, 78, 221, 0.1) 0%, transparent 20%),
-        radial-gradient(circle at 80% 70%, rgba(58, 12, 163, 0.1) 0%, transparent 20%),
-        radial-gradient(circle at 50% 50%, rgba(90, 24, 154, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 10% 20%, rgba(60, 145, 230, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(10, 46, 80, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 50% 50%, rgba(29, 91, 158, 0.05) 0%, transparent 50%);
     z-index: 0;
 }
 .hexagon {
     position: absolute;
     width: 200px;
     height: 173px;
-    background: linear-gradient(135deg, rgba(90, 24, 154, 0.1) 0%, rgba(157, 78, 221, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(29, 91, 158, 0.1) 0%, rgba(60, 145, 230, 0.05) 100%);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     z-index: 0;
 }
@@ -97,7 +97,7 @@ body {
     opacity: 1;
 }
 .nav-btn {
-    background: linear-gradient(135deg, #5a189a, #3a0ca3);
+    background: linear-gradient(135deg, #1d5b9e, #0a2e50);
     color: white;
     border: none;
     width: 40px;
@@ -111,7 +111,7 @@ body {
 }
 .nav-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(157, 78, 221, 0.5);
+    box-shadow: 0 0 15px rgba(60, 145, 230, 0.5);
 }
 .slide-indicator {
     display: flex;
@@ -128,11 +128,11 @@ body {
     transition: all 0.2s ease;
 }
 .indicator-dot.active {
-    background-color: #9d4edd;
+    background-color: #3c91e6;
     transform: scale(1.3);
 }
 .slide-number {
-    color: #9d4edd;
+    color: #3c91e6;
     font-weight: bold;
     margin: 0 10px;
 }
@@ -156,7 +156,7 @@ body {
     opacity: 1;
 }
 .fullscreen-btn:hover {
-    background: linear-gradient(135deg, #5a189a, #3a0ca3);
+    background: linear-gradient(135deg, #1d5b9e, #0a2e50);
     transform: scale(1.1);
 }
 .connected-box {
@@ -170,14 +170,14 @@ body {
     transform: translateX(-50%);
     width: 2px;
     height: 15px;
-    background-color: rgba(157, 78, 221, 0.8);
+    background-color: rgba(60, 145, 230, 0.8);
 }
 .card-glow {
-    box-shadow: 0 0 20px rgba(157, 78, 221, 0.3);
+    box-shadow: 0 0 20px rgba(60, 145, 230, 0.3);
     transition: all 0.3s ease;
 }
 .card-glow:hover {
-    box-shadow: 0 0 30px rgba(157, 78, 221, 0.5);
+    box-shadow: 0 0 30px rgba(60, 145, 230, 0.5);
     transform: translateY(-5px);
 }
 
@@ -189,14 +189,14 @@ table {
 }
 
 th, td {
-    border: 1px solid rgba(157, 78, 221, 0.3);
+    border: 1px solid rgba(60, 145, 230, 0.3);
     padding: 0.5rem 1rem;
     text-align: left;
 }
 
 th {
-    background-color: rgba(90, 24, 154, 0.2);
-    color: #9d4edd;
+    background-color: rgba(29, 91, 158, 0.2);
+    color: #3c91e6;
     font-weight: bold;
 }
 
@@ -216,7 +216,7 @@ tr:nth-child(even) {
     background-color: rgba(15, 25, 35, 0.6);
     border-radius: 0.5rem;
     padding: 1rem;
-    border: 1px solid rgba(157, 78, 221, 0.3);
+    border: 1px solid rgba(60, 145, 230, 0.3);
 }
 
 .metric-value {
@@ -227,7 +227,7 @@ tr:nth-child(even) {
 
 .metric-label {
     font-size: 0.875rem;
-    color: #9d4edd;
+    color: #3c91e6;
 }
 
 /* Progress bars */
@@ -246,19 +246,19 @@ tr:nth-child(even) {
 }
 
 .progress-pink {
-    background: linear-gradient(90deg, #9d4edd, #c77dff);
+    background: linear-gradient(90deg, #3c91e6, #67a9eb);
 }
 
 .progress-blue {
-    background: linear-gradient(90deg, #3a0ca3, #4361ee);
+    background: linear-gradient(90deg, #1d5b9e, #3c91e6);
 }
 
 .progress-purple {
-    background: linear-gradient(90deg, #7209b7, #560bad);
+    background: linear-gradient(90deg, #0a2e50, #1d5b9e);
 }
 
 .progress-indigo {
-    background: linear-gradient(90deg, #4cc9f0, #4361ee);
+    background: linear-gradient(90deg, #0a2e50, #154272);
 }
 
 .slide-frame {
@@ -273,6 +273,7 @@ tr:nth-child(even) {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+    transition: opacity 0.3s ease;
     overflow: visible !important;
 }
 
