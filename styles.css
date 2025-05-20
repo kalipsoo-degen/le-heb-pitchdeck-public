@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    background-color: #0f1923;
-    color: #f5f5f5;
+    background-color: #d5d2d1;
+    color: #2c2421;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@ body {
     padding: 0;
     position: relative;
     overflow: visible !important;
-    background: linear-gradient(135deg, #0f1923 0%, #1a2c39 100%);
+    background: linear-gradient(135deg, #d5d2d1 0%, #f3f0ed 100%);
     display: none;
     box-sizing: border-box;
 }
@@ -32,13 +32,13 @@ body {
     align-items: center;
 }
 .gradient-text {
-    background: linear-gradient(90deg, #3c91e6, #1d5b9e, #0a2e50);
+    background: linear-gradient(90deg, #627384, #4d5b6a, #374250);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 .glow {
-    text-shadow: 0 0 15px rgba(60, 145, 230, 0.7);
+    text-shadow: 0 0 15px rgba(98, 115, 132, 0.7);
 }
 .bg-pattern {
     position: absolute;
@@ -47,16 +47,16 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(circle at 10% 20%, rgba(60, 145, 230, 0.1) 0%, transparent 20%),
-        radial-gradient(circle at 80% 70%, rgba(10, 46, 80, 0.1) 0%, transparent 20%),
-        radial-gradient(circle at 50% 50%, rgba(29, 91, 158, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 10% 20%, rgba(98, 115, 132, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(44, 36, 33, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 50% 50%, rgba(77, 91, 106, 0.05) 0%, transparent 50%);
     z-index: 0;
 }
 .hexagon {
     position: absolute;
     width: 200px;
     height: 173px;
-    background: linear-gradient(135deg, rgba(29, 91, 158, 0.1) 0%, rgba(60, 145, 230, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(77, 91, 106, 0.1) 0%, rgba(98, 115, 132, 0.05) 100%);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     z-index: 0;
 }
@@ -89,7 +89,7 @@ body {
     display: flex;
     gap: 10px;
     z-index: 100;
-    background-color: rgba(15, 25, 35, 0.7);
+    background-color: rgba(213, 210, 209, 0.7);
     padding: 10px 20px;
     border-radius: 30px;
     backdrop-filter: blur(5px);
@@ -97,8 +97,8 @@ body {
     opacity: 1;
 }
 .nav-btn {
-    background: linear-gradient(135deg, #1d5b9e, #0a2e50);
-    color: white;
+    background: linear-gradient(135deg, #627384, #374250);
+    color: #f3f0ed;
     border: none;
     width: 40px;
     height: 40px;
@@ -111,7 +111,7 @@ body {
 }
 .nav-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(60, 145, 230, 0.5);
+    box-shadow: 0 0 15px rgba(98, 115, 132, 0.5);
 }
 .slide-indicator {
     display: flex;
@@ -128,11 +128,11 @@ body {
     transition: all 0.2s ease;
 }
 .indicator-dot.active {
-    background-color: #3c91e6;
+    background-color: #627384;
     transform: scale(1.3);
 }
 .slide-number {
-    color: #3c91e6;
+    color: #627384;
     font-weight: bold;
     margin: 0 10px;
 }
@@ -141,8 +141,8 @@ body {
     top: 20px;
     right: 20px;
     z-index: 100;
-    background: rgba(15, 25, 35, 0.7);
-    color: white;
+    background: rgba(213, 210, 209, 0.7);
+    color: #2c2421;
     border: none;
     width: 40px;
     height: 40px;
@@ -156,7 +156,7 @@ body {
     opacity: 1;
 }
 .fullscreen-btn:hover {
-    background: linear-gradient(135deg, #1d5b9e, #0a2e50);
+    background: linear-gradient(135deg, #627384, #374250);
     transform: scale(1.1);
 }
 .connected-box {
@@ -170,14 +170,14 @@ body {
     transform: translateX(-50%);
     width: 2px;
     height: 15px;
-    background-color: rgba(60, 145, 230, 0.8);
+    background-color: rgba(98, 115, 132, 0.8);
 }
 .card-glow {
-    box-shadow: 0 0 20px rgba(60, 145, 230, 0.3);
+    box-shadow: 0 0 20px rgba(98, 115, 132, 0.3);
     transition: all 0.3s ease;
 }
 .card-glow:hover {
-    box-shadow: 0 0 30px rgba(60, 145, 230, 0.5);
+    box-shadow: 0 0 30px rgba(98, 115, 132, 0.5);
     transform: translateY(-5px);
 }
 
@@ -189,19 +189,19 @@ table {
 }
 
 th, td {
-    border: 1px solid rgba(60, 145, 230, 0.3);
+    border: 1px solid rgba(98, 115, 132, 0.3);
     padding: 0.5rem 1rem;
     text-align: left;
 }
 
 th {
-    background-color: rgba(29, 91, 158, 0.2);
-    color: #3c91e6;
+    background-color: rgba(77, 91, 106, 0.2);
+    color: #627384;
     font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background-color: rgba(15, 25, 35, 0.4);
+    background-color: rgba(213, 210, 209, 0.4);
 }
 
 /* Financial metrics sections */
@@ -213,28 +213,28 @@ tr:nth-child(even) {
 }
 
 .metric-card {
-    background-color: rgba(15, 25, 35, 0.6);
+    background-color: rgba(243, 240, 237, 0.6);
     border-radius: 0.5rem;
     padding: 1rem;
-    border: 1px solid rgba(60, 145, 230, 0.3);
+    border: 1px solid rgba(98, 115, 132, 0.3);
 }
 
 .metric-value {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #f5f5f5;
+    color: #2c2421;
 }
 
 .metric-label {
     font-size: 0.875rem;
-    color: #3c91e6;
+    color: #627384;
 }
 
 /* Progress bars */
 .progress-container {
     width: 100%;
     height: 0.5rem;
-    background-color: rgba(15, 25, 35, 0.6);
+    background-color: rgba(213, 210, 209, 0.6);
     border-radius: 1rem;
     margin: 0.5rem 0;
     overflow: hidden;
@@ -246,19 +246,19 @@ tr:nth-child(even) {
 }
 
 .progress-pink {
-    background: linear-gradient(90deg, #3c91e6, #67a9eb);
+    background: linear-gradient(90deg, #627384, #7d8ea0);
 }
 
 .progress-blue {
-    background: linear-gradient(90deg, #1d5b9e, #3c91e6);
+    background: linear-gradient(90deg, #4d5b6a, #627384);
 }
 
 .progress-purple {
-    background: linear-gradient(90deg, #0a2e50, #1d5b9e);
+    background: linear-gradient(90deg, #374250, #4d5b6a);
 }
 
 .progress-indigo {
-    background: linear-gradient(90deg, #0a2e50, #154272);
+    background: linear-gradient(90deg, #374250, #455363);
 }
 
 .slide-frame {
