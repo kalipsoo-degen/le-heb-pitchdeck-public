@@ -93,31 +93,35 @@
             position: absolute;
             top: -40px;
             transform: translateX(-50%);
-            padding: 5px 10px;
-            background: rgba(26, 44, 57, 0.8);
-            border-radius: 5px;
-            font-size: 1.1rem;
+            padding: 8px 12px !important;
+            background: rgba(20, 30, 40, 0.95) !important;
+            border-radius: 6px;
+            font-size: 1.2rem !important;
             font-weight: bold;
             white-space: nowrap;
             overflow: visible;
             width: auto;
+            color: white !important;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+            border: 1px solid rgba(236, 72, 153, 0.3) !important;
         }
         .timeline-sublabel {
             position: absolute;
             bottom: -30px;
             transform: translateX(-50%);
-            font-size: 1.1rem;
+            font-size: 1.2rem !important;
             font-weight: bold;
             white-space: nowrap;
             overflow: visible;
             width: auto;
-            color: #ec4899;
+            color: #ff7bbf !important;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
         }
         .journey-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 25px;
-            background: rgba(26, 44, 57, 0.9);
+            background: rgba(20, 30, 40, 0.95) !important;
             border-radius: 12px;
             padding: 25px;
             box-shadow: 0 0 25px rgba(236, 72, 153, 0.3);
@@ -128,41 +132,50 @@
         }
         .journey-step {
             position: relative;
-            padding: 15px 12px;
-            background: rgba(15, 25, 35, 0.5);
+            padding: 20px 15px !important;
+            background: rgba(10, 15, 25, 0.7) !important;
             border-radius: 8px;
             height: 100%;
             display: flex;
             flex-direction: column;
             border-top: 3px solid #ec4899;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
         }
         .step-number {
             position: absolute;
             top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 32px;
-            height: 32px;
+            width: 35px !important;
+            height: 35px !important;
             border-radius: 50%;
             background: #ec4899;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 20px !important;
             box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+            color: white !important;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
         }
         .step-content {
             flex: 1;
             padding: 5px;
         }
         .step-content h2 {
-            font-size: 1.5rem;
-            line-height: 1.8rem;
+            font-size: 1.5rem !important;
+            line-height: 1.8rem !important;
+            margin-bottom: 0.5rem !important;
+            color: white !important;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
         }
         .step-content p {
-            font-size: 1.2rem;
-            line-height: 1.5rem;
+            font-size: 1.2rem !important;
+            line-height: 1.5rem !important;
+            color: #ff9ad5 !important;
+            font-weight: 500 !important;
+            margin-bottom: 0.75rem !important;
         }
         .list-items {
             margin-top: 15px;
@@ -171,19 +184,27 @@
             flex-direction: column;
         }
         .list-items li {
-            margin-bottom: 10px;
+            margin-bottom: 12px !important;
             display: flex;
             align-items: flex-start;
             padding-right: 5px;
+            background: rgba(255, 255, 255, 0.05) !important;
+            padding: 6px 10px !important;
+            border-radius: 6px !important;
         }
         .list-items li i {
-            font-size: 1rem;
+            font-size: 1.1rem !important;
             margin-top: 4px;
+            color: #ff7bbf !important;
+            filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5)) !important;
         }
         .list-items li span {
             display: inline-block;
-            line-height: 1.4;
-            font-size: 1rem;
+            line-height: 1.4 !important;
+            font-size: 1.05rem !important;
+            color: #ffffff !important;
+            font-weight: 500 !important;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5) !important;
         }
         
         /* Consistent footer style */
@@ -243,7 +264,125 @@
         .heb-grey { color: #9ca3af !important; }
         .heb-background { color: #d5d2d1 !important; }
         .heb-dark-text { color: #2c2421 !important; }
-</style>
+
+        /* Improved text legibility for Billion Dollar Journey slide */
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            background: rgba(20, 30, 40, 0.95) !important;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.3);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            margin: 0 auto 30px;
+            width: 96%;
+            max-width: 1280px;
+        }
+
+        .journey-step {
+            position: relative;
+            padding: 20px 15px !important;
+            background: rgba(10, 15, 25, 0.7) !important;
+            border-radius: 8px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-top: 3px solid #ec4899;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 35px !important;
+            height: 35px !important;
+            border-radius: 50%;
+            background: #ec4899;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px !important;
+            box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+            color: white !important;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .step-content h2 {
+            font-size: 1.5rem !important;
+            line-height: 1.8rem !important;
+            margin-bottom: 0.5rem !important;
+            color: white !important;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .step-content p {
+            font-size: 1.2rem !important;
+            line-height: 1.5rem !important;
+            color: #ff9ad5 !important;
+            font-weight: 500 !important;
+            margin-bottom: 0.75rem !important;
+        }
+
+        .list-items {
+            margin-top: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .list-items li {
+            margin-bottom: 12px !important;
+            display: flex;
+            align-items: flex-start;
+            padding-right: 5px;
+            background: rgba(255, 255, 255, 0.05) !important;
+            padding: 6px 10px !important;
+            border-radius: 6px !important;
+        }
+
+        .list-items li i {
+            font-size: 1.1rem !important;
+            margin-top: 4px;
+            color: #ff7bbf !important;
+            filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5)) !important;
+        }
+
+        .list-items li span {
+            display: inline-block;
+            line-height: 1.4 !important;
+            font-size: 1.05rem !important;
+            color: #ffffff !important;
+            font-weight: 500 !important;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        /* Improve top title text */
+        .text-center.mb-6 h1 {
+            font-size: 3.5rem !important;
+            line-height: 1.2 !important;
+            letter-spacing: 0.5px !important;
+            text-shadow: 0 2px 10px rgba(236, 72, 153, 0.7) !important;
+        }
+
+        .text-center.mb-6 p {
+            font-size: 1.35rem !important;
+            line-height: 1.5 !important;
+            color: #e1e5eb !important;
+            font-weight: 500 !important;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        /* Add focus effect on hover */
+        .journey-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4) !important;
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 <body>
     <script src="slide-fix.js"></script>
